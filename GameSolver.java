@@ -1,9 +1,14 @@
 import java.util.List;
 import java.util.Iterator;
+import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Set;
+import java.util.Queue;
+import java.util.HashSet;
 import java.util.Random;
 import java.util.Scanner;
+import java.util.ArrayDeque;
 import java.lang.StringBuilder;
 
 class Position {
@@ -57,7 +62,7 @@ class BoardIterator implements Iterator<Tile> {
     if (m >= board.size && n >= board.size)
       return false;
     return true;
-    //return !((m - 1) >= board.size && (n - 1) >= board.size);
+    // return !((m - 1) >= board.size && (n - 1) >= board.size);
   }
 
   public Tile next() {
@@ -65,8 +70,7 @@ class BoardIterator implements Iterator<Tile> {
     if (n >= board.size - 1) {
       n = 0;
       m++;
-    }
-    else {
+    } else {
       n++;
     }
     return ret;
@@ -74,7 +78,7 @@ class BoardIterator implements Iterator<Tile> {
 }
 
 enum Direction {
-  Up, Left, Right, Down 
+  Up, Left, Right, Down
 }
 
 class Tile {
@@ -85,14 +89,12 @@ class Tile {
   public Position previous;
   public Tile[] mergedFrom;
 
-  
-
   public Tile(int x, int y, Integer value) {
     this.x = x;
     this.y = y;
     this.value = value;
   }
-  
+
   public Tile(Position p, Integer value) {
     this(p.m, p.n, value);
   }
@@ -123,8 +125,8 @@ class Tile {
     if (o == null)
       return false;
     if (o == this)
-      return true; 
-    if (getClass()  != o.getClass())
+      return true;
+    if (getClass() != o.getClass())
       return false;
     Tile other = (Tile) o;
     if (this.value != other.value)
@@ -151,21 +153,18 @@ class Traversals {
     // In order to always traverse from farthest cell in direction
     if (direction == Direction.Right) {
       Collections.reverse(x);
-    }
-    else if (direction == Direction.Up) {
+    } else if (direction == Direction.Up) {
       Collections.reverse(y);
     }
   }
 }
 
 class GameBoard implements Iterable<Tile> {
-  public static final Random rand = new Random();
+  public final Random rand = new Random();
   public static final float twoProbability = 0.9f;
-
 
   public boolean won = false;
   public boolean over = false;
-
 
   public Tile[][] cells;
 
@@ -185,11 +184,15 @@ class GameBoard implements Iterable<Tile> {
 
       for (int j = 0; j < size; j++) {
         cells[i][j] = null;
-        //cells[i][j] = new Tile(new Position(i, j), null);
+        // cells[i][j] = new Tile(new Position(i, j), null);
       }
-      
+
     }
     generateNewItem();
+  }
+
+  public void setSeed(long seed) {
+    rand.setSeed(seed);
   }
 
   public static GameBoard clone(GameBoard original) {
@@ -200,9 +203,8 @@ class GameBoard implements Iterable<Tile> {
       for (int n = 0; n < size; ++n) {
         Tile oTile = original.get(m, n);
         if (oTile != null) {
-          copied.cells[m][n] =  new Tile(m, n, oTile.value);
-        }
-        else {
+          copied.cells[m][n] = new Tile(m, n, oTile.value);
+        } else {
           copied.cells[m][n] = null;
         }
       }
@@ -226,6 +228,7 @@ class GameBoard implements Iterable<Tile> {
   public void set(int m, int n, Tile t) {
     cells[m][n] = t;
   }
+
   public void set(int m, int n, int v) {
     set(m, n, new Tile(m, n, v));
   }
@@ -263,16 +266,15 @@ class GameBoard implements Iterable<Tile> {
     // Find a place to put the new item
     List<Position> freeSpaces = emptyPositions();
 
-    int next = rand.nextInt(freeSpaces.size());
     Position newPos = freeSpaces.get(rand.nextInt(freeSpaces.size()));
     set(newPos, val);
 
   }
 
-
   class PositionProspect {
     Position furthest;
     Position next;
+
     public PositionProspect(Position furthest, Position next) {
       this.furthest = furthest;
       this.next = next;
@@ -282,41 +284,30 @@ class GameBoard implements Iterable<Tile> {
   public Vector getDirectionVector(Direction direction) {
     Vector v;
     switch (direction) {
-      case Right:
-        v = new Vector(0, 1);
-        break;
-      case Up:
-        v = new Vector(-1, 0);
-        break;
-      case Left:
-        v = new Vector(0, -1);
-        break;
-      case Down:
-        v = new Vector(1, 0);
-        break;
-      default:
-        v = new Vector(0, 0);
+    case Right:
+      v = new Vector(0, 1);
+      break;
+    case Up:
+      v = new Vector(-1, 0);
+      break;
+    case Left:
+      v = new Vector(0, -1);
+      break;
+    case Down:
+      v = new Vector(1, 0);
+      break;
+    default:
+      v = new Vector(0, 0);
     }
 
-    /*switch (direction) {
-      case Up:
-        v = new Vector(0, 1);
-        break;
-      case Left:
-        v = new Vector(-1, 0);
-        break;
-      case Down:
-        v = new Vector(0, -1);
-        break;
-      case Right:
-        v = new Vector(1, 0);
-        break;
-      default:
-        v = new Vector(0, 0);
-    }
-    */
+    /*
+     * switch (direction) { case Up: v = new Vector(0, 1); break; case Left: v = new
+     * Vector(-1, 0); break; case Down: v = new Vector(0, -1); break; case Right: v
+     * = new Vector(1, 0); break; default: v = new Vector(0, 0); }
+     */
     return v;
   }
+
   public PositionProspect findFurthestPosition(Position p, Vector v) {
     Position previous;
 
@@ -346,10 +337,13 @@ class GameBoard implements Iterable<Tile> {
     }
   }
 
+  public GameBoard[] enumerate() {
+    return new GameBoard[]{ this.peekRight(), this.peekUp(), this.peekLeft(), this.peekDown()};
+  }
+
   public void move(Direction direction) {
 
     // Check if game is over first
-
 
     Vector v = getDirectionVector(direction);
     System.err.println(v);
@@ -377,11 +371,10 @@ class GameBoard implements Iterable<Tile> {
           Tile next = get(positions.next);
 
           // Determine if these tiles need to merge
-          if (next != null &&  next.value == tile.value && next.mergedFrom == null) {
+          if (next != null && next.value == tile.value && next.mergedFrom == null) {
             System.err.println("Merge happening");
-
             Tile merged = new Tile(positions.next, tile.value * 2);
-            merged.mergedFrom = new Tile[]{ tile, next };
+            merged.mergedFrom = new Tile[] { tile, next };
 
             set(merged);
             remove(tile);
@@ -392,8 +385,7 @@ class GameBoard implements Iterable<Tile> {
               won = true;
             }
 
-          }
-          else {
+          } else {
             System.err.println("Moving tile, no merge");
             moveTile(tile, positions.furthest);
           }
@@ -405,7 +397,6 @@ class GameBoard implements Iterable<Tile> {
           }
 
         }
-
 
       }
     }
@@ -419,7 +410,6 @@ class GameBoard implements Iterable<Tile> {
       // Check if there are any spaces available
     }
   }
-
 
   // Actually apply the operation to the current game board
   public void doLeft() {
@@ -438,6 +428,11 @@ class GameBoard implements Iterable<Tile> {
     move(Direction.Down);
   }
 
+  public GameBoard peek(Direction direction) {
+    GameBoard peek = clone(this);
+    peek.move(direction);
+    return peek;
+  }
   // Return a simulation of what might happen if this operation was done
   public GameBoard peekLeft() {
     GameBoard peek = clone(this);
@@ -463,9 +458,6 @@ class GameBoard implements Iterable<Tile> {
     return peek;
   }
 
-  public int score() {
-    return -1;
-  }
 
   public boolean withinBounds(int m, int n) {
     return (m < size && n < size && m >= 0 && n >= 0);
@@ -483,6 +475,14 @@ class GameBoard implements Iterable<Tile> {
     return available(p.m, p.n);
   }
 
+  public int emptySpaces() {
+    return emptyPositions().size();
+  }
+
+  public int tileCount() {
+    return size * size - emptySpaces();
+  }
+
   public boolean movesAvailable() {
     return !full() || matchesAvailable();
   }
@@ -490,11 +490,10 @@ class GameBoard implements Iterable<Tile> {
   public boolean matchesAvailable() {
     Tile t;
 
-
     for (int x = 0; x < size; ++x) {
       for (int y = 0; y < size; ++y) {
         t = get(x, y);
-        
+
         for (Direction dir : Direction.values()) {
           Vector v = getDirectionVector(dir);
           Tile other = get(x + v.x, y + v.y);
@@ -510,8 +509,21 @@ class GameBoard implements Iterable<Tile> {
 
   public boolean full() {
     List<Position> empty = emptyPositions();
-    
+
     return empty.size() == 0;
+  }
+
+  public int sum() {
+    int s = 0;
+    for (int m = 0; m < size; ++m) {
+      for (int n = 0; n < size; ++n) {
+        Tile t = get(m, n);
+        if (t != null) {
+          s += t.value;
+        }
+      }
+    }
+    return s;
   }
 
   private List<Position> emptyPositions() {
@@ -530,6 +542,15 @@ class GameBoard implements Iterable<Tile> {
     return positions;
   }
 
+  public List<Tile> corners() {
+    List<Tile> items = new ArrayList<>();
+    items.add(get(0,0));
+    items.add(get(0,size - 1));
+    items.add(get(size - 1, 0));
+    items.add(get(size - 1,size - 1));
+    return items;
+  }
+
   public String toString() {
     StringBuilder builder = new StringBuilder();
 
@@ -539,14 +560,56 @@ class GameBoard implements Iterable<Tile> {
 
         if (item != null) {
           builder.append(item).append(" ");
-        }
-        else {
+        } else {
           builder.append("_ ");
         }
       }
       builder.append("\n");
     }
     return builder.toString();
+  }
+
+  public List<Tile> adjacent(int m, int n) {
+    List<Tile> items = new ArrayList<>();
+    
+    Tile t;
+    t = get(m + 1, n);
+    if (t != null) items.add(t);
+    t = get(m - 1, n);
+    if (t != null) items.add(t);
+    t = get(m, n + 1);
+    if (t != null) items.add(t);
+    t = get(m, n - 1);
+    if (t != null) items.add(t);
+
+    return items;
+  }
+
+  public int adjacentWithSameValue(int m, int n) {
+    int count = 0;
+    Tile t = get(m, n);
+    if (t == null)
+      return 0;
+    
+    for (Tile adjacent : adjacent(m, n)) {
+      if (adjacent.value == t.value) {
+        count++;
+      }
+    }
+
+    return count;
+  }
+
+  public int adjacencyScore() {
+    int score = 0;
+
+    for (int m = 0; m < size; ++m) {
+      for (int n = 0; n < size; ++n) {
+        score += adjacentWithSameValue(m, n);
+      }
+    }
+
+    return score;
   }
 
   // TODO: Implement equal for board
@@ -583,54 +646,166 @@ class GameBoard implements Iterable<Tile> {
   }
 }
 
+class BoardScore {
+  public GameBoard gameBoard;
+  public float score;
+
+  public BoardScore(GameBoard board, float score) {
+    this.gameBoard = board;
+    this.score = score;
+  }
+}
 public class GameSolver {
 
-  public static void main(String[] args) {
-    // Kickoff
-    GameBoard board = new GameBoard();    
-    Scanner scanner = new Scanner(System.in);
+  /*
+  Direction first_search(GameBoard start, int maxDepth) {
 
-    while (board.over != true) {
-      System.out.println(board);
-      System.out.println("What would you like to do?");
-      int i = 0;
-      for (Direction d : Direction.values()) {
-        System.out.println(String.format("%d: %s", i, d));
-        i++;
+    Set<GameBoard> seen = new HashSet<>();
+    Queue<GameBoard> q = new ArrayDeque<>();
+
+    int depth = 0;
+    int elementsToDepthIncrease = 1;
+    int nextElementsToDepthIncrease = 0;
+
+    while (!q.isEmpty()) {
+      GameBoard current = q.poll();
+      if (seen.contains(current)) {
+        continue;
       }
-      int selected = scanner.nextInt();
-      board.move(Direction.values()[selected]);
 
+
+      // Calculate score
+
+      nextElementsToDepthIncrease += 4;
+      if (--elementsToDepthIncrease == 0) {
+        if (++depth > maxDepth)
+          return;
+
+        elementsToDepthIncrease = nextElementsToDepthIncrease;
+        nextElementsToDepthIncrease = 0;
+      }
+      for (GameBoard b : b.enumerate()) {
+        q.add(b);
+      }
+    }
+  }
+*/
+
+  static Direction first_search(GameBoard current, GameBoard prev) {
+    // Find the best scoring option from the four directions
+    float highest_score = 0;
+    Direction best = null;
+
+    for (Direction d : Direction.values()) {
+      GameBoard board = current.peek(d);
+      if (board == current || board == prev)
+        continue;
+
+      float score = 0;
+      // Score the board
+      // float EMPTY_SPACES_CONSTANT;
+      float EMPTY_SPACES_WEIGHT = 500.0f;
+      float SUM_WEIGHT = 1400.0f;
+      float MERGED_COUNT_WEIGHT = 1100.0f;
+      float CORNER_WEIGHT = 100.0f;
+      float MERGE_POTENTIAL_WEIGHT = 10.0f;
+
+      int empty_count = board.emptySpaces();
+      score += empty_count * EMPTY_SPACES_WEIGHT;
+
+      int sum = board.sum();
+      score += sum * SUM_WEIGHT;
+
+      int merge_count = current.tileCount() - board.tileCount();
+      if (merge_count > 0) {
+        score += merge_count * MERGED_COUNT_WEIGHT;
+      }
+
+      score += board.adjacencyScore() * MERGE_POTENTIAL_WEIGHT;
+
+
+      for (Tile t : board.corners()) {
+        if (t != null) {
+          score += t.value * CORNER_WEIGHT;
+        }
+      }
+      
+      // Check if it's higher
+      if (score > highest_score) {
+        best = d;
+        highest_score = score;
+      }
+    }
+    System.out.println("Decided to go in direction: " + best);
+
+    return best;
+  }
+
+  public static void first_test(long seed) {
+    final int LIMIT = 500000000;
+
+    GameBoard board = new GameBoard();
+    board.setSeed(seed);
+
+    // Keep track of past 2 boards, to get out of a loop
+    GameBoard previous = null;
+    int i = 0;
+    while (board.over != true && i < LIMIT) {
+      System.out.println(board);
+
+      Direction to = first_search(board, previous);
+      if (to == null) {
+        break;
+      }
+      previous = GameBoard.clone(board);
+      board.move(to);
+      i++;
     }
 
     System.out.println("Game over");
     if (board.won) {
       System.out.println("You win!");
-    }
-    else {
+    } else {
       System.out.println("Better luck next time.");
     }
-    /*System.out.println(board);
-    for (int i = 0; i < 5; i++) {
-      board.doUp();
-      System.out.println(board);
-      
-    }
-    board.doUp();
-    System.out.println(board);
-    System.out.println("Starting peek!\n\n");
-    GameBoard peek = GameBoard.clone(board);
-    System.out.println(peek);
-    //peek.doUp();
-    System.out.println(peek);
-    System.out.println("Original board:");
-    System.out.println(board);
-    if (board.equals(peek))
-      System.out.println("board is peek");
-    else
-      System.out.println("Nope");
-*/
-    
+  }
+
+  public static void second_test(long seed) {
+    GameBoard board = new GameBoard();
+    board.setSeed(seed);
+
+  }
+
+  public static void run_tests() {
+    long seed = System.currentTimeMillis();
+    run_tests(seed);
+  }
+
+  public static void run_tests(long seed) {
+    // Maybe compare time here?
+    first_test(seed);
+    second_test(seed);
+
+
+  }
+
+  public static void main(String[] args) {
+    // Kickoff
+    Scanner scanner = new Scanner(System.in);
+
+    run_tests();
+
+    /*
+     * System.out.println(board); for (int i = 0; i < 5; i++) { board.doUp();
+     * System.out.println(board);
+     * 
+     * } board.doUp(); System.out.println(board);
+     * System.out.println("Starting peek!\n\n"); GameBoard peek =
+     * GameBoard.clone(board); System.out.println(peek); //peek.doUp();
+     * System.out.println(peek); System.out.println("Original board:");
+     * System.out.println(board); if (board.equals(peek))
+     * System.out.println("board is peek"); else System.out.println("Nope");
+     */
 
   }
 }
