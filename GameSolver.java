@@ -3,6 +3,7 @@ import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
+import java.util.Scanner;
 import java.lang.StringBuilder;
 
 class Position {
@@ -114,6 +115,22 @@ class Tile {
       return true;
     }
     return false;
+  }
+
+  @Override
+  public boolean equals(Object o) {
+    System.out.println(String.format("Comparing %s and %s", this, o));
+    if (o == null)
+      return false;
+    if (o == this)
+      return true; 
+    if (getClass()  != o.getClass())
+      return false;
+    Tile other = (Tile) o;
+    if (this.value != other.value)
+      return false;
+
+    return true;
   }
 }
 
@@ -533,6 +550,37 @@ class GameBoard implements Iterable<Tile> {
   }
 
   // TODO: Implement equal for board
+  public boolean equals(Object other) {
+    if (other == null)
+      return false;
+    if (other == this)
+      return true;
+    if (getClass() != other.getClass())
+      return false;
+
+    GameBoard o = (GameBoard) other;
+    if (o.size != this.size)
+      return false;
+
+    for (int m = 0; m < size; ++m) {
+      for (int n = 0; n < size; ++n) {
+        Tile t = this.get(m, n);
+        Tile oT = o.get(m, n);
+        System.out.println("t: " + t);
+        System.out.println("oT: " + oT);
+        if (t == oT) {
+          // Shouldn't have to need this but I do???
+          // Otherwise it thinks if they're both null
+          if (t != null && oT != null) {
+            System.out.println(String.format("%s != %s", t, oT));
+            return false;
+          }
+        }
+      }
+    }
+
+    return true;
+  }
 }
 
 public class GameSolver {
@@ -540,8 +588,29 @@ public class GameSolver {
   public static void main(String[] args) {
     // Kickoff
     GameBoard board = new GameBoard();    
+    Scanner scanner = new Scanner(System.in);
 
-    System.out.println(board);
+    while (board.over != true) {
+      System.out.println(board);
+      System.out.println("What would you like to do?");
+      int i = 0;
+      for (Direction d : Direction.values()) {
+        System.out.println(String.format("%d: %s", i, d));
+        i++;
+      }
+      int selected = scanner.nextInt();
+      board.move(Direction.values()[selected]);
+
+    }
+
+    System.out.println("Game over");
+    if (board.won) {
+      System.out.println("You win!");
+    }
+    else {
+      System.out.println("Better luck next time.");
+    }
+    /*System.out.println(board);
     for (int i = 0; i < 5; i++) {
       board.doUp();
       System.out.println(board);
@@ -550,12 +619,17 @@ public class GameSolver {
     board.doUp();
     System.out.println(board);
     System.out.println("Starting peek!\n\n");
-    GameBoard peek = board.peekDown();
+    GameBoard peek = GameBoard.clone(board);
     System.out.println(peek);
-    peek.doUp();
+    //peek.doUp();
     System.out.println(peek);
     System.out.println("Original board:");
     System.out.println(board);
+    if (board.equals(peek))
+      System.out.println("board is peek");
+    else
+      System.out.println("Nope");
+*/
     
 
   }
