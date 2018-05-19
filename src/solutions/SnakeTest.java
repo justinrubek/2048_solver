@@ -92,9 +92,6 @@ public class SnakeTest implements Solver, Callable<TestResult> {
         return result;
     }
 
-    public TestResult call() {
-        return run();
-    }
 
     public MoveResult decide(GameBoard board) {
         return next(board, MAX_SEARCH_DEPTH);
