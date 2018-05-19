@@ -574,7 +574,7 @@ public class GameBoard {
       return false;
     if (other == this)
       return true;
-    if (getClass() != other.getClass())
+    if (this.getClass().equals(other.getClass()) == false)
       return false;
 
     GameBoard o = (GameBoard) other;
@@ -587,14 +587,19 @@ public class GameBoard {
         Tile oT = o.get(m, n);
         // System.out.println("t: " + t);
         // System.out.println("oT: " + oT);
-        if (t != oT) {
-          if (t == null && oT == null) {
+        if (t != null && oT != null && t.equals(oT) == false) {
+          return false;
+        }
+        if (t == null && oT != null || t != null && oT == null) {
+          return false;
+        }
+      
+          /*if (t == null && oT == null) {
 
           } else {
             // System.out.println(String.format("%s != %s", t, oT));
             return false;
-
-          }
+*/
           // Shouldn't have to need this but I do???
           // Otherwise it thinks if they're both null
           /*
@@ -603,7 +608,6 @@ public class GameBoard {
            */
         }
       }
-    }
 
     return true;
   }

@@ -782,7 +782,10 @@ public class GameSolver {
     // Kickoff
     Scanner scanner = new Scanner(System.in);
 
-    run_tests();
+//    run_tests();
+    GameBoard b = new GameBoard();
+    GameBoard c = new GameBoard();
+    System.out.println(b.equals(c));
     // play(new GameBoard());
   }
 }

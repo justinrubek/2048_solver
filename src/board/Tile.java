@@ -59,7 +59,6 @@ public class Tile {
 
   @Override
   public boolean equals(Object o) {
-    System.out.println(String.format("Comparing %s and %s", this, o));
     if (o == null)
       return false;
     if (o == this)
