@@ -15,7 +15,6 @@ import java.util.Scanner;
 import java.util.ArrayDeque;
 import java.lang.StringBuilder;
 
-
 class Position {
   public int m;
   public int n;
@@ -170,6 +169,7 @@ class GameBoard implements Iterable<Tile> {
 
   public boolean won = false;
   public boolean over = false;
+  public boolean moved = false;
 
   public Tile[][] cells;
   public Map<Integer, Integer> merges = new HashMap<>();
@@ -344,18 +344,18 @@ class GameBoard implements Iterable<Tile> {
   }
 
   public GameBoard[] enumerate() {
-    return new GameBoard[]{ this.peekRight(), this.peekUp(), this.peekLeft(), this.peekDown()};
+    return new GameBoard[] { this.peekRight(), this.peekUp(), this.peekLeft(), this.peekDown() };
   }
 
   public boolean move(Direction direction) {
 
     // Check if game is over first
+    moved = false;
 
     Vector v = getDirectionVector(direction);
     System.err.println(v);
     System.err.println(direction);
     Traversals traversals = new Traversals(direction, size);
-    boolean moved = false;
 
     merges.clear();
     resetTiles();
@@ -376,7 +376,7 @@ class GameBoard implements Iterable<Tile> {
 
           // Only one merge per row
           if (next != null && next.value.equals(tile.value) && next.mergedFrom == null) {
-            
+
             Tile merged = new Tile(positions.next, tile.value * 2);
             // Keep track for score purposes
             merges.merge(tile.value, 1, Integer::sum);
@@ -426,6 +426,7 @@ class GameBoard implements Iterable<Tile> {
     GameBoard temp = GameBoard.clone(this);
     return temp.move(d);
   }
+
   // Actually apply the operation to the current game board
   public void doLeft() {
     move(Direction.Left);
@@ -448,6 +449,7 @@ class GameBoard implements Iterable<Tile> {
     peek.move(direction);
     return peek;
   }
+
   // Return a simulation of what might happen if this operation was done
   public GameBoard peekLeft() {
     GameBoard peek = clone(this);
@@ -472,7 +474,6 @@ class GameBoard implements Iterable<Tile> {
     peek.doDown();
     return peek;
   }
-
 
   public boolean withinBounds(int m, int n) {
     return (m < size && n < size && m >= 0 && n >= 0);
@@ -502,8 +503,10 @@ class GameBoard implements Iterable<Tile> {
     return !full() || matchesAvailable();
   }
 
-
   public boolean matchesAvailable() {
+    if (over)
+      return false;
+      
     Tile t;
 
     for (int x = 0; x < size; ++x) {
@@ -518,24 +521,18 @@ class GameBoard implements Iterable<Tile> {
 
                 }
               }
-              return true;   
-            }
-          }
-        }
-        //t = get(x, y);
-
-          /*
-        if (t != null) {
-          for (Direction dir : Direction.values()) {
-            Vector v = getDirectionVector(dir);
-            Tile other = get(x + v.x, y + v.y);
-
-            if (other != null && t.value == other.value) {
               return true;
             }
           }
         }
-          */
+        // t = get(x, y);
+
+        /*
+         * if (t != null) { for (Direction dir : Direction.values()) { Vector v =
+         * getDirectionVector(dir); Tile other = get(x + v.x, y + v.y);
+         * 
+         * if (other != null && t.value == other.value) { return true; } } }
+         */
       }
     }
     return false;
@@ -591,10 +588,10 @@ class GameBoard implements Iterable<Tile> {
 
   public List<Tile> corners() {
     List<Tile> items = new ArrayList<>();
-    items.add(get(0,0));
-    items.add(get(0,size - 1));
+    items.add(get(0, 0));
+    items.add(get(0, size - 1));
     items.add(get(size - 1, 0));
-    items.add(get(size - 1,size - 1));
+    items.add(get(size - 1, size - 1));
     return items;
   }
 
@@ -632,7 +629,7 @@ class GameBoard implements Iterable<Tile> {
 
   public List<Tile> adjacent(int m, int n) {
     List<Tile> items = new ArrayList<>();
-   
+
     for (Direction d : Direction.values()) {
       Vector v = getDirectionVector(d);
 
@@ -643,16 +640,10 @@ class GameBoard implements Iterable<Tile> {
       }
     }
     /*
-    Tile t;
-    t = get(m + 1, n);
-    if (t != null) items.add(t);
-    t = get(m - 1, n);
-    if (t != null) items.add(t);
-    t = get(m, n + 1);
-    if (t != null) items.add(t);
-    t = get(m, n - 1);
-    if (t != null) items.add(t);
-    */
+     * Tile t; t = get(m + 1, n); if (t != null) items.add(t); t = get(m - 1, n); if
+     * (t != null) items.add(t); t = get(m, n + 1); if (t != null) items.add(t); t =
+     * get(m, n - 1); if (t != null) items.add(t);
+     */
     return items;
   }
 
@@ -661,7 +652,7 @@ class GameBoard implements Iterable<Tile> {
     Tile t = get(m, n);
     if (t == null)
       return 0;
-    
+
     for (Tile adjacent : adjacent(m, n)) {
       if (adjacent.value == t.value) {
         count++;
@@ -709,24 +700,22 @@ class GameBoard implements Iterable<Tile> {
       for (int n = 0; n < size; ++n) {
         Tile t = this.get(m, n);
         Tile oT = o.get(m, n);
-        //System.out.println("t: " + t);
-        //System.out.println("oT: " + oT);
+        // System.out.println("t: " + t);
+        // System.out.println("oT: " + oT);
         if (t != oT) {
           if (t == null && oT == null) {
 
-          }
-          else {
-            //System.out.println(String.format("%s != %s", t, oT));
+          } else {
+            // System.out.println(String.format("%s != %s", t, oT));
             return false;
 
           }
           // Shouldn't have to need this but I do???
           // Otherwise it thinks if they're both null
           /*
-          if (t != null && oT != null) {
-            System.out.println(String.format("%s != %s", t, oT));
-            return false;
-          }*/
+           * if (t != null && oT != null) { System.out.println(String.format("%s != %s",
+           * t, oT)); return false; }
+           */
         }
       }
     }
@@ -744,41 +733,31 @@ class BoardScore {
     this.score = score;
   }
 }
+
 public class GameSolver {
 
   /*
-  Direction first_search(GameBoard start, int maxDepth) {
-
-    Set<GameBoard> seen = new HashSet<>();
-    Queue<GameBoard> q = new ArrayDeque<>();
-
-    int depth = 0;
-    int elementsToDepthIncrease = 1;
-    int nextElementsToDepthIncrease = 0;
-
-    while (!q.isEmpty()) {
-      GameBoard current = q.poll();
-      if (seen.contains(current)) {
-        continue;b
-      }
-
-
-      // Calculate score
-
-      nextElementsToDepthIncrease += 4;
-      if (--elementsToDepthIncrease == 0) {
-        if (++depth > maxDepth)
-          return;
-
-        elementsToDepthIncrease = nextElementsToDepthIncrease;
-        nextElementsToDepthIncrease = 0;
-      }
-      for (GameBoard b : b.enumerate()) {
-        q.add(b);
-      }
-    }
-  }
-*/
+   * Direction first_search(GameBoard start, int maxDepth) {
+   * 
+   * Set<GameBoard> seen = new HashSet<>(); Queue<GameBoard> q = new
+   * ArrayDeque<>();
+   * 
+   * int depth = 0; int elementsToDepthIncrease = 1; int
+   * nextElementsToDepthIncrease = 0;
+   * 
+   * while (!q.isEmpty()) { GameBoard current = q.poll(); if
+   * (seen.contains(current)) { continue;b }
+   * 
+   * 
+   * // Calculate score
+   * 
+   * nextElementsToDepthIncrease += 4; if (--elementsToDepthIncrease == 0) { if
+   * (++depth > maxDepth) return;
+   * 
+   * elementsToDepthIncrease = nextElementsToDepthIncrease;
+   * nextElementsToDepthIncrease = 0; } for (GameBoard b : b.enumerate()) {
+   * q.add(b); } } }
+   */
 
   static float EMPTY_SPACES_WEIGHT = 10000.0f;
   static float SUM_WEIGHT = 400.0f;
@@ -800,66 +779,65 @@ public class GameSolver {
   static int HIGH_VALUE = 128;
 
   static float first_score(GameBoard board, GameBoard prev) {
-      if (board.count_value(2048) > 0) {
-        return Float.MAX_VALUE;
+    if (board.count_value(2048) > 0) {
+      return Float.MAX_VALUE;
+    }
+
+    float score = 0;
+    // Score the board
+    // float EMPTY_SPACES_CONSTANT;
+    int max = board.maxValue();
+    if (max > prev.maxValue()) {
+      score += Math.pow(max * MAX_VALUE_MULTIPLIER, MAX_VALUE_EXP);
+    }
+
+    score += board.count_value(256) * 256 * 1000;
+    score += board.count_value(512) * 512 * 100000;
+    score += board.count_value(1024) * 1024 * 1000000;
+
+    int empty_count = board.emptySpaces();
+    score += empty_count * EMPTY_SPACES_WEIGHT;
+
+    int sum = board.sum();
+    score += sum * SUM_WEIGHT;
+
+    int merge_count = prev.tileCount() - board.tileCount();
+    if (merge_count > 0) {
+      score += merge_count * MERGED_COUNT_WEIGHT;
+    }
+
+    score += board.adjacencySum() * MERGE_POTENTIAL_WEIGHT;
+
+    for (int i = HIGH_VALUE; i < 2048; i *= 2) {
+      if (board.count_value(i) > HIGH_OVERFLOW_LIMIT) {
+        score -= i * HIGH_OVERFLOW_PENALTY_MULT;
       }
+    }
 
-      float score = 0;
-      // Score the board
-      // float EMPTY_SPACES_CONSTANT;
-      int max = board.maxValue();
-      if (max > prev.maxValue()) {
-        score += Math.pow(max * MAX_VALUE_MULTIPLIER, MAX_VALUE_EXP);
-      }
+    if (board.over && board.won == false)
+      score -= LOST_PENALTY;
 
-      score += board.count_value(256) * 256 * 1000;
-      score += board.count_value(512) * 512 * 100000;
-      score += board.count_value(1024) * 1024 * 1000000;
-
-
-      int empty_count = board.emptySpaces();
-      score += empty_count * EMPTY_SPACES_WEIGHT;
-
-      int sum = board.sum();
-      score += sum * SUM_WEIGHT;
-
-      int merge_count = prev.tileCount() - board.tileCount();
-      if (merge_count > 0) {
-        score += merge_count * MERGED_COUNT_WEIGHT;
-      }
-
-      score += board.adjacencySum() * MERGE_POTENTIAL_WEIGHT;
-
-      for (int i = HIGH_VALUE; i < 2048; i *= 2) {
-        if (board.count_value(i) > HIGH_OVERFLOW_LIMIT) {
-          score -= i * HIGH_OVERFLOW_PENALTY_MULT;
-        }
-      }
-
-      if (board.over && board.won == false)
-        score -= LOST_PENALTY;
-
-      int high_corner_count = 0;
-      for (Tile t : board.corners()) {
-        if (t != null) {
-          score += t.value * CORNER_WEIGHT;
-          if (t.value >= HIGH_VALUE) {
-            if (++high_corner_count >= 1) {
-              score -= MULTIPLE_HIGH_CORNER_PENALTY * t.value;
-            }
-
+    int high_corner_count = 0;
+    for (Tile t : board.corners()) {
+      if (t != null) {
+        score += t.value * CORNER_WEIGHT;
+        if (t.value >= HIGH_VALUE) {
+          if (++high_corner_count >= 1) {
+            score -= MULTIPLE_HIGH_CORNER_PENALTY * t.value;
           }
+
         }
       }
+    }
 
-      for (int i = HIGH_VALUE; i < 2048; i *= 2) {
-        int count = board.merges.getOrDefault(i, 0);
+    for (int i = HIGH_VALUE; i < 2048; i *= 2) {
+      int count = board.merges.getOrDefault(i, 0);
 
-        score += Math.pow(i * count * HIGH_MERGE_MULTIPLIER, HIGH_MERGE_EXP);
-      }
+      score += Math.pow(i * count * HIGH_MERGE_MULTIPLIER, HIGH_MERGE_EXP);
+    }
 
-      //System.out.println(score);
-      return score;
+    // System.out.println(score);
+    return score;
   }
 
   static Direction first_search(GameBoard current, EvictingQueue prev) {
@@ -927,11 +905,9 @@ public class GameSolver {
     System.out.println("Game over");
     if (board.won) {
       System.out.println("You won");
-    } else 
+    } else
       System.out.println("Better luck next time.");
-   }
-  
-
+  }
 
   static class MoveResult {
     public Direction direction;
@@ -963,7 +939,7 @@ public class GameSolver {
         float score = first_score(newBoard, board);
 
         if (depth != maxDepth) {
-          MoveResult result = second_next(newBoard,  depth + 1, maxDepth);
+          MoveResult result = second_next(newBoard, depth + 1, maxDepth);
           score += result.score * Math.pow(0.9, depth + 1);
         }
 
@@ -976,7 +952,6 @@ public class GameSolver {
 
     return new MoveResult(best_direction, best_score);
   }
-
 
   public static void second_test(long seed) {
     final int LIMIT = 2000;
@@ -998,13 +973,11 @@ public class GameSolver {
 
       board.move(nextMove);
       /*
-      if (board.count_value(128) >= 2) {
-        play(board);
-      }
-      */
+       * if (board.count_value(128) >= 2) { play(board); }
+       */
       i++;
     }
-    
+
     System.out.println(board);
     System.out.println("Game over");
     System.out.println("Total moves mode: " + i);
@@ -1026,9 +999,12 @@ public class GameSolver {
       }
     }
     if (dir != Direction.Left) {
-      if (board.canMove(Direction.Down)) dir = Direction.Down;
-      if (board.canMove(Direction.Right)) dir = Direction.Right;
-      if (board.canMove(Direction.Left)) dir = Direction.Left;
+      if (board.canMove(Direction.Down))
+        dir = Direction.Down;
+      if (board.canMove(Direction.Right))
+        dir = Direction.Right;
+      if (board.canMove(Direction.Left))
+        dir = Direction.Left;
     }
 
     return dir;
@@ -1054,7 +1030,7 @@ public class GameSolver {
       board.move(nextMove);
       i++;
     }
-    
+
     System.out.println(board);
     System.out.println("Game over");
     System.out.println("Total moves mode: " + i);
@@ -1071,11 +1047,10 @@ public class GameSolver {
   }
 
   public static float neat_score(GameBoard board) {
-    /* 
-      We're going to try to go back and forth down the grid, like a snake.
-      Start from a corner
-      8 possible paths
-    */
+    /*
+     * We're going to try to go back and forth down the grid, like a snake. Start
+     * from a corner 8 possible paths
+     */
 
     List<Float> scores = new ArrayList<>();
 
@@ -1205,7 +1180,7 @@ public class GameSolver {
       }
       reversed = !reversed;
     }
-    
+
     scores.add(score);
     score = 0.0f;
     reversed = true;
@@ -1225,7 +1200,13 @@ public class GameSolver {
     }
 
     scores.add(score);
-    
+
+    float max = Collections.max(scores);
+
+    for (Tile t : board.corners()) {
+      max += t.value;
+    }
+
     return Collections.max(scores);
   }
 
@@ -1236,18 +1217,14 @@ public class GameSolver {
       if (board.canMove(d)) {
         GameBoard newBoard = board.peek(d);
 
-        if (newBoard.merges.size() >= 3)
-          return new MoveResult(best_direction, best_score);
-
         float score = neat_score(newBoard);
 
         if (depth != maxDepth) {
-          MoveResult result = neat_next(newBoard,  depth + 1, maxDepth);
+          MoveResult result = neat_next(newBoard, depth + 1, maxDepth);
           // Diminishing returns the farther you go down
           score += result.score * Math.pow(0.9, depth + 1);
         }
 
-        
         if (score > best_score) {
           best_direction = d;
           best_score = score;
@@ -1260,12 +1237,13 @@ public class GameSolver {
 
   public static boolean neat_test(long seed) {
     final int LIMIT = 2000;
-    final int SEARCH_DEPTH = 5;
+    final int SEARCH_DEPTH = 4;
     GameBoard board = new GameBoard();
     board.setSeed(seed);
     // We need to try searching deeper, so maybe we can make a better prediction
 
     System.out.println("Welcome to the last test you'll ever need.\n");
+    System.out.println("Seed: " + seed);
     int i = 0;
     while (!board.over) {
       if (i >= LIMIT)
@@ -1276,12 +1254,16 @@ public class GameSolver {
       MoveResult nextMove = neat_next(board, SEARCH_DEPTH);
       System.out.println("Decided to go in direction: " + nextMove.direction);
 
+      if (nextMove.direction == null) {
+        break;
+      }
       board.move(nextMove.direction);
       i++;
     }
-    
+
     System.out.println(board);
     System.out.println("Game over");
+    System.out.println("Seed: " + seed);
     System.out.println("Total moves mode: " + i);
     if (board.won) {
       System.out.println("You win!");
@@ -1293,6 +1275,134 @@ public class GameSolver {
 
   }
 
+  static class AverageResult {
+    public float score;
+    public float count;
+
+    public AverageResult(float score, float count) {
+      this.score = score;
+      this.count = count;
+    }
+  }
+
+  public static float merge_score(GameBoard board) {
+    float score = 0.0f;
+    for(int i = 2; i <= 2048; i *= 2) {
+      int merged = board.merges.getOrDefault(i, 0);
+      score += merged * i;
+    }
+
+    return score;
+  }
+
+  public static AverageResult average_run(GameBoard board, Direction direction) {
+    Random rand = new Random();
+      GameBoard newBoard = board.peek(direction);
+      if(newBoard.moved == false) {
+        return null;
+      }
+
+      // Score is the sum of all merges that happened this run
+      float score = merge_score(newBoard);
+      float moves = 1;
+      while (board.movesAvailable()) {
+        // Go in a random direction
+        Direction to = Direction.values()[rand.nextInt(4)];
+        boolean moved = newBoard.move(to);
+        //System.out.println(newBoard);
+        if (moved == false) {
+          break;
+        }
+
+        score += merge_score(newBoard);
+        moves++;
+      }
+      return new AverageResult(score, moves);
+  }
+
+  public static AverageResult average_perform_runs(GameBoard board, Direction direction, int amount) {
+    float totalScore = 0.0f;
+    int performed = 0;
+
+    for (int i = 0; i < amount; i++) {
+      // Do the run
+      AverageResult run = average_run(board, direction);
+      if (run == null) {
+        return null;
+      }
+      totalScore += run.score;
+      performed += run.count;
+    }
+
+    float average = totalScore / amount;
+    float moves = performed / amount;
+
+    return new AverageResult(average, moves);
+  }
+
+  public static MoveResult average_next(GameBoard board, int RUN_COUNT) {
+    float bestScore = 0.0f;
+    Direction bestDirection = null;
+
+    for (Direction d : Direction.values()) {
+      AverageResult result = average_perform_runs(board, d, RUN_COUNT);
+      if (result == null) {
+        continue;
+      }
+
+      if (result.score > bestScore) {
+        bestScore = result.score;
+        bestDirection = d;
+        
+      }
+    }
+
+    return new MoveResult(bestDirection, bestScore);
+  }
+
+  public static boolean average_test(long seed) {
+    /*
+     * Gather the results of performing a move several times randomly. Then we can gauge the
+     * average score increase per move direction
+     */
+    final int LIMIT = 2000;
+    final int SEARCH_DEPTH = 4;
+    final int RUNS_TO_AVERAGE = 150;
+    GameBoard board = new GameBoard();
+    board.setSeed(seed);
+
+    System.out.println("This time, I think we've got it.\n");
+    System.out.println("Seed: " + seed);
+    int i = 0;
+    while (board.count_value(2048) <= 0) {
+      if (i >= LIMIT)
+        break;
+
+      System.out.println(board);
+
+      MoveResult nextMove = average_next(board, RUNS_TO_AVERAGE);
+      System.out.println("Decided to go in direction: " + nextMove.direction);
+
+      if (nextMove.direction == null) {
+        break;
+      }
+      board.move(nextMove.direction);
+      i++;
+    }
+
+    System.out.println(board);
+    System.out.println("Game over");
+    System.out.println("Seed: " + seed);
+    System.out.println("Total moves mode: " + i);
+    if (board.won) {
+      System.out.println("You win!");
+      return true;
+    } else {
+      System.out.println("Better luck next time.");
+      return false;
+    }
+
+  }
 
   public static void run_tests() {
     final long seed = System.currentTimeMillis();
@@ -1301,16 +1411,15 @@ public class GameSolver {
 
   public static void run_tests(long seed) {
     // Maybe compare time here?
-    //first_test(seed);
-    //second_test(seed);
-    //dumb_test(seed);
-    //neat_test(seed);
-    while (neat_test(seed)!= true) {
-
-    }
+    // first_test(seed);
+    // second_test(seed);
+    // dumb_test(seed);
+    // neat_test(seed);
+    average_test(seed);
 
   }
 
+  // Shouldn't really be needed
   public static void examine(GameBoard board) {
     Scanner scanner = new Scanner(System.in);
     boolean done = false;
@@ -1322,57 +1431,57 @@ public class GameSolver {
         done = true;
         break;
       }
-      
+
       Tile t = board.get(x, y);
       if (t != null) {
         System.out.println(t);
-      }
-      else {
+      } else {
         System.out.println("T is null");
       }
     }
   }
+
+  // Give control to the terminal
   public static void play(GameBoard board) {
     Scanner scanner = new Scanner(System.in);
-       System.out.println(board);
-       while (board.over != true) {
-         System.out.println(board);
-         System.out.println("What would you like to do?");
-         int i = 0;
-         for (Direction d : Direction.values()) {
-           System.out.println(String.format("%d: %s", i, d));
-           i++;
-         }
-         int selected = scanner.nextInt();
-         switch (selected) {
-           case 8:
-            selected = 0;
-              break;
-            case 4:
-              selected = 1;
-              break;
-             case 2:
-              selected = 3;
-              break;
-            case 6:
-              selected = 2;
-              break;
+    System.out.println(board);
+    while (board.over != true) {
+      System.out.println(board);
+      System.out.println("What would you like to do?");
+      int i = 0;
+      for (Direction d : Direction.values()) {
+        System.out.println(String.format("%d: %s", i, d));
+        i++;
+      }
+      int selected = scanner.nextInt();
+      switch (selected) {
+      case 8:
+        selected = 0;
+        break;
+      case 4:
+        selected = 1;
+        break;
+      case 2:
+        selected = 3;
+        break;
+      case 6:
+        selected = 2;
+        break;
 
-            case 5:
-              examine(board);
-              continue;
-         }
-         board.move(Direction.values()[selected]);
-    
-       }
-    
-       System.out.println("Game over");
-       if (board.won) {
-         System.out.println("You win!");
-       }
-       else {
-         System.out.println("Better luck next time.");
-       } 
+      case 5:
+        examine(board);
+        continue;
+      }
+      board.move(Direction.values()[selected]);
+
+    }
+
+    System.out.println("Game over");
+    if (board.won) {
+      System.out.println("You win!");
+    } else {
+      System.out.println("Better luck next time.");
+    }
   }
 
   public static void main(String[] args) {
@@ -1380,7 +1489,7 @@ public class GameSolver {
     Scanner scanner = new Scanner(System.in);
 
     run_tests();
-    //play(new GameBoard());
+    // play(new GameBoard());
     /*
      * System.out.println(board); for (int i = 0; i < 5; i++) { board.doUp();
      * System.out.println(board);
