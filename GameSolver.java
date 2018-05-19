@@ -244,7 +244,7 @@ class GameBoard implements Iterable<Tile> {
   }
 
   public void set(Tile t) {
-    set(t.x, t.y, t);
+    cells[t.x][t.y] = t;
   }
 
   public void remove(Tile t) {
@@ -317,8 +317,8 @@ class GameBoard implements Iterable<Tile> {
   public PositionProspect findFurthestPosition(Position p, Vector v) {
     Position previous;
 
-    System.err.println("Calculating furthest position");
-    System.err.println(String.format("from P: %s with v: %s", p, v));
+    // System.err.println("Calculating furthest position");
+    // System.err.println(String.format("from P: %s with v: %s", p, v));
 
     // FIXME: Allocation here when we don't *really* need to
     do {
@@ -359,23 +359,23 @@ class GameBoard implements Iterable<Tile> {
 
     merges.clear();
     resetTiles();
+    Tile tile;
 
     for (int x : traversals.x) {
       for (int y : traversals.y) {
         System.err.println(String.format("x: %d, y: %d", x, y));
 
         final Position position = new Position(x, y);
-        Tile tile = get(position);
+        tile = get(position);
 
         if (tile != null) {
 
           PositionProspect positions = findFurthestPosition(position, v);
-
-          Tile next = get(positions.next);
-
+          Tile next = get(positions.next.m, positions.next.n);
           // Determine if these tiles need to merge
 
-          if (next != null && next.value == tile.value && next.mergedFrom == null) {
+          // Only one merge per row
+          if (next != null && next.value.equals(tile.value) && next.mergedFrom == null) {
             
             Tile merged = new Tile(positions.next, tile.value * 2);
             // Keep track for score purposes
@@ -393,7 +393,6 @@ class GameBoard implements Iterable<Tile> {
             if (merged.value == 2048) {
               won = true;
             }
-
           } else {
             System.err.println("Moving tile, no merge");
             moveTile(tile, positions.furthest);
@@ -512,8 +511,15 @@ class GameBoard implements Iterable<Tile> {
         t = get(x, y);
         if (t != null) {
           for (Tile a : adjacent(x, y)) {
-            if (t.value == a.value)
+            if (t.value == a.value) {
+              if (t.value == 128) {
+                System.out.println("found 128 match");
+                while (true) {
+
+                }
+              }
               return true;   
+            }
           }
         }
         //t = get(x, y);
@@ -626,7 +632,17 @@ class GameBoard implements Iterable<Tile> {
 
   public List<Tile> adjacent(int m, int n) {
     List<Tile> items = new ArrayList<>();
-    
+   
+    for (Direction d : Direction.values()) {
+      Vector v = getDirectionVector(d);
+
+      Position p = new Position(m + v.x, n + v.y);
+      Tile a = get(p);
+      if (a != null) {
+        items.add(a);
+      }
+    }
+    /*
     Tile t;
     t = get(m + 1, n);
     if (t != null) items.add(t);
@@ -636,7 +652,7 @@ class GameBoard implements Iterable<Tile> {
     if (t != null) items.add(t);
     t = get(m, n - 1);
     if (t != null) items.add(t);
-
+    */
     return items;
   }
 
@@ -734,7 +750,7 @@ public class GameSolver {
     while (!q.isEmpty()) {
       GameBoard current = q.poll();
       if (seen.contains(current)) {
-        continue;
+        continue;b
       }
 
 
@@ -787,8 +803,10 @@ public class GameSolver {
         score += Math.pow(max * MAX_VALUE_MULTIPLIER, MAX_VALUE_EXP);
       }
 
-      score += board.count_value(256) * 256 * 100000;
-      score += board.count_value(512) * 512 * 1000;
+      score += board.count_value(256) * 256 * 10000;
+      score += board.count_value(512) * 512 * 10000000;
+      score += board.count_value(1024) * 1024 * 10000000;
+
 
       int empty_count = board.emptySpaces();
       score += empty_count * EMPTY_SPACES_WEIGHT;
@@ -850,58 +868,6 @@ public class GameSolver {
       }
 
       float score = first_score(board, current);
-      /*
-      float score = 0;
-      // Score the board
-      // float EMPTY_SPACES_CONSTANT;
-      float EMPTY_SPACES_WEIGHT = 1800.0f;
-      float SUM_WEIGHT = 800.0f;
-      float MERGED_COUNT_WEIGHT = 2000.0f;
-      float CORNER_WEIGHT = 100.0f;
-      float MERGE_POTENTIAL_WEIGHT = 500.0f;
-
-      float LOST_PENALTY = 5000.0f;
-      float MULTIPLE_HIGH_CORNER_PENALTY = 1500.0f;
-      float HIGH_OVERFLOW_LIMIT = 2;
-      float HIGH_OVERFLOW_PENALTY_MULT = 3.0f;
-
-      int HIGH_VALUE = 128;
-
-      int empty_count = board.emptySpaces();
-      score += empty_count * EMPTY_SPACES_WEIGHT;
-
-      int sum = board.sum();
-      score += sum * SUM_WEIGHT;
-
-      int merge_count = current.tileCount() - board.tileCount();
-      if (merge_count > 0) {
-        score += merge_count * MERGED_COUNT_WEIGHT;
-      }
-
-      score += board.adjacencySum() * MERGE_POTENTIAL_WEIGHT;
-
-      for (int i = HIGH_VALUE; i < 2048; i *= 2) {
-        if (board.count_value(i) > HIGH_OVERFLOW_LIMIT) {
-          score -= i * HIGH_OVERFLOW_PENALTY_MULT;
-        }
-      }
-
-      if (board.over && board.won == false)
-        score -= LOST_PENALTY;
-
-      int high_corner_count = 0;
-      for (Tile t : board.corners()) {
-        if (t != null) {
-          score += t.value * CORNER_WEIGHT;
-          if (t.value >= HIGH_VALUE) {
-            if (++high_corner_count >= 1) {
-              score -= MULTIPLE_HIGH_CORNER_PENALTY;
-            }
-
-          }
-        }
-      }
-      */
       // Check if it's higher
       if (score > highest_score) {
         best = d;
@@ -950,18 +916,18 @@ public class GameSolver {
 
     System.out.println(board);
     System.out.println("Game over");
-    System.out.println("Total moves mode: " + i);
     if (board.won) {
-      System.out.println("You win!");
-    } else {
+      System.out.println("You won");
+    } else 
       System.out.println("Better luck next time.");
-    }
-  }
+   }
+  
 
 
   static class MoveResult {
     public Direction direction;
     public float score;
+
     public MoveResult(Direction d, float score) {
       this.direction = d;
       this.score = score;
@@ -1022,10 +988,11 @@ public class GameSolver {
       System.out.println("Decided to go in direction: " + nextMove);
 
       board.move(nextMove);
+      /*
       if (board.count_value(128) >= 2) {
         play(board);
       }
-
+      */
       i++;
     }
     
@@ -1053,6 +1020,27 @@ public class GameSolver {
 
   }
 
+  public static void examine(GameBoard board) {
+    Scanner scanner = new Scanner(System.in);
+    boolean done = false;
+    while (board.over == false || !done) {
+      int x = scanner.nextInt();
+      int y = scanner.nextInt();
+
+      if (x == -1) {
+        done = true;
+        break;
+      }
+      
+      Tile t = board.get(x, y);
+      if (t != null) {
+        System.out.println(t);
+      }
+      else {
+        System.out.println("T is null");
+      }
+    }
+  }
   public static void play(GameBoard board) {
     Scanner scanner = new Scanner(System.in);
        System.out.println(board);
@@ -1078,6 +1066,10 @@ public class GameSolver {
             case 6:
               selected = 2;
               break;
+
+            case 5:
+              examine(board);
+              continue;
          }
          board.move(Direction.values()[selected]);
     
