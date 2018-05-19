@@ -771,16 +771,16 @@ public class GameSolver {
   }
 */
 
-  static float EMPTY_SPACES_WEIGHT = 4000.0f;
+  static float EMPTY_SPACES_WEIGHT = 6000.0f;
   static float SUM_WEIGHT = 400.0f;
-  static float MERGED_COUNT_WEIGHT = 3000.0f;
+  static float MERGED_COUNT_WEIGHT = 2000.0f;
   static float CORNER_WEIGHT = 400.0f;
   static float MERGE_POTENTIAL_WEIGHT = 500.0f;
 
-  static float LOST_PENALTY = 5000.0f;
+  static float LOST_PENALTY = 500000.0f;
   static float MULTIPLE_HIGH_CORNER_PENALTY = 1700.0f;
-  static float HIGH_OVERFLOW_LIMIT = 3;
-  static float HIGH_OVERFLOW_PENALTY_MULT = 50.0f;
+  static float HIGH_OVERFLOW_LIMIT = 2;
+  static float HIGH_OVERFLOW_PENALTY_MULT = 70.0f;
 
   static float HIGH_MERGE_MULTIPLIER = 3.0f;
   static float HIGH_MERGE_EXP = 1.3f;
@@ -803,9 +803,9 @@ public class GameSolver {
         score += Math.pow(max * MAX_VALUE_MULTIPLIER, MAX_VALUE_EXP);
       }
 
-      score += board.count_value(256) * 256 * 10000;
-      score += board.count_value(512) * 512 * 10000000;
-      score += board.count_value(1024) * 1024 * 10000000;
+      score += board.count_value(256) * 256 * 1000;
+      score += board.count_value(512) * 512 * 100000;
+      score += board.count_value(1024) * 1024 * 1000000;
 
 
       int empty_count = board.emptySpaces();
@@ -945,7 +945,7 @@ public class GameSolver {
   }
 
   public static MoveResult second_next(GameBoard board, int depth, int maxDepth) {
-    float best_score = -1;
+    float best_score = -Float.MIN_VALUE;
     Direction best_direction = null;
     for (Direction d : Direction.values()) {
       if (board.canMove(d)) {
