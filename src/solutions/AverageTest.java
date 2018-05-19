@@ -83,7 +83,6 @@ public class AverageTest implements Solver {
     }
 
     public TestResult run() {
-        TestResult result = new TestResult();
 
         println("RandomAverageTest");
         print("seed:");
@@ -120,8 +119,7 @@ public class AverageTest implements Solver {
             println("loss");
         }
 
-        result.output = output.toString();
-        return result;
+        return new TestResult(board, i, output.toString());
 
     }
 

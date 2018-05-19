@@ -51,7 +51,6 @@ public class SnakeTest implements Solver, Callable<TestResult> {
     }
 
     public TestResult run() {
-        TestResult result = new TestResult();
 
         println("SnakeTest");
         print("seed:");
@@ -88,8 +87,7 @@ public class SnakeTest implements Solver, Callable<TestResult> {
             println("loss");
         }
 
-        result.output = output.toString();
-        return result;
+        return new TestResult(board, i, output.toString());
     }
 
 

@@ -342,7 +342,16 @@ public class GameSolver {
     run_tests(seed);
   }
 
+  static boolean parallel = false;
   public static void run_tests(long seed) {
+    // Prepare a lit of Solvers
+    // We'll use this to run them all concurrently, or to have the user select
+    if (parallel) {
+      // Do all at onces
+    }
+    else {
+
+    }
     // Maybe compare time here?
     // first_test(seed);
     // second_test(seed);
