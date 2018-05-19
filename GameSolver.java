@@ -683,6 +683,15 @@ class GameBoard implements Iterable<Tile> {
     return score;
   }
 
+  public int tilesInRow(int row) {
+    int count = 0;
+    for (Tile t : cells[row]) {
+      if (t != null)
+        count++;
+    }
+    return count;
+  }
+
   // TODO: Implement equal for board
   public boolean equals(Object other) {
     if (other == null)
@@ -771,7 +780,7 @@ public class GameSolver {
   }
 */
 
-  static float EMPTY_SPACES_WEIGHT = 6000.0f;
+  static float EMPTY_SPACES_WEIGHT = 10000.0f;
   static float SUM_WEIGHT = 400.0f;
   static float MERGED_COUNT_WEIGHT = 2000.0f;
   static float CORNER_WEIGHT = 400.0f;
@@ -970,7 +979,7 @@ public class GameSolver {
 
 
   public static void second_test(long seed) {
-    final int LIMIT = 1500;
+    final int LIMIT = 2000;
     final int SEARCH_DEPTH = 4;
     GameBoard board = new GameBoard();
     board.setSeed(seed);
@@ -1007,6 +1016,284 @@ public class GameSolver {
 
   }
 
+  // Try to only go in 3 directions
+  static Direction dumb(GameBoard board) {
+    Direction dir = Direction.Up;
+    Tile t = board.get(board.size - 1, 0);
+    if (t == null) {
+      if (board.tilesInRow(board.size - 1) > 0) {
+        dir = Direction.Left;
+      }
+    }
+    if (dir != Direction.Left) {
+      if (board.canMove(Direction.Down)) dir = Direction.Down;
+      if (board.canMove(Direction.Right)) dir = Direction.Right;
+      if (board.canMove(Direction.Left)) dir = Direction.Left;
+    }
+
+    return dir;
+  }
+
+  static void dumb_test(long seed) {
+    final int LIMIT = 1500;
+    GameBoard board = new GameBoard();
+    board.setSeed(seed);
+    // We need to try searching deeper, so maybe we can make a better prediction
+
+    System.out.println("Welcome to the dumb test.\n");
+    int i = 0;
+    while (!board.over) {
+      if (i >= LIMIT)
+        break;
+
+      System.out.println(board);
+
+      Direction nextMove = dumb(board);
+      System.out.println("Decided to go in direction: " + nextMove);
+
+      board.move(nextMove);
+      i++;
+    }
+    
+    System.out.println(board);
+    System.out.println("Game over");
+    System.out.println("Total moves mode: " + i);
+    if (board.won) {
+      System.out.println("You win!");
+    } else {
+      System.out.println("Better luck next time.");
+    }
+
+  }
+
+  public static MoveResult neat_next(GameBoard board, int depth) {
+    return second_next(board, 0, depth);
+  }
+
+  public static float neat_score(GameBoard board) {
+    /* 
+      We're going to try to go back and forth down the grid, like a snake.
+      Start from a corner
+      8 possible paths
+    */
+
+    List<Float> scores = new ArrayList<>();
+
+    float decay = 0.25f;
+
+    float score = 0.0f;
+    // To go back and forth down the row
+    boolean reversed = false;
+    float weight = 1.0f;
+    for (int n = 0; n < board.size; ++n) {
+      for (int m = 0; m < board.size; ++m) {
+        int x = m;
+        int y = n;
+        if (reversed) {
+          x = board.size - 1 - m;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+
+    scores.add(score);
+    score = 0.0f;
+    reversed = false;
+    weight = 1.0f;
+    for (int m = 0; m < board.size; ++m) {
+      for (int n = 0; n < board.size; ++n) {
+        int x = m;
+        int y = n;
+        if (reversed) {
+          y = board.size - 1 - n;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+
+    scores.add(score);
+    score = 0.0f;
+    reversed = false;
+    weight = 1.0f;
+    for (int n = 0; n < board.size; ++n) {
+      for (int m = 0; m < board.size; ++m) {
+        int x = m;
+        int y = board.size - 1 - n;
+        if (reversed) {
+          x = board.size - 1 - m;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+
+    scores.add(score);
+    score = 0.0f;
+    reversed = false;
+    weight = 1.0f;
+    for (int m = 0; m < board.size; ++m) {
+      for (int n = 0; n < board.size; ++n) {
+        int x = board.size - 1 - m;
+        int y = n;
+        if (reversed) {
+          y = board.size - 1 - n;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+    scores.add(score);
+    score = 0.0f;
+    reversed = true;
+    weight = 1.0f;
+    for (int n = 0; n < board.size; ++n) {
+      for (int m = 0; m < board.size; ++m) {
+        int x = m;
+        int y = n;
+        if (reversed) {
+          x = board.size - 1 - m;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+
+    scores.add(score);
+    score = 0.0f;
+    reversed = true;
+    weight = 1.0f;
+    for (int m = 0; m < board.size; ++m) {
+      for (int n = 0; n < board.size; ++n) {
+        int x = m;
+        int y = n;
+        if (reversed) {
+          y = board.size - 1 - n;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+
+    scores.add(score);
+    score = 0.0f;
+    reversed = true;
+    weight = 1.0f;
+    for (int n = 0; n < board.size; ++n) {
+      for (int m = 0; m < board.size; ++m) {
+        int x = m;
+        int y = board.size - 1 - n;
+        if (reversed) {
+          x = board.size - 1 - m;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+    
+    scores.add(score);
+    score = 0.0f;
+    reversed = true;
+    weight = 1.0f;
+    for (int m = 0; m < board.size; ++m) {
+      for (int n = 0; n < board.size; ++n) {
+        int x = board.size - 1 - m;
+        int y = n;
+        if (reversed) {
+          y = board.size - 1 - n;
+        }
+        Tile t = board.get(x, y);
+        score += t.value * weight;
+        weight *= decay;
+      }
+      reversed = !reversed;
+    }
+
+    scores.add(score);
+    
+    return Collections.max(scores);
+  }
+
+  public static MoveResult neat_next(GameBoard board, int depth, int maxDepth) {
+    float best_score = -Float.MIN_VALUE;
+    Direction best_direction = null;
+    for (Direction d : Direction.values()) {
+      if (board.canMove(d)) {
+        GameBoard newBoard = board.peek(d);
+
+        if (newBoard.merges.size() >= 3)
+          return new MoveResult(best_direction, best_score);
+
+        float score = neat_score(newBoard);
+
+        if (depth != maxDepth) {
+          MoveResult result = neat_next(newBoard,  depth + 1, maxDepth);
+          // Diminishing returns the farther you go down
+          score += result.score * Math.pow(0.9, depth + 1);
+        }
+
+        
+        if (score > best_score) {
+          best_direction = d;
+          best_score = score;
+        }
+      }
+    }
+
+    return new MoveResult(best_direction, best_score);
+  }
+
+  public static boolean neat_test(long seed) {
+    final int LIMIT = 2000;
+    final int SEARCH_DEPTH = 5;
+    GameBoard board = new GameBoard();
+    board.setSeed(seed);
+    // We need to try searching deeper, so maybe we can make a better prediction
+
+    System.out.println("Welcome to the last test you'll ever need.\n");
+    int i = 0;
+    while (!board.over) {
+      if (i >= LIMIT)
+        break;
+
+      System.out.println(board);
+
+      MoveResult nextMove = neat_next(board, SEARCH_DEPTH);
+      System.out.println("Decided to go in direction: " + nextMove.direction);
+
+      board.move(nextMove.direction);
+      i++;
+    }
+    
+    System.out.println(board);
+    System.out.println("Game over");
+    System.out.println("Total moves mode: " + i);
+    if (board.won) {
+      System.out.println("You win!");
+      return true;
+    } else {
+      System.out.println("Better luck next time.");
+      return false;
+    }
+
+  }
+
+
   public static void run_tests() {
     final long seed = System.currentTimeMillis();
     run_tests(seed);
@@ -1015,8 +1302,12 @@ public class GameSolver {
   public static void run_tests(long seed) {
     // Maybe compare time here?
     //first_test(seed);
-    second_test(seed);
+    //second_test(seed);
+    //dumb_test(seed);
+    //neat_test(seed);
+    while (neat_test(seed)!= true) {
 
+    }
 
   }
 
