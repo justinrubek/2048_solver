@@ -29,7 +29,6 @@ class BoardIterator implements Iterator<Tile> {
   }
 
   public boolean hasNext() {
-    System.err.println("Checking for next");
     if (m >= board.size && n >= board.size)
       return false;
     return true;
@@ -51,6 +50,7 @@ class BoardIterator implements Iterator<Tile> {
 public class GameBoard {
   public final Random rand = new Random();
   public static final float twoProbability = 0.9f;
+  int WIN_VALUE = 2048;
 
   public boolean won = false;
   public boolean over = false;
@@ -84,6 +84,13 @@ public class GameBoard {
 
   public void setSeed(long seed) {
     rand.setSeed(seed);
+  }
+
+  // Set the win value to 2^newExp
+  public void setWinValue(int newExp) {
+    if (newExp < 31) {
+      WIN_VALUE = (int) Math.pow(2, newExp);
+    }
   }
 
   public static GameBoard clone(GameBoard original) {
@@ -238,8 +245,8 @@ public class GameBoard {
     moved = false;
 
     Vector v = getDirectionVector(direction);
-    System.err.println(v);
-    System.err.println(direction);
+    //System.err.println(v);
+    //System.err.println(direction);
     Traversals traversals = new Traversals(direction, size);
 
     merges.clear();
@@ -248,7 +255,7 @@ public class GameBoard {
 
     for (int x : traversals.x) {
       for (int y : traversals.y) {
-        System.err.println(String.format("x: %d, y: %d", x, y));
+        //System.err.println(String.format("x: %d, y: %d", x, y));
 
         final Position position = new Position(x, y);
         tile = get(position);
@@ -271,21 +278,18 @@ public class GameBoard {
             remove(tile);
 
             tile.updatePosition(positions.next);
-            if (merged.value >= 128) {
-              System.err.println(String.format("Merged %d amnd %d at %s", tile.value, next.value, positions.next));
-            }
 
-            if (merged.value == 2048) {
+            if (merged.value == WIN_VALUE) {
               won = true;
+              over = true;
             }
           } else {
-            System.err.println("Moving tile, no merge");
             moveTile(tile, positions.furthest);
           }
 
           // It isn't in it's original place
           if (!tile.isAt(position)) {
-            System.err.println("Detected change of position");
+            //System.err.println("Detected change of position");
             moved = true;
           }
 
@@ -400,18 +404,10 @@ public class GameBoard {
         if (t != null) {
           for (Tile a : adjacent(x, y)) {
             if (t.value == a.value) {
-              if (t.value == 128) {
-                System.out.println("found 128 match");
-                while (true) {
-
-                }
-              }
               return true;
             }
           }
         }
-        // t = get(x, y);
-
         /*
          * if (t != null) { for (Direction dir : Direction.values()) { Vector v =
          * getDirectionVector(dir); Tile other = get(x + v.x, y + v.y);
@@ -585,30 +581,14 @@ public class GameBoard {
       for (int n = 0; n < size; ++n) {
         Tile t = this.get(m, n);
         Tile oT = o.get(m, n);
-        // System.out.println("t: " + t);
-        // System.out.println("oT: " + oT);
         if (t != null && oT != null && t.equals(oT) == false) {
           return false;
         }
         if (t == null && oT != null || t != null && oT == null) {
           return false;
         }
-      
-          /*if (t == null && oT == null) {
-
-          } else {
-            // System.out.println(String.format("%s != %s", t, oT));
-            return false;
-*/
-          // Shouldn't have to need this but I do???
-          // Otherwise it thinks if they're both null
-          /*
-           * if (t != null && oT != null) { System.out.println(String.format("%s != %s",
-           * t, oT)); return false; }
-           */
-        }
       }
-
+    }
     return true;
   }
 }

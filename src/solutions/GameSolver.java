@@ -10,6 +10,7 @@ import java.util.Collections;
 import java.util.Deque;
 import java.util.HashMap;
 import java.util.Set;
+import java.util.concurrent.Callable;
 import java.util.Queue;
 import java.util.HashSet;
 import java.util.Random;
@@ -337,7 +338,7 @@ public class GameSolver {
   }
 
   public static MoveResult neat_next(GameBoard board, int depth) {
-    return second_next(board, 0, depth);
+    return neat_next(board, 0, depth);
   }
 
   public static float neat_score(GameBoard board) {
@@ -362,7 +363,9 @@ public class GameSolver {
           x = board.size - 1 - m;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } // Still decay weight when we find nothing
         weight *= decay;
       }
       reversed = !reversed;
@@ -380,7 +383,9 @@ public class GameSolver {
           y = board.size - 1 - n;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -398,7 +403,9 @@ public class GameSolver {
           x = board.size - 1 - m;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -416,7 +423,9 @@ public class GameSolver {
           y = board.size - 1 - n;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -433,7 +442,9 @@ public class GameSolver {
           x = board.size - 1 - m;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -451,7 +462,9 @@ public class GameSolver {
           y = board.size - 1 - n;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -469,7 +482,9 @@ public class GameSolver {
           x = board.size - 1 - m;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -487,7 +502,9 @@ public class GameSolver {
           y = board.size - 1 - n;
         }
         Tile t = board.get(x, y);
-        score += t.value * weight;
+        if (t != null) {
+          score += t.value * weight;
+        } 
         weight *= decay;
       }
       reversed = !reversed;
@@ -498,7 +515,9 @@ public class GameSolver {
     float max = Collections.max(scores);
 
     for (Tile t : board.corners()) {
-      max += t.value;
+      if (t != null) {
+        max += t.value;
+      }
     }
 
     return Collections.max(scores);
@@ -665,8 +684,8 @@ public class GameSolver {
     GameBoard board = new GameBoard();
     board.setSeed(seed);
 
-    System.out.println("Test:RandomAverage");
-    System.out.println("Seed:" + seed);
+    System.out.println("RandomAverage");
+    System.out.println("seed:" + seed);
     int i = 0;
     while (board.count_value(2048) <= 0) {
       if (i >= LIMIT)
@@ -709,7 +728,11 @@ public class GameSolver {
     // second_test(seed);
     // dumb_test(seed);
     // neat_test(seed);
-    average_test(seed);
+    // average_test(seed);
+    Solver snake = new SnakeTest(seed);
+    TestResult r = snake.run();
+    
+    System.out.println(r.output);
 
   }
 
@@ -782,10 +805,10 @@ public class GameSolver {
     // Kickoff
     Scanner scanner = new Scanner(System.in);
 
-//    run_tests();
-    GameBoard b = new GameBoard();
-    GameBoard c = new GameBoard();
-    System.out.println(b.equals(c));
+    run_tests();
+//    GameBoard b = new GameBoard();
+//    GameBoard c = new GameBoard();
+//    System.out.println(b.equals(c));
     // play(new GameBoard());
   }
 }
