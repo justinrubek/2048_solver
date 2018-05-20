@@ -7,6 +7,6 @@ run:
 	java -cp .:build:**/*.class solutions.GameSolver
 
 clean:
-	rm -r ./build/
+	rm -rf ./build/
 
 do: clean build run
