@@ -8,7 +8,6 @@ import java.util.concurrent.*;
 import board.GameBoard;
 import board.Tile;
 import board.Direction;
-import solutions.GameSolver.MoveResult;
 
 /*
     This is a modified version of the original 'neat_test'
@@ -56,6 +55,8 @@ public class SnakeTest implements Solver, Callable<TestResult> {
         print("seed:");
         println(seed);
 
+        long start = System.nanoTime();
+
         int i = 0;
         while (!board.over) {
             if (i >= MOVE_LIMIT)
@@ -74,6 +75,8 @@ public class SnakeTest implements Solver, Callable<TestResult> {
             i++;
         }
 
+        long end = System.nanoTime();
+
         println(board);
         println("gameover");
         print("seed:");
@@ -87,7 +90,8 @@ public class SnakeTest implements Solver, Callable<TestResult> {
             println("loss");
         }
 
-        return new TestResult(board, i, output.toString());
+        return new TestResult(board).move_count(i).output(output.toString()).name("SnakeTest").time_taken(end - start);
+        // return new TestResult(board, i, output.toString(), "SnakeTest");
     }
 
 

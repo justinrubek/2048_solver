@@ -3,45 +3,24 @@ package solutions;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
-import java.util.concurrent.*;
 import java.util.Random;
 
 import board.GameBoard;
 import board.Tile;
 import board.Direction;
 
-class AverageResult {
-    public float score;
-    public float count;
-
-    public AverageResult(float score, float count) {
-        this.score = score;
-        this.count = count;
-    }
-}
-
-/*
- * This test goes in a direction, then tries a bunch of random moves until it
- * can no longer move It then uses the average of these scores to try to figure
- * which path is best
- * 
- * The "score" is the sum of all merges happening in the move
- * 
- * There should be room for eventual threading
- */
-
-public class AverageTest implements Solver {
+// Tries to only go in 3 directions when possible
+public class DumbTest implements Solver {
     public int MAX_SEARCH_DEPTH = 4;
     public int MOVE_LIMIT = 2000;
     public int WIN_POWER = 11;
-    public int RUNS_TO_MAKE = 50;
     public long seed;
 
     StringBuilder output;
 
     GameBoard board;
 
-    public AverageTest(long seed) {
+    public DumbTest(long seed) {
         this.seed = seed;
 
         board = new GameBoard();
@@ -50,29 +29,28 @@ public class AverageTest implements Solver {
     }
 
     public MoveResult decide(GameBoard board) {
-        float bestScore = 0.0f;
-        Direction bestDirection = null;
-
-        for (Direction d : Direction.values()) {
-            AverageResult result = multiple_runs(board, d, RUNS_TO_MAKE);
-            if (result == null) {
-                continue;
-            }
-
-            if (result.score > bestScore) {
-                bestScore = result.score;
-                bestDirection = d;
-
+        Direction dir = Direction.Up;
+        Tile t = board.get(board.size - 1, 0);
+        if (t == null) {
+            if (board.tilesInRow(board.size - 1) > 0) {
+                dir = Direction.Left;
             }
         }
-
-        return new MoveResult(bestDirection, bestScore);
+        if (dir != Direction.Left) {
+            if (board.canMove(Direction.Down))
+                dir = Direction.Down;
+            if (board.canMove(Direction.Right))
+                dir = Direction.Right;
+            if (board.canMove(Direction.Left))
+                dir = Direction.Left;
+        }
+        return new MoveResult(dir, 0.0f);
     }
-
 
     void print(Object o) {
         output.append(o);
-        // Print to stderr so we can see it live if we chose, but aren't required to for performance
+        // Print to stderr so we can see it live if we chose, but aren't required to for
+        // performance
         // This is probably still not good for performance? I have no idea
         System.err.print(o);
     }
@@ -84,12 +62,11 @@ public class AverageTest implements Solver {
 
     public TestResult run() {
 
-        println("AverageTest");
+        println("DumbTest");
         print("seed:");
         println(seed);
 
         long start = System.nanoTime();
-
         int i = 0;
         while (!board.over) {
             if (i >= MOVE_LIMIT)
@@ -109,6 +86,7 @@ public class AverageTest implements Solver {
         }
 
         long end = System.nanoTime();
+
         println(board);
         println("gameover");
         print("seed:");
@@ -117,13 +95,12 @@ public class AverageTest implements Solver {
         println(i);
         if (board.won) {
             println("win");
-        } 
-        else {
+        } else {
             println("loss");
         }
 
+        return new TestResult(board).move_count(i).output(output.toString()).name("DumbTest").time_taken(end - start);
 
-        return new TestResult(board).move_count(i).output(output.toString()).name("AverageTest").time_taken(end - start);
     }
 
     public static float score(GameBoard board) {
