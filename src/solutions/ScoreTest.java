@@ -71,8 +71,6 @@ public class ScoreTest implements Solver {
                 highest_score = score;
             }
         }
-        System.out.println("Decided to go in direction: " + best);
-
         return new MoveResult(best, highest_score);
     }
 

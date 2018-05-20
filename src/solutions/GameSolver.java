@@ -25,7 +25,7 @@ public class GameSolver {
     run_tests(seed);
   }
 
-  static boolean parallel = false;
+  static boolean parallel = true;
   static final int THREAD_COUNT = 5;
   public static void run_tests(long seed) {
     // Prepare a lit of Solvers
@@ -33,11 +33,15 @@ public class GameSolver {
     if (parallel) {
       // Do all at onces
       Collection<Solver> tests = new ArrayList<>();
-      tests.add(new SnakeTest(seed));
-      tests.add(new AverageTest(seed));
-      tests.add(new DumbTest(seed));
-      tests.add(new ScoreTest(seed));
-      tests.add(new DeepScoreTest(seed));
+      //tests.add(new ScoreTest(seed));
+      //tests.add(new DeepScoreTest(seed));
+      //tests.add(new DumbTest(seed));
+      //tests.add(new SnakeTest(seed));
+      //tests.add(new AverageTest(seed));
+      tests.add(new SmoothnessTest(seed));
+
+      // This test sucks
+      //tests.add(new ConcurrentAverageTest(seed));
 
       ExecutorService executor = Executors.newFixedThreadPool(THREAD_COUNT);
       try {
@@ -67,34 +71,12 @@ public class GameSolver {
       // TestResult r = snake.run();
 
       // Solver score = new ScoreTest(seed);
-      Solver deep_score = new DeepScoreTest(seed);
-      TestResult r = deep_score.run();
-      System.out.println(r.output);
+      //Solver deep_score = new DeepScoreTest(seed);
+      //TestResult r = deep_score.run();
+      //System.out.println(r.output);
       // System.out.println(avg.output);
     }
 
-  }
-
-  // Shouldn't really be needed
-  public static void examine(GameBoard board) {
-    Scanner scanner = new Scanner(System.in);
-    boolean done = false;
-    while (board.over == false || !done) {
-      int x = scanner.nextInt();
-      int y = scanner.nextInt();
-
-      if (x == -1) {
-        done = true;
-        break;
-      }
-
-      Tile t = board.get(x, y);
-      if (t != null) {
-        System.out.println(t);
-      } else {
-        System.out.println("T is null");
-      }
-    }
   }
 
   // Give control to the terminal
@@ -109,26 +91,29 @@ public class GameSolver {
         System.out.println(String.format("%d: %s", i, d));
         i++;
       }
-      int selected = scanner.nextInt();
-      switch (selected) {
-      case 8:
-        selected = 0;
-        break;
-      case 4:
-        selected = 1;
-        break;
-      case 2:
-        selected = 3;
-        break;
-      case 6:
-        selected = 2;
-        break;
-
-      case 5:
-        examine(board);
+      char selected;
+      try {
+        selected = (char) System.in.read();
+      } catch (Exception e) {
+        e.printStackTrace();
         continue;
       }
-      board.move(Direction.values()[selected]);
+      int val = 0;
+      switch (selected) {
+      case 'w':
+        val = 0;
+        break;
+      case 'a':
+        val = 1;
+        break;
+      case 's':
+        val = 3;
+        break;
+      case 'd':
+        val = 2;
+        break;
+      }
+      board.move(Direction.values()[val]);
 
     }
 
@@ -142,12 +127,9 @@ public class GameSolver {
 
   public static void main(String[] args) {
     // Kickoff
-    Scanner scanner = new Scanner(System.in);
 
-    run_tests();
-    // GameBoard b = new GameBoard();
-    // GameBoard c = new GameBoard();
-    // System.out.println(b.equals(c));
     // play(new GameBoard());
+    run_tests();
+
   }
 }

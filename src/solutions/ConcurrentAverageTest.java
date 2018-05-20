@@ -3,22 +3,13 @@ package solutions;
 import java.util.Collections;
 import java.util.List;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.concurrent.*;
 import java.util.Random;
 
 import board.GameBoard;
 import board.Tile;
 import board.Direction;
-
-class AverageResult {
-    public float score;
-    public float count;
-
-    public AverageResult(float score, float count) {
-        this.score = score;
-        this.count = count;
-    }
-}
 
 /*
  * This test goes in a direction, then tries a bunch of random moves until it
@@ -30,23 +21,28 @@ class AverageResult {
  * There should be room for eventual threading
  */
 
-public class AverageTest implements Solver {
+public class ConcurrentAverageTest implements Solver {
     public int MAX_SEARCH_DEPTH = 4;
     public int MOVE_LIMIT = 2000;
     public int WIN_POWER = 11;
     public int RUNS_TO_MAKE = 150;
+    public int THREAD_COUNT = 5;
     public long seed;
 
     StringBuilder output;
 
     GameBoard board;
 
-    public AverageTest(long seed) {
+    public ConcurrentAverageTest(long seed) {
         this.seed = seed;
 
         board = new GameBoard();
         board.setWinValue(WIN_POWER);
         output = new StringBuilder();
+    }
+
+    public void setThreadCount(int count) {
+        THREAD_COUNT = count;
     }
 
     public MoveResult decide(GameBoard board) {
@@ -69,10 +65,10 @@ public class AverageTest implements Solver {
         return new MoveResult(bestDirection, bestScore);
     }
 
-
     void print(Object o) {
         output.append(o);
-        // Print to stderr so we can see it live if we chose, but aren't required to for performance
+        // Print to stderr so we can see it live if we chose, but aren't required to for
+        // performance
         // This is probably still not good for performance? I have no idea
         System.err.print(o);
     }
@@ -84,7 +80,7 @@ public class AverageTest implements Solver {
 
     public TestResult run() {
 
-        println("AverageTest");
+        println("ConcurrentAverageTest");
         print("seed:");
         println(seed);
 
@@ -117,13 +113,12 @@ public class AverageTest implements Solver {
         println(i);
         if (board.won) {
             println("win");
-        } 
-        else {
+        } else {
             println("loss");
         }
 
-
-        return new TestResult(board).move_count(i).output(output.toString()).name("AverageTest").time_taken(end - start);
+        return new TestResult(board).move_count(i).output(output.toString()).name("ConcurrentAverageTest")
+                .time_taken(end - start);
     }
 
     public static float score(GameBoard board) {
@@ -136,44 +131,77 @@ public class AverageTest implements Solver {
         return score;
     }
 
-    public static AverageResult single_run(GameBoard board, Direction direction) {
+    class AverageRun implements Callable<AverageResult> {
+        GameBoard board;
+        Direction direction;
         Random rand = new Random();
-        GameBoard newBoard = board.peek(direction);
-        if (newBoard.moved == false) {
-            return null;
+
+        public AverageRun(GameBoard board, Direction direction) {
+            this.board = board;
+            this.direction = direction;
         }
 
-        // Score is the sum of all merges that happened this run
-        float score = score(newBoard);
-        float moves = 1;
-        while (board.movesAvailable()) {
-            // Go in a random direction
-            Direction to = Direction.values()[rand.nextInt(4)];
-            boolean moved = newBoard.move(to);
-            // System.out.println(newBoard);
-            if (moved == false) {
-                break;
+        @Override
+        public AverageResult call() throws Exception {
+            return single_run(board, direction);
+        }
+
+        public AverageResult single_run(GameBoard board, Direction direction) {
+            if (board.move(direction) == false) {
+                return null;
             }
 
-            score += score(newBoard);
-            moves++;
+            // Score is the sum of all merges that happened this run
+            float score = score(board);
+            float moves = 1;
+            while (board.movesAvailable()) {
+                // Go in a random direction
+                Direction to = Direction.values()[rand.nextInt(4)];
+                boolean moved = board.move(to);
+                // System.out.println(newBoard);
+                if (moved == false) {
+                    break;
+                }
+
+                score += score(board);
+                moves++;
+            }
+            return new AverageResult(score, moves);
         }
-        return new AverageResult(score, moves);
     }
 
-    public static AverageResult multiple_runs(GameBoard board, Direction direction, int amount) {
+    public AverageResult multiple_runs(GameBoard board, Direction direction, int amount) {
         float totalScore = 0.0f;
         int performed = 0;
 
+        Collection<AverageRun> runs = new ArrayList<>(amount);
         for (int i = 0; i < amount; i++) {
-            // Do the run
-            AverageResult run = single_run(board, direction);
-            if (run == null) {
-                return null;
-            }
-            totalScore += run.score;
-            performed += run.count;
+            AverageRun run = new AverageRun(GameBoard.clone(board), direction);
+            runs.add(run);
         }
+        ExecutorService executor = Executors.newFixedThreadPool(THREAD_COUNT);
+        try {
+            List<Future<AverageResult>> results = executor.invokeAll(runs);
+
+            for (Future<AverageResult> result : results) {
+                AverageResult r = result.get();
+
+                if (r == null) {
+                    executor.shutdown();
+                    return null;
+                }
+                // This could be improved by not waiting for them all to complete
+                totalScore += r.score;
+                performed += r.count;
+
+
+            }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
+        executor.shutdown();
 
         float average = totalScore / amount;
         float moves = performed / amount;

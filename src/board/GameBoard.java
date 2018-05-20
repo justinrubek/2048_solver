@@ -3,17 +3,11 @@ package board;
 import java.util.List;
 import java.util.Map;
 import java.util.Iterator;
-import java.util.LinkedHashMap;
 import java.util.ArrayDeque;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Deque;
 import java.util.HashMap;
-import java.util.Set;
-import java.util.Queue;
-import java.util.HashSet;
 import java.util.Random;
-import java.util.Scanner;
 import java.util.ArrayDeque;
 import java.lang.StringBuilder;
 
@@ -240,8 +234,6 @@ public class GameBoard {
   }
 
   public boolean move(Direction direction) {
-
-    // Check if game is over first
     moved = false;
 
     Vector v = getDirectionVector(direction);
