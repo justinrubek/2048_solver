@@ -123,7 +123,7 @@ public class AverageTest implements Solver {
         }
 
 
-        return new TestResult(board).move_count(i).output(output.toString()).name("AverageTest").time_taken(end - start);
+        return new TestResult(board).move_count(i).output(output.toString()).name("AverageTest").time_taken(end - start).seed(seed);
     }
 
     public static float score(GameBoard board) {

@@ -9,6 +9,7 @@ public class TestResult {
     public String output;
     public String name;
     public long time_taken;
+    long seed;
 
     public TestResult(GameBoard board) {
         this(board, -1);
@@ -55,11 +56,17 @@ public class TestResult {
         return this;
     }
 
+    public TestResult seed(long seed) {
+        this.seed = seed;
+        return this;
+    }
+
 
     public String toString() {
         StringBuilder builder = new StringBuilder();
 
         builder.append("test:").append(name).append("\n");
+        builder.append("seed:").append(seed).append("\n");
         builder.append("won:").append(won).append("\n");
         builder.append("totalmoves:").append(move_count).append("\n");
         builder.append("time:").append(time_taken).append("\n");

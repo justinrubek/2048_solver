@@ -1,0 +1,3864 @@
+rm -rf ./build/
+javac -sourcepath src -d build src/**/*.java
+java -cp .:build:**/*.class solutions.GameSolver
+test:SnakeTest
+seed:1526865391001
+won:true
+totalmoves:965
+time:3199355015
+ns/move:3315393
+finalboard:
+_ 4 2 _ 
+_ 8 4 _ 
+_ _ 8 _ 
+2048 8 2 _ 
+
+
+test:SnakeTest
+seed:1526865394202
+won:true
+totalmoves:935
+time:2721756641
+ns/move:2910969
+finalboard:
+8 2 _ _ 
+2 4 _ 2 
+8 4 2 _ 
+2048 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865396924
+won:true
+totalmoves:939
+time:2729876915
+ns/move:2907217
+finalboard:
+2048 8 2 _ 
+16 2 2 _ 
+8 _ _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865399654
+won:true
+totalmoves:958
+time:2882807085
+ns/move:3009193
+finalboard:
+2048 4 _ _ 
+8 4 2 2 
+2 8 _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865402537
+won:true
+totalmoves:948
+time:2828898031
+ns/move:2984069
+finalboard:
+8 _ _ 2048 
+8 4 _ 16 
+_ _ _ 4 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865405366
+won:true
+totalmoves:945
+time:2698472130
+ns/move:2855526
+finalboard:
+8 2 8 _ 
+4 _ _ _ 
+2 _ _ 2 
+2048 4 2 _ 
+
+
+test:SnakeTest
+seed:1526865408064
+won:true
+totalmoves:960
+time:2973521118
+ns/move:3097417
+finalboard:
+2048 4 _ 2 
+16 2 _ _ 
+8 4 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865411038
+won:true
+totalmoves:946
+time:2674991649
+ns/move:2827686
+finalboard:
+_ _ _ 4 
+_ 2 _ 2 
+_ 16 2 8 
+8 _ _ 2048 
+
+
+test:SnakeTest
+seed:1526865413713
+won:true
+totalmoves:955
+time:2825126244
+ns/move:2958247
+finalboard:
+2 _ _ 2 
+_ _ _ _ 
+_ 16 4 _ 
+2048 2 8 2 
+
+
+test:SnakeTest
+seed:1526865416538
+won:true
+totalmoves:958
+time:2892430611
+ns/move:3019238
+finalboard:
+2048 8 2 2 
+2 2 _ _ 
+_ 4 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865419431
+won:true
+totalmoves:969
+time:2800638595
+ns/move:2890235
+finalboard:
+8 _ _ 2048 
+4 16 2 4 
+_ 16 _ 4 
+_ _ 2 2 
+
+
+test:SnakeTest
+seed:1526865422232
+won:false
+totalmoves:978
+time:2708451507
+ns/move:2769377
+finalboard:
+2 32 8 1024 
+4 2 128 512 
+2 8 64 256 
+4 2 128 4 
+
+
+test:SnakeTest
+seed:1526865424940
+won:true
+totalmoves:932
+time:2872391504
+ns/move:3081965
+finalboard:
+2048 _ _ _ 
+4 8 2 _ 
+4 2 _ 2 
+8 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865427813
+won:true
+totalmoves:938
+time:2878114638
+ns/move:3068352
+finalboard:
+2048 2 2 2 
+2 4 _ _ 
+_ 8 _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865430691
+won:true
+totalmoves:933
+time:2856437049
+ns/move:3061561
+finalboard:
+_ _ _ 2048 
+4 2 _ 8 
+_ _ _ 2 
+_ _ 2 4 
+
+
+test:SnakeTest
+seed:1526865433547
+won:true
+totalmoves:939
+time:2835566929
+ns/move:3019773
+finalboard:
+2048 4 _ _ 
+2 4 _ _ 
+16 2 _ _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865436383
+won:true
+totalmoves:935
+time:2807191387
+ns/move:3002343
+finalboard:
+2048 8 2 2 
+8 2 8 _ 
+_ _ 2 _ 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865439190
+won:true
+totalmoves:949
+time:2715015222
+ns/move:2860922
+finalboard:
+4 _ _ _ 
+16 4 _ _ 
+8 2 _ _ 
+2048 4 2 _ 
+
+
+test:SnakeTest
+seed:1526865441905
+won:true
+totalmoves:956
+time:2715216968
+ns/move:2840185
+finalboard:
+4 2 8 2048 
+2 8 4 8 
+_ 2 2 _ 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865444621
+won:true
+totalmoves:948
+time:2832944436
+ns/move:2988338
+finalboard:
+2048 2 2 _ 
+8 2 4 _ 
+4 2 _ _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865447454
+won:false
+totalmoves:480
+time:1475414077
+ns/move:3073779
+finalboard:
+512 256 128 8 
+16 4 32 64 
+8 2 8 4 
+2 4 16 2 
+
+
+test:SnakeTest
+seed:1526865448929
+won:true
+totalmoves:940
+time:2845345791
+ns/move:3026963
+finalboard:
+2048 8 4 2 
+_ 4 _ _ 
+_ _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865451775
+won:true
+totalmoves:947
+time:2672264986
+ns/move:2821821
+finalboard:
+_ _ 4 2 
+4 8 _ 4 
+2 2 2 _ 
+4 8 4 2048 
+
+
+test:SnakeTest
+seed:1526865454447
+won:true
+totalmoves:943
+time:2786725894
+ns/move:2955170
+finalboard:
+8 4 _ _ 
+_ _ 2 _ 
+_ _ 2 _ 
+2048 16 8 4 
+
+
+test:SnakeTest
+seed:1526865457234
+won:true
+totalmoves:951
+time:2806990189
+ns/move:2951619
+finalboard:
+8 2 _ _ 
+2 _ _ 2 
+4 2 4 2 
+2048 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865460041
+won:true
+totalmoves:953
+time:2699769486
+ns/move:2832916
+finalboard:
+8 2 _ _ 
+4 _ _ _ 
+4 8 4 2 
+2048 8 _ _ 
+
+
+test:SnakeTest
+seed:1526865462741
+won:true
+totalmoves:952
+time:2899790872
+ns/move:3045998
+finalboard:
+2048 2 2 2 
+_ 8 8 _ 
+_ 4 _ _ 
+_ 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865465641
+won:true
+totalmoves:950
+time:2813376133
+ns/move:2961448
+finalboard:
+8 _ 2 2048 
+16 _ 4 2 
+_ _ 8 4 
+_ _ 4 2 
+
+
+test:SnakeTest
+seed:1526865468454
+won:false
+totalmoves:716
+time:2075134455
+ns/move:2898232
+finalboard:
+2 8 16 1024 
+8 2 8 256 
+2 16 32 128 
+4 2 64 4 
+
+
+test:SnakeTest
+seed:1526865470529
+won:true
+totalmoves:941
+time:2812671386
+ns/move:2989023
+finalboard:
+2048 4 _ 2 
+8 4 2 _ 
+2 4 _ _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865473342
+won:true
+totalmoves:945
+time:2808214859
+ns/move:2971655
+finalboard:
+8 _ _ _ 
+_ _ 8 _ 
+_ 2 4 _ 
+4 8 2 2048 
+
+
+test:SnakeTest
+seed:1526865476150
+won:true
+totalmoves:935
+time:2719690583
+ns/move:2908759
+finalboard:
+4 2 _ _ 
+2 4 _ _ 
+4 8 _ 2 
+2048 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865478870
+won:true
+totalmoves:933
+time:2710589457
+ns/move:2905240
+finalboard:
+2 4 _ 2 
+_ _ 8 2 
+_ 4 _ 8 
+_ _ 2 2048 
+
+
+test:SnakeTest
+seed:1526865481581
+won:true
+totalmoves:932
+time:2714261062
+ns/move:2912297
+finalboard:
+2048 4 _ _ 
+16 _ _ _ 
+4 4 _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865484295
+won:true
+totalmoves:939
+time:2848957614
+ns/move:3034033
+finalboard:
+_ 16 _ _ 
+_ 2 _ _ 
+_ 4 _ _ 
+2048 2 4 2 
+
+
+test:SnakeTest
+seed:1526865487144
+won:true
+totalmoves:948
+time:2810235369
+ns/move:2964383
+finalboard:
+8 16 _ _ 
+_ 2 _ _ 
+2 8 4 2 
+2048 4 2 8 
+
+
+test:SnakeTest
+seed:1526865489954
+won:true
+totalmoves:950
+time:2927104919
+ns/move:3081163
+finalboard:
+_ 4 2 _ 
+_ 8 _ 2 
+_ 4 4 _ 
+2048 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865492882
+won:true
+totalmoves:952
+time:2663366434
+ns/move:2797653
+finalboard:
+8 4 8 2048 
+2 8 _ 16 
+_ 4 _ 2 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865495545
+won:true
+totalmoves:957
+time:2721785779
+ns/move:2844081
+finalboard:
+4 2 _ _ 
+16 8 _ 2 
+8 2 _ _ 
+2048 4 _ _ 
+
+
+test:SnakeTest
+seed:1526865498267
+won:true
+totalmoves:936
+time:2744195828
+ns/move:2931833
+finalboard:
+_ 2 _ 2048 
+8 _ 8 2 
+_ _ _ 8 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526865501011
+won:false
+totalmoves:249
+time:755967343
+ns/move:3036013
+finalboard:
+4 8 4 8 
+8 2 64 16 
+4 32 2 128 
+8 2 8 256 
+
+
+test:SnakeTest
+seed:1526865501767
+won:true
+totalmoves:927
+time:2787950135
+ns/move:3007497
+finalboard:
+4 _ _ _ 
+4 2 _ _ 
+8 4 2 _ 
+2048 _ _ 2 
+
+
+test:SnakeTest
+seed:1526865504555
+won:true
+totalmoves:947
+time:2665615428
+ns/move:2814799
+finalboard:
+_ _ 2 8 
+2 _ _ 8 
+_ _ 16 2 
+8 _ _ 2048 
+
+
+test:SnakeTest
+seed:1526865507221
+won:true
+totalmoves:945
+time:2830965083
+ns/move:2995730
+finalboard:
+8 _ _ 2048 
+2 _ 8 2 
+2 _ _ 16 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865510052
+won:true
+totalmoves:958
+time:2851148322
+ns/move:2976146
+finalboard:
+4 _ _ 2048 
+_ 8 2 16 
+_ _ 2 8 
+_ 2 _ 4 
+
+
+test:SnakeTest
+seed:1526865512903
+won:true
+totalmoves:947
+time:2712008213
+ns/move:2863789
+finalboard:
+2048 32 8 4 
+4 2 2 2 
+_ _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865515615
+won:true
+totalmoves:957
+time:2765227881
+ns/move:2889475
+finalboard:
+2 4 2 _ 
+4 8 4 _ 
+2 4 2 _ 
+2048 4 _ 2 
+
+
+test:SnakeTest
+seed:1526865518381
+won:true
+totalmoves:963
+time:2928621390
+ns/move:3041143
+finalboard:
+2048 _ _ _ 
+8 16 4 _ 
+8 2 _ 2 
+8 4 _ _ 
+
+
+test:SnakeTest
+seed:1526865521309
+won:false
+totalmoves:853
+time:2362828326
+ns/move:2770021
+finalboard:
+4 32 2 1024 
+16 8 16 512 
+4 64 32 128 
+2 8 4 2 
+
+
+test:SnakeTest
+seed:1526865523672
+won:true
+totalmoves:979
+time:2634798523
+ns/move:2691316
+finalboard:
+2 4 16 4 
+_ _ 4 32 
+8 _ 4 8 
+16 4 _ 2048 
+
+
+test:SnakeTest
+seed:1526865526307
+won:true
+totalmoves:951
+time:2778795177
+ns/move:2921971
+finalboard:
+2 _ _ 2 
+8 16 8 _ 
+2 2 2 _ 
+4 4 4 2048 
+
+
+test:SnakeTest
+seed:1526865529086
+won:true
+totalmoves:934
+time:2781785066
+ns/move:2978356
+finalboard:
+2048 _ _ _ 
+4 2 _ _ 
+16 2 _ _ 
+4 2 8 2 
+
+
+test:SnakeTest
+seed:1526865531868
+won:false
+totalmoves:859
+time:2515160898
+ns/move:2928010
+finalboard:
+2 8 2 4 
+8 2 4 8 
+2 64 32 16 
+1024 512 128 64 
+
+
+test:SnakeTest
+seed:1526865534383
+won:true
+totalmoves:943
+time:2660562385
+ns/move:2821381
+finalboard:
+2 2 4 2048 
+_ 8 8 2 
+_ _ 16 _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865537044
+won:true
+totalmoves:948
+time:2762558051
+ns/move:2914090
+finalboard:
+_ _ _ 2048 
+8 4 _ 2 
+_ _ _ 2 
+_ _ 2 2 
+
+
+test:SnakeTest
+seed:1526865539807
+won:true
+totalmoves:964
+time:2669096516
+ns/move:2768772
+finalboard:
+_ 4 _ 2 
+_ _ _ 16 
+_ 16 4 8 
+4 2 _ 2048 
+
+
+test:SnakeTest
+seed:1526865542476
+won:false
+totalmoves:936
+time:2660323111
+ns/move:2842225
+finalboard:
+2 8 2 1024 
+4 64 32 512 
+8 2 256 2 
+2 4 128 4 
+
+
+test:SnakeTest
+seed:1526865545136
+won:true
+totalmoves:948
+time:2875219305
+ns/move:3032931
+finalboard:
+2048 2 _ 2 
+16 4 _ _ 
+4 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865548011
+won:true
+totalmoves:928
+time:2874831356
+ns/move:3097878
+finalboard:
+2 _ _ _ 
+_ _ _ _ 
+_ 8 _ _ 
+2048 2 8 2 
+
+
+test:SnakeTest
+seed:1526865550886
+won:true
+totalmoves:978
+time:2760848826
+ns/move:2822953
+finalboard:
+8 4 4 2048 
+4 32 2 4 
+2 _ _ _ 
+32 _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865553647
+won:false
+totalmoves:933
+time:2684754877
+ns/move:2877550
+finalboard:
+4 128 4 2 
+256 64 2 4 
+512 16 4 2 
+1024 8 2 4 
+
+
+test:SnakeTest
+seed:1526865556332
+won:true
+totalmoves:943
+time:2891174931
+ns/move:3065933
+finalboard:
+_ _ _ 2048 
+8 4 _ 4 
+2 2 _ 8 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865559223
+won:true
+totalmoves:936
+time:2873545389
+ns/move:3070027
+finalboard:
+2048 16 2 _ 
+2 4 4 _ 
+_ _ 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865562097
+won:true
+totalmoves:928
+time:2726934036
+ns/move:2938506
+finalboard:
+2048 8 4 2 
+_ 2 _ _ 
+_ 4 _ 2 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865564824
+won:true
+totalmoves:952
+time:2872406275
+ns/move:3017233
+finalboard:
+2048 4 4 4 
+2 2 8 _ 
+_ 8 _ _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865567697
+won:true
+totalmoves:975
+time:2965468617
+ns/move:3041506
+finalboard:
+2 _ 2 2048 
+4 _ 2 8 
+_ _ 2 32 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865570662
+won:true
+totalmoves:937
+time:2855045635
+ns/move:3047007
+finalboard:
+_ 2 _ _ 
+_ 4 _ 4 
+_ _ _ _ 
+2048 4 2 2 
+
+
+test:SnakeTest
+seed:1526865573517
+won:true
+totalmoves:939
+time:2705036919
+ns/move:2880763
+finalboard:
+_ _ _ 2048 
+4 16 2 4 
+2 _ _ 4 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526865576223
+won:true
+totalmoves:947
+time:2742307636
+ns/move:2895784
+finalboard:
+4 2 _ _ 
+8 2 8 2 
+2 8 _ _ 
+2048 4 _ _ 
+
+
+test:SnakeTest
+seed:1526865578965
+won:true
+totalmoves:936
+time:2767403010
+ns/move:2956627
+finalboard:
+2048 2 8 2 
+16 16 2 4 
+_ 4 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865581733
+won:true
+totalmoves:957
+time:2830654710
+ns/move:2957841
+finalboard:
+2048 2 4 4 
+4 8 2 2 
+_ 4 4 _ 
+_ 8 _ _ 
+
+
+test:SnakeTest
+seed:1526865584563
+won:true
+totalmoves:956
+time:2618952526
+ns/move:2739490
+finalboard:
+2048 16 8 2 
+32 8 16 4 
+4 4 2 2 
+_ 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865587182
+won:true
+totalmoves:977
+time:2671789449
+ns/move:2734687
+finalboard:
+8 16 2 2048 
+2 8 32 4 
+_ 32 2 2 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865589854
+won:true
+totalmoves:944
+time:2872081542
+ns/move:3042459
+finalboard:
+2048 2 _ _ 
+4 8 2 _ 
+4 _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865592726
+won:true
+totalmoves:961
+time:2525817023
+ns/move:2628321
+finalboard:
+2 4 2 2048 
+8 2 64 2 
+_ _ 8 2 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865595252
+won:true
+totalmoves:945
+time:2848285358
+ns/move:3014058
+finalboard:
+_ 4 2 _ 
+_ 2 4 _ 
+_ _ 2 _ 
+2048 4 16 8 
+
+
+test:SnakeTest
+seed:1526865598101
+won:false
+totalmoves:899
+time:2555612527
+ns/move:2842728
+finalboard:
+16 2 4 1024 
+4 16 256 512 
+8 32 2 8 
+4 64 4 2 
+
+
+test:SnakeTest
+seed:1526865600656
+won:true
+totalmoves:941
+time:2896592328
+ns/move:3078206
+finalboard:
+_ 4 _ _ 
+_ 8 _ _ 
+_ 16 _ 2 
+2048 2 4 2 
+
+
+test:SnakeTest
+seed:1526865603553
+won:true
+totalmoves:994
+time:2746227246
+ns/move:2762804
+finalboard:
+_ 2 _ 2 
+4 8 128 _ 
+_ _ 16 _ 
+2 2 2 2048 
+
+
+test:SnakeTest
+seed:1526865606299
+won:true
+totalmoves:955
+time:2776171328
+ns/move:2906985
+finalboard:
+8 _ 2 2048 
+4 8 _ 8 
+_ _ 2 4 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865609076
+won:true
+totalmoves:922
+time:2625345566
+ns/move:2847446
+finalboard:
+2 8 2 2048 
+_ _ 8 2 
+_ _ _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865611701
+won:true
+totalmoves:939
+time:2770180551
+ns/move:2950139
+finalboard:
+2048 2 _ _ 
+8 4 8 2 
+2 4 _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865614471
+won:true
+totalmoves:936
+time:2809205796
+ns/move:3001288
+finalboard:
+2048 _ 2 _ 
+16 _ _ _ 
+4 2 _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865617281
+won:true
+totalmoves:932
+time:2708307485
+ns/move:2905909
+finalboard:
+2048 8 4 4 
+_ 4 _ _ 
+_ 2 _ _ 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865619989
+won:true
+totalmoves:930
+time:2809407200
+ns/move:3020867
+finalboard:
+2048 2 4 2 
+2 4 2 _ 
+_ 2 _ 2 
+_ 16 _ _ 
+
+
+test:SnakeTest
+seed:1526865622799
+won:true
+totalmoves:950
+time:2747475927
+ns/move:2892079
+finalboard:
+_ 2 _ 2048 
+16 8 4 2 
+8 _ 4 2 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526865625546
+won:true
+totalmoves:962
+time:2844891900
+ns/move:2957268
+finalboard:
+_ 16 2 2 
+_ 2 8 _ 
+2 16 2 _ 
+2048 4 8 16 
+
+
+test:SnakeTest
+seed:1526865628391
+won:true
+totalmoves:951
+time:2872296096
+ns/move:3020290
+finalboard:
+2048 16 8 2 
+_ 4 4 _ 
+_ _ _ _ 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526865631264
+won:true
+totalmoves:940
+time:2811943346
+ns/move:2991429
+finalboard:
+_ _ _ _ 
+_ _ _ 4 
+_ _ _ 2 
+2048 8 2 2 
+
+
+test:SnakeTest
+seed:1526865634076
+won:true
+totalmoves:965
+time:2940165741
+ns/move:3046803
+finalboard:
+2 4 _ _ 
+_ _ _ 2 
+_ 2 _ _ 
+2048 16 8 8 
+
+
+test:SnakeTest
+seed:1526865637016
+won:true
+totalmoves:926
+time:2740966248
+ns/move:2960006
+finalboard:
+2048 2 2 2 
+2 8 _ 2 
+_ _ _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865639757
+won:true
+totalmoves:928
+time:2634445225
+ns/move:2838841
+finalboard:
+2048 8 4 _ 
+2 4 _ _ 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865642391
+won:true
+totalmoves:949
+time:2585883762
+ns/move:2724851
+finalboard:
+_ _ _ 8 
+_ _ 2 _ 
+2 16 2 _ 
+8 2 4 2048 
+
+
+test:SnakeTest
+seed:1526865644977
+won:true
+totalmoves:946
+time:2836238242
+ns/move:2998137
+finalboard:
+_ 8 4 _ 
+2 4 _ _ 
+_ 8 _ _ 
+2048 2 2 2 
+
+
+test:SnakeTest
+seed:1526865647814
+won:true
+totalmoves:934
+time:2802174093
+ns/move:3000186
+finalboard:
+2048 2 8 _ 
+4 8 2 _ 
+2 8 _ _ 
+2 _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865650616
+won:false
+totalmoves:958
+time:2558654065
+ns/move:2670828
+finalboard:
+4 32 4 2 
+2 8 16 8 
+32 64 32 128 
+1024 512 256 4 
+
+
+test:SnakeTest
+seed:1526865653175
+won:false
+totalmoves:940
+time:2753728465
+ns/move:2929498
+finalboard:
+2 4 8 2 
+32 2 16 32 
+4 16 128 4 
+1024 512 256 2 
+
+
+test:SnakeTest
+seed:1526865655928
+won:true
+totalmoves:954
+time:2880537590
+ns/move:3019431
+finalboard:
+2048 2 _ _ 
+8 4 8 _ 
+2 _ _ 2 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865658809
+won:true
+totalmoves:937
+time:2660596617
+ns/move:2839484
+finalboard:
+_ 2 _ _ 
+4 _ 2 _ 
+_ _ 2 _ 
+2 8 4 2048 
+
+
+test:SnakeTest
+seed:1526865661470
+won:true
+totalmoves:939
+time:2805900106
+ns/move:2988179
+finalboard:
+_ _ _ 2048 
+16 _ _ 4 
+2 _ 16 2 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865664276
+won:true
+totalmoves:977
+time:2766315876
+ns/move:2831438
+finalboard:
+8 2 _ _ 
+32 4 4 _ 
+2 32 16 2 
+2048 _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865667042
+won:true
+totalmoves:952
+time:2777432930
+ns/move:2917471
+finalboard:
+2 _ _ _ 
+_ _ 8 2 
+_ 4 4 _ 
+4 2 2 2048 
+
+
+test:SnakeTest
+seed:1526865669820
+won:true
+totalmoves:937
+time:2821114202
+ns/move:3010794
+finalboard:
+2048 8 4 _ 
+2 _ _ 2 
+_ _ _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865672641
+won:true
+totalmoves:948
+time:2701093052
+ns/move:2849254
+finalboard:
+_ _ _ 2 
+_ _ 4 8 
+_ 16 4 2 
+4 _ 4 2048 
+
+
+test:SnakeTest
+seed:1526865675342
+won:true
+totalmoves:952
+time:2817357974
+ns/move:2959409
+finalboard:
+2048 8 4 2 
+_ 2 2 4 
+_ 4 _ _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865678160
+won:true
+totalmoves:946
+time:2727910731
+ns/move:2883626
+finalboard:
+2048 4 8 2 
+8 _ 4 _ 
+_ _ _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865680888
+won:true
+totalmoves:922
+time:2776583353
+ns/move:3011478
+finalboard:
+4 _ _ 2048 
+_ 2 _ 8 
+_ 4 _ 2 
+_ _ 2 4 
+
+
+test:SnakeTest
+seed:1526865683664
+won:true
+totalmoves:948
+time:2857761815
+ns/move:3014516
+finalboard:
+_ 8 _ _ 
+_ 4 _ _ 
+_ _ _ _ 
+2048 4 2 2 
+
+
+test:SnakeTest
+seed:1526865686522
+won:false
+totalmoves:1106
+time:2876601056
+ns/move:2600905
+finalboard:
+2 8 512 2 
+8 32 64 256 
+4 512 8 4 
+2 4 2 1024 
+
+
+test:SnakeTest
+seed:1526865689399
+won:true
+totalmoves:976
+time:2650013412
+ns/move:2715177
+finalboard:
+2 4 2 _ 
+4 8 _ _ 
+2 4 64 _ 
+2048 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865692049
+won:false
+totalmoves:708
+time:2071945177
+ns/move:2926476
+finalboard:
+4 2 4 2 
+32 16 2 4 
+4 128 4 2 
+64 8 256 1024 
+
+
+test:SnakeTest
+seed:1526865694121
+won:true
+totalmoves:961
+time:2838871689
+ns/move:2954080
+finalboard:
+2048 4 _ 2 
+16 2 _ _ 
+16 4 2 _ 
+8 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865696960
+won:true
+totalmoves:962
+time:2936088305
+ns/move:3052066
+finalboard:
+2048 2 _ _ 
+16 2 _ _ 
+2 8 2 _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865699896
+won:true
+totalmoves:945
+time:2787734708
+ns/move:2949983
+finalboard:
+4 _ _ 2048 
+2 4 _ 4 
+4 8 _ 4 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526865702684
+won:true
+totalmoves:953
+time:2903955649
+ns/move:3047172
+finalboard:
+2048 _ _ _ 
+16 4 _ _ 
+4 8 2 _ 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865705588
+won:true
+totalmoves:1006
+time:2761306066
+ns/move:2744837
+finalboard:
+4 2 4 2048 
+_ 16 2 64 
+_ _ 32 _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865708349
+won:true
+totalmoves:946
+time:2834932492
+ns/move:2996757
+finalboard:
+2048 _ _ _ 
+8 4 _ _ 
+2 4 2 2 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865711184
+won:true
+totalmoves:980
+time:2679389745
+ns/move:2734071
+finalboard:
+8 2 2 2048 
+_ 8 32 64 
+_ 2 2 _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865713864
+won:true
+totalmoves:946
+time:2779178258
+ns/move:2937820
+finalboard:
+2048 4 2 _ 
+2 4 2 _ 
+8 _ _ _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865716643
+won:true
+totalmoves:937
+time:2793579285
+ns/move:2981407
+finalboard:
+2048 8 4 _ 
+4 2 _ _ 
+2 8 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865719437
+won:true
+totalmoves:951
+time:2694645946
+ns/move:2833486
+finalboard:
+2048 2 _ _ 
+2 4 2 4 
+2 _ _ 2 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865722132
+won:true
+totalmoves:936
+time:2835060207
+ns/move:3028910
+finalboard:
+2048 8 2 _ 
+2 4 _ _ 
+_ 2 _ _ 
+_ 4 2 _ 
+
+
+test:SnakeTest
+seed:1526865724967
+won:true
+totalmoves:949
+time:2788379054
+ns/move:2938228
+finalboard:
+8 2 _ _ 
+_ 4 2 _ 
+_ 2 _ _ 
+2048 8 16 2 
+
+
+test:SnakeTest
+seed:1526865727755
+won:true
+totalmoves:944
+time:2652733670
+ns/move:2810099
+finalboard:
+_ _ _ _ 
+4 2 4 _ 
+4 2 4 2 
+2048 _ _ 2 
+
+
+test:SnakeTest
+seed:1526865730408
+won:true
+totalmoves:954
+time:2816440502
+ns/move:2952243
+finalboard:
+2048 2 8 4 
+4 4 4 2 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865733225
+won:true
+totalmoves:937
+time:2883705221
+ns/move:3077593
+finalboard:
+2048 2 2 4 
+2 4 8 _ 
+_ _ 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865736108
+won:true
+totalmoves:942
+time:2653710047
+ns/move:2817101
+finalboard:
+4 4 16 2048 
+_ _ 4 8 
+4 _ _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865738762
+won:true
+totalmoves:956
+time:2892531021
+ns/move:3025660
+finalboard:
+2048 4 _ _ 
+8 4 _ _ 
+8 _ 2 _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865741655
+won:false
+totalmoves:720
+time:2111884757
+ns/move:2933173
+finalboard:
+2 16 8 2 
+4 2 128 4 
+64 16 2 8 
+32 2 256 1024 
+
+
+test:SnakeTest
+seed:1526865743767
+won:true
+totalmoves:924
+time:2595205409
+ns/move:2808663
+finalboard:
+_ _ _ 4 
+_ _ 4 2 
+_ 2 _ 8 
+4 _ _ 2048 
+
+
+test:SnakeTest
+seed:1526865746362
+won:true
+totalmoves:961
+time:2886881074
+ns/move:3004038
+finalboard:
+2048 16 4 _ 
+8 4 4 _ 
+16 8 2 _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865749249
+won:true
+totalmoves:944
+time:2879395174
+ns/move:3050206
+finalboard:
+2048 4 _ 4 
+2 2 _ _ 
+_ 8 4 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865752128
+won:true
+totalmoves:928
+time:2771937672
+ns/move:2987001
+finalboard:
+_ 2 4 2 
+_ 8 _ 2 
+_ 4 _ 4 
+2048 8 2 2 
+
+
+test:SnakeTest
+seed:1526865754900
+won:true
+totalmoves:943
+time:2736668652
+ns/move:2902087
+finalboard:
+2 _ 8 _ 
+_ _ _ 2 
+_ _ _ _ 
+8 4 4 2048 
+
+
+test:SnakeTest
+seed:1526865757637
+won:true
+totalmoves:933
+time:2832957423
+ns/move:3036395
+finalboard:
+2048 4 2 2 
+2 2 _ _ 
+_ 4 _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865760470
+won:true
+totalmoves:958
+time:2796307544
+ns/move:2918901
+finalboard:
+2048 8 _ 2 
+8 2 8 4 
+2 8 2 _ 
+8 4 _ _ 
+
+
+test:SnakeTest
+seed:1526865763267
+won:true
+totalmoves:953
+time:2913200224
+ns/move:3056873
+finalboard:
+_ _ _ 2048 
+8 4 _ 4 
+4 2 _ 8 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865766180
+won:true
+totalmoves:952
+time:2673382714
+ns/move:2808175
+finalboard:
+8 16 2 2048 
+4 4 _ 4 
+_ _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865768853
+won:true
+totalmoves:957
+time:2786427286
+ns/move:2911627
+finalboard:
+_ _ _ _ 
+4 _ _ 2 
+2 _ 2 8 
+_ _ _ 2048 
+
+
+test:SnakeTest
+seed:1526865771640
+won:true
+totalmoves:992
+time:2815415495
+ns/move:2838120
+finalboard:
+2 4 8 2048 
+4 8 32 64 
+_ 2 _ 2 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865774455
+won:true
+totalmoves:959
+time:2666368653
+ns/move:2780363
+finalboard:
+_ _ _ 4 
+2 4 _ 8 
+8 _ 16 8 
+2 8 _ 2048 
+
+
+test:SnakeTest
+seed:1526865777122
+won:false
+totalmoves:724
+time:2106840422
+ns/move:2910000
+finalboard:
+2 8 2 1024 
+4 2 64 256 
+8 64 2 128 
+2 16 4 2 
+
+
+test:SnakeTest
+seed:1526865779229
+won:false
+totalmoves:107
+time:298968066
+ns/move:2794094
+finalboard:
+16 4 16 64 
+4 32 8 32 
+2 8 32 4 
+8 2 4 8 
+
+
+test:SnakeTest
+seed:1526865779528
+won:true
+totalmoves:959
+time:2883471105
+ns/move:3006747
+finalboard:
+2048 8 2 2 
+4 32 4 _ 
+2 4 8 _ 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865782411
+won:true
+totalmoves:978
+time:2823917089
+ns/move:2887440
+finalboard:
+2 16 2 2048 
+8 2 32 8 
+2 _ 2 2 
+32 _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865785235
+won:true
+totalmoves:949
+time:2893385934
+ns/move:3048878
+finalboard:
+2048 2 4 2 
+4 4 2 _ 
+_ 2 _ _ 
+_ 4 _ _ 
+
+
+test:SnakeTest
+seed:1526865788129
+won:true
+totalmoves:950
+time:2911155592
+ns/move:3064374
+finalboard:
+2048 8 4 2 
+_ 2 _ _ 
+_ 4 _ 2 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865791040
+won:true
+totalmoves:943
+time:2800417060
+ns/move:2969689
+finalboard:
+_ 4 _ _ 
+_ 2 4 _ 
+_ _ _ 4 
+2048 8 _ 2 
+
+
+test:SnakeTest
+seed:1526865793840
+won:true
+totalmoves:967
+time:2839819345
+ns/move:2936731
+finalboard:
+2 16 _ _ 
+2 8 _ _ 
+_ 2 4 _ 
+2048 8 8 _ 
+
+
+test:SnakeTest
+seed:1526865796680
+won:true
+totalmoves:947
+time:2732473852
+ns/move:2885400
+finalboard:
+2 4 2 _ 
+16 2 _ _ 
+2 4 2 _ 
+2048 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865799413
+won:true
+totalmoves:951
+time:2888004928
+ns/move:3036808
+finalboard:
+2048 4 4 _ 
+8 8 2 _ 
+_ 2 4 _ 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865802301
+won:true
+totalmoves:954
+time:2941067361
+ns/move:3082879
+finalboard:
+_ 8 4 _ 
+2 4 _ _ 
+_ _ _ _ 
+2048 2 2 2 
+
+
+test:SnakeTest
+seed:1526865805242
+won:true
+totalmoves:942
+time:2788266304
+ns/move:2959942
+finalboard:
+2 4 _ _ 
+_ _ 2 _ 
+_ 4 8 2 
+2048 16 4 8 
+
+
+test:SnakeTest
+seed:1526865808030
+won:true
+totalmoves:964
+time:2809275905
+ns/move:2914186
+finalboard:
+_ _ 2 _ 
+_ 16 2 _ 
+_ 4 _ _ 
+2048 2 4 8 
+
+
+test:SnakeTest
+seed:1526865810840
+won:true
+totalmoves:960
+time:2762953205
+ns/move:2878076
+finalboard:
+2048 4 _ _ 
+2 16 4 2 
+4 4 _ _ 
+2 8 2 _ 
+
+
+test:SnakeTest
+seed:1526865813603
+won:true
+totalmoves:948
+time:2699087516
+ns/move:2847138
+finalboard:
+2 4 _ _ 
+8 _ 2 _ 
+8 4 _ _ 
+2048 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865816302
+won:true
+totalmoves:954
+time:2904149575
+ns/move:3044181
+finalboard:
+2048 8 4 2 
+4 2 4 _ 
+_ 4 _ 4 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865819206
+won:true
+totalmoves:990
+time:2884819994
+ns/move:2913959
+finalboard:
+2 8 2 4 
+4 4 _ _ 
+4 32 _ _ 
+2048 64 _ 2 
+
+
+test:SnakeTest
+seed:1526865822091
+won:true
+totalmoves:929
+time:2630954024
+ns/move:2832028
+finalboard:
+4 4 2 2048 
+_ 8 4 16 
+2 4 2 _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865824722
+won:true
+totalmoves:953
+time:2888354028
+ns/move:3030801
+finalboard:
+2048 4 _ 4 
+_ 2 _ 2 
+_ 8 _ _ 
+_ 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865827611
+won:false
+totalmoves:1010
+time:2757142972
+ns/move:2729844
+finalboard:
+2 4 128 4 
+8 2 64 256 
+4 16 128 512 
+2 8 32 1024 
+
+
+test:SnakeTest
+seed:1526865830368
+won:true
+totalmoves:938
+time:2820727293
+ns/move:3007171
+finalboard:
+2048 _ _ _ 
+8 16 2 _ 
+2 _ _ _ 
+4 _ _ 2 
+
+
+test:SnakeTest
+seed:1526865833189
+won:true
+totalmoves:943
+time:2790716529
+ns/move:2959402
+finalboard:
+2048 4 8 4 
+8 8 2 _ 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865835979
+won:true
+totalmoves:947
+time:2671999124
+ns/move:2821540
+finalboard:
+_ 8 8 2048 
+_ 2 4 _ 
+_ _ 2 _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865838652
+won:true
+totalmoves:937
+time:2912911773
+ns/move:3108763
+finalboard:
+_ 4 _ 2 
+_ 8 _ _ 
+_ _ _ _ 
+2048 2 8 _ 
+
+
+test:SnakeTest
+seed:1526865841565
+won:true
+totalmoves:941
+time:2795391162
+ns/move:2970660
+finalboard:
+2048 _ _ _ 
+4 2 _ _ 
+8 4 _ _ 
+4 4 2 _ 
+
+
+test:SnakeTest
+seed:1526865844360
+won:true
+totalmoves:968
+time:2811035970
+ns/move:2903962
+finalboard:
+2 _ _ _ 
+_ 8 _ _ 
+2 16 8 2 
+2048 64 2 4 
+
+
+test:SnakeTest
+seed:1526865847171
+won:true
+totalmoves:962
+time:2830471313
+ns/move:2942277
+finalboard:
+8 _ _ _ 
+2 2 _ _ 
+_ 4 2 _ 
+2048 16 16 _ 
+
+
+test:SnakeTest
+seed:1526865850002
+won:true
+totalmoves:949
+time:2875506230
+ns/move:3030038
+finalboard:
+2048 8 8 2 
+4 4 2 _ 
+_ 2 _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865852877
+won:true
+totalmoves:981
+time:2697045678
+ns/move:2749282
+finalboard:
+_ _ _ 8 
+_ 2 _ 4 
+2 32 64 32 
+_ _ _ 2048 
+
+
+test:SnakeTest
+seed:1526865855574
+won:false
+totalmoves:998
+time:2764487435
+ns/move:2770027
+finalboard:
+2 4 8 4 
+8 2 4 32 
+16 64 128 128 
+1024 512 256 2 
+
+
+test:SnakeTest
+seed:1526865858339
+won:true
+totalmoves:982
+time:2701513334
+ns/move:2751031
+finalboard:
+8 2 16 2048 
+2 4 8 64 
+_ 8 32 _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865861041
+won:true
+totalmoves:935
+time:2796142716
+ns/move:2990526
+finalboard:
+_ 2 _ _ 
+_ _ _ 4 
+_ 2 _ _ 
+2048 8 2 2 
+
+
+test:SnakeTest
+seed:1526865863837
+won:true
+totalmoves:942
+time:2795350715
+ns/move:2967463
+finalboard:
+2048 _ _ _ 
+4 2 8 2 
+4 2 _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865866632
+won:true
+totalmoves:940
+time:2864087140
+ns/move:3046901
+finalboard:
+2048 2 _ _ 
+8 2 8 4 
+2 4 _ _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865869496
+won:true
+totalmoves:948
+time:2875546423
+ns/move:3033276
+finalboard:
+_ _ 2 2048 
+2 4 2 8 
+_ _ _ 2 
+_ 4 _ 2 
+
+
+test:SnakeTest
+seed:1526865872372
+won:true
+totalmoves:934
+time:2587958188
+ns/move:2770833
+finalboard:
+4 _ _ 4 
+_ _ 4 8 
+_ 8 _ 4 
+4 _ 2 2048 
+
+
+test:SnakeTest
+seed:1526865874960
+won:true
+totalmoves:952
+time:2903159663
+ns/move:3049537
+finalboard:
+_ _ _ _ 
+_ 16 2 _ 
+_ _ _ _ 
+2048 4 8 _ 
+
+
+test:SnakeTest
+seed:1526865877863
+won:true
+totalmoves:962
+time:2719903564
+ns/move:2827342
+finalboard:
+4 4 8 2048 
+_ 2 16 4 
+_ _ 2 _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865880583
+won:true
+totalmoves:959
+time:2918747937
+ns/move:3043532
+finalboard:
+2048 8 16 _ 
+_ 2 4 _ 
+2 4 2 _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865883502
+won:true
+totalmoves:944
+time:2767528861
+ns/move:2931704
+finalboard:
+4 8 8 2048 
+2 _ 2 _ 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865886270
+won:true
+totalmoves:943
+time:2764387247
+ns/move:2931481
+finalboard:
+4 2 8 _ 
+_ 2 4 _ 
+_ 16 2 _ 
+2048 4 4 _ 
+
+
+test:SnakeTest
+seed:1526865889034
+won:true
+totalmoves:933
+time:2661401685
+ns/move:2852520
+finalboard:
+_ _ _ 2 
+4 8 _ 2 
+_ _ _ 4 
+_ _ 2 2048 
+
+
+test:SnakeTest
+seed:1526865891696
+won:true
+totalmoves:940
+time:2903661467
+ns/move:3089001
+finalboard:
+_ _ _ 2048 
+_ 8 _ 2 
+_ 2 _ 2 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865894599
+won:true
+totalmoves:954
+time:2709891159
+ns/move:2840556
+finalboard:
+8 8 8 2048 
+_ 2 32 4 
+_ _ 2 _ 
+_ _ 4 _ 
+
+
+test:SnakeTest
+seed:1526865897309
+won:true
+totalmoves:937
+time:2835371548
+ns/move:3026010
+finalboard:
+_ _ _ _ 
+_ 16 _ _ 
+_ 4 2 _ 
+2048 2 2 2 
+
+
+test:SnakeTest
+seed:1526865900145
+won:true
+totalmoves:935
+time:2736615295
+ns/move:2926861
+finalboard:
+8 _ _ _ 
+2 4 _ _ 
+_ 2 2 _ 
+2048 4 4 _ 
+
+
+test:SnakeTest
+seed:1526865902881
+won:true
+totalmoves:930
+time:2815882850
+ns/move:3027831
+finalboard:
+2048 8 4 2 
+_ 2 2 _ 
+_ 8 _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865905697
+won:true
+totalmoves:954
+time:2754612439
+ns/move:2887434
+finalboard:
+_ _ _ _ 
+_ 4 _ 16 
+_ _ 2 8 
+8 _ 2 2048 
+
+
+test:SnakeTest
+seed:1526865908452
+won:true
+totalmoves:950
+time:2710859464
+ns/move:2853536
+finalboard:
+_ _ _ 4 
+4 _ 8 2 
+_ _ 16 _ 
+2 2 8 2048 
+
+
+test:SnakeTest
+seed:1526865911163
+won:true
+totalmoves:953
+time:2737442364
+ns/move:2872447
+finalboard:
+2 2 8 2048 
+_ 4 2 2 
+_ 2 4 _ 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865913901
+won:false
+totalmoves:468
+time:1304496894
+ns/move:2787386
+finalboard:
+8 4 8 4 
+2 8 64 8 
+4 16 32 2 
+512 256 128 4 
+
+
+test:SnakeTest
+seed:1526865915205
+won:true
+totalmoves:934
+time:2795939738
+ns/move:2993511
+finalboard:
+2048 16 4 4 
+_ 8 2 2 
+_ _ 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865918001
+won:true
+totalmoves:946
+time:2691081753
+ns/move:2844695
+finalboard:
+2048 4 2 _ 
+4 16 2 _ 
+8 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865920692
+won:false
+totalmoves:738
+time:2192606469
+ns/move:2971011
+finalboard:
+2 8 4 1024 
+4 2 16 256 
+2 8 64 128 
+32 64 2 4 
+
+
+test:SnakeTest
+seed:1526865922885
+won:true
+totalmoves:959
+time:2909990397
+ns/move:3034400
+finalboard:
+2048 2 _ _ 
+8 4 2 _ 
+4 _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865925795
+won:true
+totalmoves:950
+time:2930379753
+ns/move:3084610
+finalboard:
+_ 4 2 _ 
+_ 8 4 _ 
+2 2 2 _ 
+2048 8 4 2 
+
+
+test:SnakeTest
+seed:1526865928726
+won:true
+totalmoves:930
+time:2721545862
+ns/move:2926393
+finalboard:
+4 2 2 _ 
+_ 16 _ _ 
+_ 2 2 _ 
+2048 4 16 8 
+
+
+test:SnakeTest
+seed:1526865931447
+won:false
+totalmoves:1001
+time:2869838005
+ns/move:2866971
+finalboard:
+2 4 8 4 
+16 8 2 32 
+4 64 128 128 
+1024 512 256 4 
+
+
+test:SnakeTest
+seed:1526865934317
+won:true
+totalmoves:946
+time:2834361988
+ns/move:2996154
+finalboard:
+2048 4 _ _ 
+8 2 4 _ 
+4 8 _ _ 
+2 _ _ 2 
+
+
+test:SnakeTest
+seed:1526865937152
+won:true
+totalmoves:945
+time:2736515279
+ns/move:2895783
+finalboard:
+4 4 8 2048 
+_ 8 2 _ 
+_ 4 _ 2 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865939888
+won:true
+totalmoves:962
+time:2709079514
+ns/move:2816090
+finalboard:
+8 2 8 2048 
+2 4 2 8 
+4 8 4 _ 
+_ 2 2 _ 
+
+
+test:SnakeTest
+seed:1526865942597
+won:true
+totalmoves:941
+time:2846379561
+ns/move:3024845
+finalboard:
+4 8 _ _ 
+4 4 _ _ 
+_ 2 _ _ 
+2048 4 2 _ 
+
+
+test:SnakeTest
+seed:1526865945444
+won:false
+totalmoves:950
+time:2774269606
+ns/move:2920283
+finalboard:
+4 256 512 1024 
+128 64 32 16 
+8 2 4 8 
+2 4 2 4 
+
+
+test:SnakeTest
+seed:1526865948218
+won:false
+totalmoves:889
+time:2494972166
+ns/move:2806492
+finalboard:
+2 4 2 4 
+8 16 64 256 
+2 8 32 512 
+4 2 4 1024 
+
+
+test:SnakeTest
+seed:1526865950713
+won:true
+totalmoves:964
+time:2859511715
+ns/move:2966298
+finalboard:
+2048 8 8 2 
+8 4 2 _ 
+_ _ 4 _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526865953573
+won:true
+totalmoves:937
+time:2787139689
+ns/move:2974535
+finalboard:
+_ _ _ 2048 
+_ 4 _ 2 
+8 _ 4 2 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526865956360
+won:true
+totalmoves:946
+time:2701599834
+ns/move:2855813
+finalboard:
+2048 8 4 2 
+8 4 _ _ 
+2 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865959062
+won:true
+totalmoves:956
+time:2829844984
+ns/move:2960088
+finalboard:
+4 _ _ 2048 
+2 8 2 4 
+4 2 4 2 
+_ _ _ 8 
+
+
+test:SnakeTest
+seed:1526865961892
+won:true
+totalmoves:944
+time:2806538245
+ns/move:2973027
+finalboard:
+_ _ _ 2048 
+8 _ 2 8 
+_ 4 _ 2 
+_ _ _ 8 
+
+
+test:SnakeTest
+seed:1526865964698
+won:true
+totalmoves:953
+time:2935091767
+ns/move:3079844
+finalboard:
+_ _ _ 2048 
+8 16 _ 2 
+_ _ 2 4 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865967633
+won:true
+totalmoves:931
+time:2723231185
+ns/move:2925060
+finalboard:
+4 2 8 2048 
+_ _ 4 2 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526865970357
+won:true
+totalmoves:941
+time:2814143233
+ns/move:2990587
+finalboard:
+2048 4 _ _ 
+8 _ _ 2 
+8 2 _ _ 
+2 8 _ _ 
+
+
+test:SnakeTest
+seed:1526865973171
+won:true
+totalmoves:936
+time:2625955303
+ns/move:2805507
+finalboard:
+2 4 _ _ 
+_ _ 4 _ 
+_ 2 _ _ 
+8 2 4 2048 
+
+
+test:SnakeTest
+seed:1526865975797
+won:true
+totalmoves:946
+time:2745539085
+ns/move:2902261
+finalboard:
+2 _ 4 8 
+_ _ _ 2 
+_ _ 8 16 
+8 _ _ 2048 
+
+
+test:SnakeTest
+seed:1526865978543
+won:true
+totalmoves:947
+time:2626088080
+ns/move:2773060
+finalboard:
+_ 8 8 2048 
+_ 4 2 2 
+_ 2 4 _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865981169
+won:true
+totalmoves:954
+time:2770355257
+ns/move:2903936
+finalboard:
+4 4 16 2048 
+2 8 4 8 
+_ 2 _ _ 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526865983939
+won:true
+totalmoves:957
+time:2787510755
+ns/move:2912759
+finalboard:
+4 32 _ _ 
+_ 2 _ _ 
+_ _ 16 _ 
+2048 8 4 2 
+
+
+test:SnakeTest
+seed:1526865986727
+won:true
+totalmoves:949
+time:2843050513
+ns/move:2995838
+finalboard:
+_ _ _ 2048 
+8 _ 8 2 
+_ 4 _ 2 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865989570
+won:false
+totalmoves:938
+time:2573993695
+ns/move:2744129
+finalboard:
+2 32 2 1024 
+8 2 32 512 
+2 16 64 256 
+4 2 128 4 
+
+
+test:SnakeTest
+seed:1526865992144
+won:true
+totalmoves:929
+time:2645799544
+ns/move:2848008
+finalboard:
+2 4 2 2048 
+_ 8 4 8 
+_ 2 2 _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526865994790
+won:true
+totalmoves:935
+time:2786495397
+ns/move:2980208
+finalboard:
+_ _ 4 2048 
+_ 4 _ 4 
+4 _ _ 8 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526865997576
+won:true
+totalmoves:956
+time:2911780088
+ns/move:3045795
+finalboard:
+2048 4 _ _ 
+8 4 _ _ 
+8 2 _ _ 
+2 _ _ 2 
+
+
+test:SnakeTest
+seed:1526866000488
+won:true
+totalmoves:941
+time:2838553170
+ns/move:3016528
+finalboard:
+2048 4 _ _ 
+8 4 _ _ 
+8 2 _ _ 
+2 4 _ _ 
+
+
+test:SnakeTest
+seed:1526866003327
+won:false
+totalmoves:894
+time:2497462456
+ns/move:2793582
+finalboard:
+4 2 512 1024 
+2 8 2 4 
+8 16 64 256 
+2 32 4 2 
+
+
+test:SnakeTest
+seed:1526866005824
+won:true
+totalmoves:932
+time:2755870183
+ns/move:2956942
+finalboard:
+2048 2 8 2 
+4 8 2 _ 
+_ 2 _ _ 
+_ 4 2 _ 
+
+
+test:SnakeTest
+seed:1526866008580
+won:true
+totalmoves:950
+time:2804542281
+ns/move:2952149
+finalboard:
+2048 4 2 _ 
+8 16 2 _ 
+4 2 _ _ 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866011385
+won:false
+totalmoves:917
+time:2624075359
+ns/move:2861587
+finalboard:
+2 4 8 1024 
+4 32 2 512 
+16 2 64 8 
+2 32 256 64 
+
+
+test:SnakeTest
+seed:1526866014009
+won:true
+totalmoves:950
+time:2932111135
+ns/move:3086432
+finalboard:
+_ 8 2 _ 
+_ _ _ _ 
+2 4 _ _ 
+2048 2 4 2 
+
+
+test:SnakeTest
+seed:1526866016941
+won:true
+totalmoves:948
+time:2843676571
+ns/move:2999658
+finalboard:
+_ _ 2 2048 
+_ 4 2 4 
+8 _ 8 2 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526866019785
+won:true
+totalmoves:958
+time:2869973682
+ns/move:2995797
+finalboard:
+2048 _ 2 _ 
+16 _ _ _ 
+2 4 2 _ 
+4 4 _ _ 
+
+
+test:SnakeTest
+seed:1526866022655
+won:true
+totalmoves:936
+time:2795034360
+ns/move:2986147
+finalboard:
+_ 4 2 _ 
+_ 8 _ _ 
+_ _ _ _ 
+2048 2 2 _ 
+
+
+test:SnakeTest
+seed:1526866025450
+won:true
+totalmoves:946
+time:2907479091
+ns/move:3073445
+finalboard:
+2048 2 _ _ 
+2 8 _ _ 
+4 2 2 _ 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866028358
+won:true
+totalmoves:954
+time:2847285991
+ns/move:2984576
+finalboard:
+_ _ _ _ 
+_ 16 _ _ 
+_ _ _ 2 
+2048 4 2 2 
+
+
+test:SnakeTest
+seed:1526866031205
+won:true
+totalmoves:990
+time:2742354027
+ns/move:2770054
+finalboard:
+4 8 16 2048 
+_ 2 64 _ 
+2 4 4 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866033948
+won:false
+totalmoves:717
+time:2008032927
+ns/move:2800603
+finalboard:
+16 4 2 64 
+2 32 8 2 
+8 2 256 16 
+2 32 128 1024 
+
+
+test:SnakeTest
+seed:1526866035956
+won:false
+totalmoves:804
+time:2320994496
+ns/move:2886809
+finalboard:
+4 2 16 1024 
+2 4 2 512 
+8 16 128 2 
+4 8 32 8 
+
+
+test:SnakeTest
+seed:1526866038277
+won:true
+totalmoves:952
+time:2757800459
+ns/move:2896849
+finalboard:
+32 _ _ 2048 
+8 2 4 2 
+_ _ 2 4 
+_ _ 2 2 
+
+
+test:SnakeTest
+seed:1526866041035
+won:true
+totalmoves:943
+time:2861893404
+ns/move:3034881
+finalboard:
+2 4 4 _ 
+_ 2 _ _ 
+_ 4 _ _ 
+2048 8 4 _ 
+
+
+test:SnakeTest
+seed:1526866043897
+won:true
+totalmoves:932
+time:2840164547
+ns/move:3047386
+finalboard:
+2048 _ _ _ 
+4 2 4 2 
+4 _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866046737
+won:true
+totalmoves:935
+time:2820863010
+ns/move:3016965
+finalboard:
+2048 4 8 2 
+_ 2 _ _ 
+_ 4 _ _ 
+2 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866049558
+won:true
+totalmoves:966
+time:2642455277
+ns/move:2735460
+finalboard:
+2 4 2 _ 
+4 8 2 _ 
+32 16 4 _ 
+2048 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866052200
+won:true
+totalmoves:935
+time:2827162848
+ns/move:3023703
+finalboard:
+2048 8 4 2 
+4 _ 8 _ 
+_ 2 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866055028
+won:true
+totalmoves:944
+time:2638924616
+ns/move:2795470
+finalboard:
+2 2 8 2048 
+_ 4 2 4 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866057667
+won:true
+totalmoves:940
+time:2870714043
+ns/move:3053951
+finalboard:
+2048 2 8 2 
+8 8 _ _ 
+_ 4 _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866060537
+won:false
+totalmoves:482
+time:1517443365
+ns/move:3148222
+finalboard:
+512 256 128 16 
+4 32 64 2 
+2 8 2 4 
+8 2 8 2 
+
+
+test:SnakeTest
+seed:1526866062055
+won:true
+totalmoves:953
+time:2701764768
+ns/move:2835010
+finalboard:
+4 _ _ _ 
+2 4 _ 2 
+4 2 _ _ 
+2048 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866064757
+won:true
+totalmoves:942
+time:2847899612
+ns/move:3023247
+finalboard:
+2048 2 16 4 
+_ 8 2 2 
+2 2 8 4 
+_ 4 2 _ 
+
+
+test:SnakeTest
+seed:1526866067605
+won:true
+totalmoves:948
+time:2834652065
+ns/move:2990139
+finalboard:
+2 _ 2 2048 
+4 8 4 8 
+_ _ _ 4 
+_ _ 2 4 
+
+
+test:SnakeTest
+seed:1526866070440
+won:true
+totalmoves:945
+time:2891156144
+ns/move:3059424
+finalboard:
+_ 2 _ _ 
+_ 2 _ _ 
+_ _ _ 4 
+2048 8 4 2 
+
+
+test:SnakeTest
+seed:1526866073331
+won:true
+totalmoves:962
+time:2850970664
+ns/move:2963586
+finalboard:
+_ _ _ 2048 
+_ 4 16 2 
+_ _ 16 8 
+_ _ 2 8 
+
+
+test:SnakeTest
+seed:1526866076182
+won:true
+totalmoves:938
+time:2789818162
+ns/move:2974219
+finalboard:
+2048 4 _ _ 
+8 16 8 4 
+2 4 4 _ 
+4 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866078972
+won:true
+totalmoves:949
+time:2689514909
+ns/move:2834051
+finalboard:
+_ _ 2 4 
+_ 2 8 2 
+_ _ 4 8 
+4 _ _ 2048 
+
+
+test:SnakeTest
+seed:1526866081661
+won:true
+totalmoves:952
+time:2685207516
+ns/move:2820596
+finalboard:
+4 4 8 2048 
+2 8 4 4 
+_ 2 _ 2 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526866084347
+won:true
+totalmoves:941
+time:2672922548
+ns/move:2840512
+finalboard:
+2 4 16 2048 
+8 2 4 4 
+2 _ _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526866087020
+won:true
+totalmoves:949
+time:2823031138
+ns/move:2974743
+finalboard:
+2048 _ _ _ 
+4 2 8 _ 
+4 2 _ _ 
+2 _ _ 2 
+
+
+test:SnakeTest
+seed:1526866089843
+won:true
+totalmoves:942
+time:2770384071
+ns/move:2940959
+finalboard:
+_ _ _ 2 
+8 _ _ 2 
+8 2 _ 8 
+_ _ _ 2048 
+
+
+test:SnakeTest
+seed:1526866092613
+won:true
+totalmoves:934
+time:2837383972
+ns/move:3037884
+finalboard:
+_ 4 _ 2 
+_ 8 _ _ 
+_ _ _ _ 
+2048 4 2 4 
+
+
+test:SnakeTest
+seed:1526866095451
+won:true
+totalmoves:948
+time:2713323695
+ns/move:2862155
+finalboard:
+4 2 _ _ 
+8 _ _ _ 
+4 8 2 4 
+2048 4 2 _ 
+
+
+test:SnakeTest
+seed:1526866098164
+won:true
+totalmoves:950
+time:2901152834
+ns/move:3053845
+finalboard:
+_ 2 _ 2048 
+4 2 _ 8 
+4 _ 2 4 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866101065
+won:false
+totalmoves:937
+time:2814244899
+ns/move:3003463
+finalboard:
+1024 512 256 4 
+2 32 64 128 
+4 2 4 2 
+2 4 2 4 
+
+
+test:SnakeTest
+seed:1526866103880
+won:true
+totalmoves:937
+time:2767966773
+ns/move:2954073
+finalboard:
+4 _ _ _ 
+8 2 _ _ 
+4 2 2 _ 
+2048 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866106648
+won:true
+totalmoves:940
+time:2847621056
+ns/move:3029384
+finalboard:
+_ 2 _ 2048 
+8 2 8 2 
+_ _ 8 2 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866109495
+won:true
+totalmoves:930
+time:2789434703
+ns/move:2999392
+finalboard:
+_ 2 _ _ 
+_ 8 8 _ 
+2 _ _ _ 
+2048 2 4 2 
+
+
+test:SnakeTest
+seed:1526866112285
+won:true
+totalmoves:954
+time:2692552123
+ns/move:2822381
+finalboard:
+2 8 8 2048 
+_ 2 4 4 
+_ _ 2 _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866114978
+won:true
+totalmoves:985
+time:2692900616
+ns/move:2733909
+finalboard:
+2 8 2 _ 
+32 8 2 _ 
+4 64 _ _ 
+2048 4 _ 4 
+
+
+test:SnakeTest
+seed:1526866117670
+won:true
+totalmoves:941
+time:2784804526
+ns/move:2959409
+finalboard:
+2048 8 4 2 
+4 4 2 _ 
+_ 8 _ _ 
+_ 4 _ 2 
+
+
+test:SnakeTest
+seed:1526866120455
+won:true
+totalmoves:924
+time:2828718767
+ns/move:3061383
+finalboard:
+2048 2 4 4 
+_ 4 _ 2 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866123284
+won:true
+totalmoves:949
+time:2804137821
+ns/move:2954834
+finalboard:
+2 8 _ _ 
+_ 16 _ _ 
+_ _ _ _ 
+2048 4 4 _ 
+
+
+test:SnakeTest
+seed:1526866126088
+won:true
+totalmoves:953
+time:2801069610
+ns/move:2939212
+finalboard:
+_ _ _ 2048 
+4 2 _ 8 
+_ _ _ 2 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526866128889
+won:true
+totalmoves:954
+time:2904978893
+ns/move:3045051
+finalboard:
+2048 _ _ _ 
+4 8 _ 2 
+8 2 _ _ 
+4 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866131795
+won:true
+totalmoves:996
+time:2746232831
+ns/move:2757261
+finalboard:
+2 4 _ _ 
+4 8 2 _ 
+16 4 32 _ 
+2048 64 _ 2 
+
+
+test:SnakeTest
+seed:1526866134541
+won:true
+totalmoves:943
+time:2587279482
+ns/move:2743668
+finalboard:
+8 8 16 2048 
+2 4 _ _ 
+_ _ _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526866137128
+won:true
+totalmoves:946
+time:2775798801
+ns/move:2934248
+finalboard:
+_ 8 4 _ 
+2 _ _ _ 
+_ _ _ _ 
+2048 4 2 _ 
+
+
+test:SnakeTest
+seed:1526866139904
+won:true
+totalmoves:955
+time:2888525063
+ns/move:3024633
+finalboard:
+_ _ _ 2048 
+2 4 8 2 
+2 _ _ 8 
+2 _ _ 2 
+
+
+test:SnakeTest
+seed:1526866142793
+won:true
+totalmoves:958
+time:2890730085
+ns/move:3017463
+finalboard:
+2048 4 _ _ 
+32 2 _ _ 
+4 4 _ _ 
+8 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866145683
+won:true
+totalmoves:952
+time:2699699718
+ns/move:2835819
+finalboard:
+_ 8 _ _ 
+2 _ 16 _ 
+_ _ 4 _ 
+2 4 2 2048 
+
+
+test:SnakeTest
+seed:1526866148383
+won:true
+totalmoves:942
+time:2896346149
+ns/move:3074677
+finalboard:
+2048 2 4 2 
+2 8 _ _ 
+4 2 _ _ 
+_ _ 2 _ 
+
+
+test:SnakeTest
+seed:1526866151280
+won:true
+totalmoves:945
+time:2872742436
+ns/move:3039939
+finalboard:
+_ _ 2 2048 
+8 2 _ 4 
+2 _ _ 4 
+_ _ _ 2 
+
+
+test:SnakeTest
+seed:1526866154152
+won:true
+totalmoves:945
+time:2665851298
+ns/move:2821006
+finalboard:
+8 2 2 _ 
+8 _ _ _ 
+8 2 4 _ 
+2048 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866156818
+won:false
+totalmoves:702
+time:2063499894
+ns/move:2939458
+finalboard:
+4 64 8 2 
+8 128 4 16 
+4 16 8 256 
+8 2 4 1024 
+
+
+test:SnakeTest
+seed:1526866158882
+won:true
+totalmoves:938
+time:2736182104
+ns/move:2917038
+finalboard:
+2 2 _ _ 
+16 2 _ _ 
+4 2 _ _ 
+2048 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866161618
+won:true
+totalmoves:937
+time:2743963602
+ns/move:2928456
+finalboard:
+2048 4 _ _ 
+4 8 2 _ 
+2 4 2 _ 
+2 _ _ 2 
+
+
+test:SnakeTest
+seed:1526866164362
+won:true
+totalmoves:942
+time:2873640195
+ns/move:3050573
+finalboard:
+_ 4 _ _ 
+_ 2 2 _ 
+_ 8 _ _ 
+2048 4 4 2 
+
+
+test:SnakeTest
+seed:1526866167236
+won:true
+totalmoves:951
+time:2869708233
+ns/move:3017569
+finalboard:
+_ _ 8 _ 
+2 8 _ _ 
+_ _ _ _ 
+2048 4 4 4 
+
+
+test:SnakeTest
+seed:1526866170106
+won:true
+totalmoves:957
+time:2693115829
+ns/move:2814123
+finalboard:
+_ _ 2 8 
+_ _ 2 4 
+_ _ 4 8 
+2 _ 2 2048 
+
+
+test:SnakeTest
+seed:1526866172799
+won:true
+totalmoves:931
+time:2846797870
+ns/move:3057785
+finalboard:
+2048 4 2 2 
+2 8 _ _ 
+_ 2 _ _ 
+_ 4 _ 2 
+
+
+test:SnakeTest
+seed:1526866175646
+won:true
+totalmoves:934
+time:2659249335
+ns/move:2847162
+finalboard:
+4 2 2 2048 
+_ 4 4 4 
+_ _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866178305
+won:true
+totalmoves:955
+time:2916378995
+ns/move:3053799
+finalboard:
+2048 4 _ _ 
+2 8 2 4 
+8 2 _ _ 
+_ 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866181222
+won:false
+totalmoves:875
+time:2620331687
+ns/move:2994664
+finalboard:
+8 256 512 1024 
+64 32 8 2 
+2 4 2 4 
+16 2 4 2 
+
+
+test:SnakeTest
+seed:1526866183842
+won:false
+totalmoves:468
+time:1397342583
+ns/move:2985774
+finalboard:
+4 8 4 512 
+2 4 128 256 
+8 16 8 32 
+4 32 4 2 
+
+
+test:SnakeTest
+seed:1526866185239
+won:true
+totalmoves:936
+time:2846407009
+ns/move:3041033
+finalboard:
+2048 2 _ _ 
+8 4 4 _ 
+4 _ _ _ 
+2 _ _ _ 
+
+
+test:SnakeTest
+seed:1526866188086
+won:true
+totalmoves:942
+time:2894018716
+ns/move:3072206
+finalboard:
+_ 2 _ _ 
+_ 4 _ _ 
+_ _ 2 _ 
+2048 2 4 2 
+
+
+test:SnakeTest
+seed:1526866190980
+won:true
+totalmoves:934
+time:2877469675
+ns/move:3080802
+finalboard:
+_ _ _ 2048 
+2 4 4 2 
+4 _ 8 2 
+_ _ _ 4 
+
+
+test:SnakeTest
+seed:1526866193858
+won:true
+totalmoves:955
+time:2968536424
+ns/move:3108415
+finalboard:
+2048 16 4 4 
+32 4 _ _ 
+_ 4 _ _ 
+_ _ _ _ 
+
+
+test:SnakeTest
+seed:1526866196826
+won:true
+totalmoves:937
+time:2832330713
+ns/move:3022764
+finalboard:
+2048 4 2 _ 
+16 2 _ _ 
+8 _ _ _ 
+8 2 _ _ 
+
+
+test:SnakeTest
+seed:1526866199659
+won:true
+totalmoves:940
+time:2975321523
+ns/move:3165235
+finalboard:
+_ _ _ _ 
+_ _ 8 _ 
+2 4 _ _ 
+2048 2 2 2 
+
+

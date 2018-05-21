@@ -1,0 +1,5203 @@
+rm -rf ./build/
+javac -sourcepath src -d build src/**/*.java
+java -cp .:build:**/*.class solutions.GameSolver
+test:SmoothnessTest
+seed:1526866479537
+won:false
+totalmoves:851
+time:3199058127
+ns/move:3759175
+finalboard:
+1024 16 128 2 
+512 8 32 4 
+2 32 16 64 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866482738
+won:true
+totalmoves:959
+time:3409567108
+ns/move:3555335
+finalboard:
+2048 4 2 _ 
+4 16 8 2 
+4 2 _ _ 
+16 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866486148
+won:false
+totalmoves:955
+time:3311178678
+ns/move:3467202
+finalboard:
+1024 2 4 128 
+512 64 8 4 
+256 8 16 8 
+16 2 32 2 
+
+
+test:SmoothnessTest
+seed:1526866489459
+won:true
+totalmoves:975
+time:3391496302
+ns/move:3478457
+finalboard:
+2048 4 _ _ 
+8 2 4 32 
+2 4 _ _ 
+4 16 2 2 
+
+
+test:SmoothnessTest
+seed:1526866492850
+won:true
+totalmoves:1016
+time:3456938838
+ns/move:3402498
+finalboard:
+2048 128 4 _ 
+32 4 4 _ 
+2 16 4 _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866496307
+won:true
+totalmoves:962
+time:3348593555
+ns/move:3480866
+finalboard:
+2048 2 4 _ 
+2 16 4 16 
+32 4 _ _ 
+4 16 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866499656
+won:false
+totalmoves:505
+time:1695128123
+ns/move:3356689
+finalboard:
+512 2 16 64 
+128 4 8 4 
+32 256 2 64 
+2 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866501351
+won:false
+totalmoves:933
+time:3166150447
+ns/move:3393516
+finalboard:
+1024 32 64 4 
+64 16 2 512 
+2 8 256 2 
+4 2 64 8 
+
+
+test:SmoothnessTest
+seed:1526866504518
+won:true
+totalmoves:954
+time:3389842849
+ns/move:3553294
+finalboard:
+2048 2 32 2 
+4 4 _ _ 
+_ 2 _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526866507908
+won:false
+totalmoves:481
+time:1620361412
+ns/move:3368734
+finalboard:
+512 128 8 4 
+256 8 64 16 
+4 2 4 2 
+2 4 64 4 
+
+
+test:SmoothnessTest
+seed:1526866509528
+won:false
+totalmoves:944
+time:3216872871
+ns/move:3407704
+finalboard:
+1024 2 256 8 
+512 64 16 32 
+32 16 2 8 
+2 8 128 4 
+
+
+test:SmoothnessTest
+seed:1526866512745
+won:true
+totalmoves:1003
+time:3492269367
+ns/move:3481823
+finalboard:
+2048 8 2 _ 
+32 16 4 4 
+4 32 _ _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866516237
+won:true
+totalmoves:973
+time:3481602805
+ns/move:3578214
+finalboard:
+2048 16 8 2 
+16 4 _ _ 
+2 4 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866519719
+won:false
+totalmoves:532
+time:1802638454
+ns/move:3388418
+finalboard:
+512 256 4 2 
+2 32 128 64 
+8 128 16 2 
+32 4 8 4 
+
+
+test:SmoothnessTest
+seed:1526866521522
+won:true
+totalmoves:986
+time:3422723667
+ns/move:3471322
+finalboard:
+2048 4 2 _ 
+16 4 16 _ 
+64 2 2 _ 
+8 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866524945
+won:false
+totalmoves:941
+time:3231851470
+ns/move:3434486
+finalboard:
+1024 512 32 4 
+256 8 16 2 
+32 128 32 4 
+2 8 4 8 
+
+
+test:SmoothnessTest
+seed:1526866528176
+won:false
+totalmoves:970
+time:3369357765
+ns/move:3473564
+finalboard:
+1024 256 128 16 
+64 4 32 8 
+16 32 512 4 
+2 4 16 2 
+
+
+test:SmoothnessTest
+seed:1526866531546
+won:false
+totalmoves:720
+time:2473083412
+ns/move:3434838
+finalboard:
+1024 64 8 2 
+128 2 4 8 
+8 16 32 256 
+2 4 16 2 
+
+
+test:SmoothnessTest
+seed:1526866534019
+won:false
+totalmoves:1056
+time:3732953050
+ns/move:3534993
+finalboard:
+1024 8 32 512 
+2 4 512 128 
+4 32 16 2 
+2 4 8 32 
+
+
+test:SmoothnessTest
+seed:1526866537752
+won:false
+totalmoves:949
+time:3232434235
+ns/move:3406147
+finalboard:
+1024 4 32 256 
+512 64 8 128 
+2 32 16 4 
+8 2 4 8 
+
+
+test:SmoothnessTest
+seed:1526866540985
+won:false
+totalmoves:603
+time:2062257861
+ns/move:3419996
+finalboard:
+1024 128 4 2 
+64 32 8 32 
+2 8 2 4 
+16 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526866543047
+won:false
+totalmoves:720
+time:2445618615
+ns/move:3396692
+finalboard:
+1024 32 4 2 
+64 4 32 8 
+2 128 16 256 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866545493
+won:false
+totalmoves:1011
+time:3484374917
+ns/move:3446463
+finalboard:
+1024 512 256 128 
+32 8 32 2 
+16 64 128 8 
+4 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866548977
+won:false
+totalmoves:938
+time:3236787340
+ns/move:3450732
+finalboard:
+1024 512 128 8 
+2 8 32 64 
+4 2 8 2 
+256 4 16 4 
+
+
+test:SmoothnessTest
+seed:1526866552214
+won:false
+totalmoves:910
+time:3129368411
+ns/move:3438866
+finalboard:
+1024 64 2 16 
+64 32 8 2 
+16 2 4 256 
+2 512 2 8 
+
+
+test:SmoothnessTest
+seed:1526866555344
+won:true
+totalmoves:970
+time:3349719070
+ns/move:3453318
+finalboard:
+2048 64 8 _ 
+4 2 _ _ 
+_ 16 _ _ 
+_ 2 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866558693
+won:true
+totalmoves:960
+time:3298981828
+ns/move:3436439
+finalboard:
+2048 4 8 _ 
+2 16 8 4 
+8 2 4 _ 
+2 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866561992
+won:true
+totalmoves:1012
+time:3569996071
+ns/move:3527664
+finalboard:
+2048 8 64 _ 
+4 16 4 _ 
+8 2 2 _ 
+64 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866565562
+won:false
+totalmoves:502
+time:1685380603
+ns/move:3357331
+finalboard:
+512 128 4 2 
+256 4 16 8 
+32 8 32 2 
+8 64 16 4 
+
+
+test:SmoothnessTest
+seed:1526866567248
+won:false
+totalmoves:978
+time:3352033671
+ns/move:3427437
+finalboard:
+1024 256 8 2 
+512 32 4 64 
+128 4 16 8 
+32 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526866570600
+won:true
+totalmoves:950
+time:3374938898
+ns/move:3552567
+finalboard:
+2048 8 _ _ 
+4 16 2 _ 
+4 2 4 _ 
+8 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866573975
+won:true
+totalmoves:954
+time:3387205244
+ns/move:3550529
+finalboard:
+2048 8 4 _ 
+4 16 8 _ 
+8 _ 2 _ 
+8 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866577362
+won:true
+totalmoves:961
+time:3336476447
+ns/move:3471879
+finalboard:
+2048 32 2 2 
+32 4 _ _ 
+16 4 4 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866580699
+won:false
+totalmoves:969
+time:3286088739
+ns/move:3391216
+finalboard:
+1024 64 16 2 
+512 8 256 4 
+8 128 32 8 
+64 8 2 4 
+
+
+test:SmoothnessTest
+seed:1526866583985
+won:true
+totalmoves:956
+time:3334224606
+ns/move:3487682
+finalboard:
+2048 2 16 _ 
+2 8 _ _ 
+8 4 _ _ 
+8 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866587319
+won:true
+totalmoves:958
+time:3318747044
+ns/move:3464245
+finalboard:
+2048 4 8 _ 
+2 8 2 _ 
+32 _ _ _ 
+_ _ 4 _ 
+
+
+test:SmoothnessTest
+seed:1526866590638
+won:false
+totalmoves:975
+time:3364459266
+ns/move:3450727
+finalboard:
+1024 2 256 8 
+512 64 2 64 
+2 4 128 8 
+4 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526866594003
+won:true
+totalmoves:977
+time:3391847077
+ns/move:3471696
+finalboard:
+2048 2 16 4 
+8 8 2 32 
+4 16 _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526866597395
+won:false
+totalmoves:977
+time:3458346985
+ns/move:3539761
+finalboard:
+1024 64 2 8 
+128 2 4 2 
+8 512 8 64 
+256 32 2 8 
+
+
+test:SmoothnessTest
+seed:1526866600853
+won:false
+totalmoves:954
+time:3282954848
+ns/move:3441252
+finalboard:
+1024 8 256 16 
+4 512 4 128 
+32 8 64 16 
+16 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526866604136
+won:false
+totalmoves:714
+time:2414118836
+ns/move:3381118
+finalboard:
+1024 256 2 16 
+128 64 4 2 
+8 32 16 8 
+2 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526866606550
+won:true
+totalmoves:965
+time:3331997510
+ns/move:3452847
+finalboard:
+2048 32 4 _ 
+4 8 2 2 
+4 16 _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866609883
+won:true
+totalmoves:958
+time:3294138064
+ns/move:3438557
+finalboard:
+2048 8 16 _ 
+2 4 8 32 
+4 _ 2 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866613177
+won:false
+totalmoves:897
+time:3100413407
+ns/move:3456425
+finalboard:
+1024 512 256 4 
+4 8 16 2 
+64 16 2 8 
+8 2 8 32 
+
+
+test:SmoothnessTest
+seed:1526866616277
+won:false
+totalmoves:948
+time:3206683887
+ns/move:3382577
+finalboard:
+1024 512 64 8 
+8 256 128 2 
+4 2 32 8 
+2 16 2 16 
+
+
+test:SmoothnessTest
+seed:1526866619484
+won:true
+totalmoves:996
+time:3446364320
+ns/move:3460205
+finalboard:
+2048 8 4 4 
+2 32 16 16 
+_ 64 2 _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866622930
+won:false
+totalmoves:507
+time:1727600969
+ns/move:3407496
+finalboard:
+512 256 64 16 
+128 4 32 2 
+64 16 8 4 
+2 4 2 8 
+
+
+test:SmoothnessTest
+seed:1526866624658
+won:true
+totalmoves:983
+time:3377507676
+ns/move:3435918
+finalboard:
+2048 8 8 2 
+64 32 2 2 
+8 8 4 _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866628036
+won:false
+totalmoves:480
+time:1614053586
+ns/move:3362611
+finalboard:
+512 256 4 2 
+64 8 16 4 
+4 2 4 8 
+128 4 16 2 
+
+
+test:SmoothnessTest
+seed:1526866629650
+won:false
+totalmoves:888
+time:3070073921
+ns/move:3457290
+finalboard:
+1024 512 128 16 
+128 8 32 2 
+64 2 4 8 
+8 16 2 4 
+
+
+test:SmoothnessTest
+seed:1526866632720
+won:false
+totalmoves:949
+time:3249418220
+ns/move:3424044
+finalboard:
+1024 128 8 2 
+512 32 64 16 
+16 2 16 8 
+4 256 2 4 
+
+
+test:SmoothnessTest
+seed:1526866635969
+won:false
+totalmoves:952
+time:3298101490
+ns/move:3464392
+finalboard:
+1024 512 4 2 
+64 256 16 8 
+16 2 128 2 
+2 16 8 4 
+
+
+test:SmoothnessTest
+seed:1526866639268
+won:false
+totalmoves:320
+time:1028803977
+ns/move:3215012
+finalboard:
+512 32 16 8 
+2 64 8 2 
+32 2 4 16 
+2 8 2 4 
+
+
+test:SmoothnessTest
+seed:1526866640297
+won:true
+totalmoves:947
+time:3291083784
+ns/move:3475273
+finalboard:
+2048 16 _ _ 
+2 8 2 _ 
+8 2 _ _ 
+2 4 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866643588
+won:false
+totalmoves:954
+time:3255464405
+ns/move:3412436
+finalboard:
+1024 256 4 16 
+512 4 32 8 
+8 16 64 128 
+2 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866646843
+won:false
+totalmoves:968
+time:3378205880
+ns/move:3489882
+finalboard:
+1024 256 16 2 
+512 128 64 32 
+64 32 16 4 
+4 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526866650222
+won:true
+totalmoves:969
+time:3384981201
+ns/move:3493272
+finalboard:
+2048 4 4 16 
+4 32 _ 2 
+_ 16 _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526866653607
+won:true
+totalmoves:984
+time:3495300908
+ns/move:3552135
+finalboard:
+2048 32 4 2 
+2 8 32 _ 
+32 4 _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866657102
+won:true
+totalmoves:982
+time:3351713028
+ns/move:3413149
+finalboard:
+2048 16 8 _ 
+2 32 4 _ 
+16 16 _ 2 
+2 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866660454
+won:false
+totalmoves:860
+time:2913601550
+ns/move:3387908
+finalboard:
+1024 64 16 4 
+512 32 4 128 
+32 4 16 8 
+8 2 32 2 
+
+
+test:SmoothnessTest
+seed:1526866663367
+won:false
+totalmoves:974
+time:3239041909
+ns/move:3325505
+finalboard:
+1024 512 128 64 
+8 64 2 16 
+2 16 32 4 
+4 256 8 2 
+
+
+test:SmoothnessTest
+seed:1526866666607
+won:false
+totalmoves:919
+time:3142377653
+ns/move:3419344
+finalboard:
+1024 256 16 4 
+8 512 2 8 
+4 2 128 4 
+2 32 16 2 
+
+
+test:SmoothnessTest
+seed:1526866669749
+won:false
+totalmoves:720
+time:2436678723
+ns/move:3384276
+finalboard:
+1024 256 64 8 
+2 16 32 2 
+8 2 4 8 
+2 16 128 2 
+
+
+test:SmoothnessTest
+seed:1526866672186
+won:true
+totalmoves:967
+time:3253698430
+ns/move:3364734
+finalboard:
+2048 2 16 2 
+16 16 8 2 
+_ 8 _ _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866675440
+won:false
+totalmoves:979
+time:3362688098
+ns/move:3434819
+finalboard:
+1024 16 128 2 
+256 4 2 8 
+128 32 512 2 
+16 8 4 16 
+
+
+test:SmoothnessTest
+seed:1526866678802
+won:true
+totalmoves:1009
+time:3469121858
+ns/move:3438178
+finalboard:
+2048 64 16 _ 
+8 2 32 2 
+2 4 2 _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866682272
+won:true
+totalmoves:1008
+time:3386841526
+ns/move:3359961
+finalboard:
+2048 8 16 _ 
+2 32 2 4 
+8 16 2 2 
+2 64 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866685659
+won:false
+totalmoves:990
+time:3364081242
+ns/move:3398061
+finalboard:
+1024 512 128 2 
+256 8 32 8 
+16 2 16 4 
+8 128 8 2 
+
+
+test:SmoothnessTest
+seed:1526866689023
+won:false
+totalmoves:999
+time:3426251087
+ns/move:3429680
+finalboard:
+1024 512 8 256 
+32 2 16 64 
+8 256 2 16 
+2 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526866692449
+won:true
+totalmoves:952
+time:3254377952
+ns/move:3418464
+finalboard:
+2048 16 2 _ 
+2 16 _ _ 
+4 _ _ 2 
+2 32 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866695704
+won:true
+totalmoves:969
+time:3390219177
+ns/move:3498678
+finalboard:
+2048 4 4 2 
+2 8 _ _ 
+32 16 _ 2 
+_ 8 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866699094
+won:false
+totalmoves:970
+time:3315227302
+ns/move:3417760
+finalboard:
+1024 512 256 4 
+128 64 8 2 
+32 2 4 32 
+2 32 2 8 
+
+
+test:SmoothnessTest
+seed:1526866702409
+won:false
+totalmoves:985
+time:3343514762
+ns/move:3394431
+finalboard:
+1024 16 2 8 
+512 256 64 4 
+128 16 2 64 
+4 2 32 2 
+
+
+test:SmoothnessTest
+seed:1526866705753
+won:true
+totalmoves:936
+time:3224007370
+ns/move:3444452
+finalboard:
+2048 4 4 2 
+2 2 32 _ 
+_ _ 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866708977
+won:true
+totalmoves:1003
+time:3457382743
+ns/move:3447041
+finalboard:
+2048 4 16 2 
+16 4 8 4 
+32 64 4 _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866712435
+won:true
+totalmoves:989
+time:3377558303
+ns/move:3415124
+finalboard:
+2048 8 _ _ 
+32 8 2 2 
+4 64 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866715812
+won:false
+totalmoves:931
+time:3181786505
+ns/move:3417600
+finalboard:
+1024 2 8 32 
+32 8 128 16 
+8 512 16 8 
+4 256 4 2 
+
+
+test:SmoothnessTest
+seed:1526866718994
+won:true
+totalmoves:967
+time:3292585885
+ns/move:3404949
+finalboard:
+2048 16 _ _ 
+16 16 2 _ 
+2 4 2 _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866722287
+won:false
+totalmoves:900
+time:3126833574
+ns/move:3474259
+finalboard:
+1024 512 4 32 
+8 4 2 8 
+64 32 256 2 
+4 2 16 4 
+
+
+test:SmoothnessTest
+seed:1526866725414
+won:false
+totalmoves:965
+time:3315607934
+ns/move:3435863
+finalboard:
+1024 4 2 32 
+256 128 16 2 
+16 64 8 512 
+8 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526866728729
+won:false
+totalmoves:723
+time:2486131232
+ns/move:3438632
+finalboard:
+1024 128 32 8 
+256 32 8 16 
+2 4 64 2 
+4 2 16 4 
+
+
+test:SmoothnessTest
+seed:1526866731216
+won:true
+totalmoves:986
+time:3452795378
+ns/move:3501820
+finalboard:
+2048 16 2 _ 
+16 2 8 _ 
+16 64 _ _ 
+2 4 2 _ 
+
+
+test:SmoothnessTest
+seed:1526866734668
+won:true
+totalmoves:987
+time:3458061075
+ns/move:3503607
+finalboard:
+2048 16 2 2 
+2 32 2 32 
+8 8 2 _ 
+2 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866738127
+won:true
+totalmoves:967
+time:3339670458
+ns/move:3453640
+finalboard:
+2048 4 4 4 
+16 32 8 2 
+2 2 2 16 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866741466
+won:true
+totalmoves:968
+time:3315082286
+ns/move:3424671
+finalboard:
+2048 4 2 _ 
+4 8 4 _ 
+2 4 2 2 
+16 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866744781
+won:true
+totalmoves:965
+time:3272123039
+ns/move:3390801
+finalboard:
+2048 2 2 4 
+4 4 64 _ 
+_ 8 _ _ 
+_ _ _ 4 
+
+
+test:SmoothnessTest
+seed:1526866748054
+won:false
+totalmoves:962
+time:3243792640
+ns/move:3371925
+finalboard:
+1024 8 2 8 
+256 512 64 2 
+2 64 8 16 
+16 128 4 2 
+
+
+test:SmoothnessTest
+seed:1526866751298
+won:true
+totalmoves:957
+time:3322634282
+ns/move:3471927
+finalboard:
+2048 8 4 4 
+_ 2 2 2 
+2 _ 16 _ 
+_ _ 32 _ 
+
+
+test:SmoothnessTest
+seed:1526866754620
+won:false
+totalmoves:941
+time:3180443053
+ns/move:3379854
+finalboard:
+1024 512 256 32 
+16 2 32 4 
+2 4 128 16 
+8 32 8 4 
+
+
+test:SmoothnessTest
+seed:1526866757801
+won:false
+totalmoves:956
+time:3273808621
+ns/move:3424486
+finalboard:
+1024 32 4 128 
+512 4 8 16 
+64 32 256 8 
+16 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526866761075
+won:false
+totalmoves:932
+time:3149639641
+ns/move:3379441
+finalboard:
+1024 512 64 8 
+256 4 32 4 
+8 32 64 16 
+4 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526866764224
+won:true
+totalmoves:953
+time:3445080534
+ns/move:3614984
+finalboard:
+2048 4 32 2 
+16 2 4 2 
+_ 8 2 _ 
+_ 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866767670
+won:false
+totalmoves:974
+time:3373580016
+ns/move:3463634
+finalboard:
+1024 512 2 4 
+128 64 4 2 
+4 256 2 16 
+32 4 64 2 
+
+
+test:SmoothnessTest
+seed:1526866771043
+won:false
+totalmoves:964
+time:3220099889
+ns/move:3340352
+finalboard:
+1024 128 8 4 
+512 2 256 16 
+16 64 32 8 
+8 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526866774263
+won:false
+totalmoves:893
+time:3044213800
+ns/move:3408974
+finalboard:
+1024 4 16 4 
+8 64 2 512 
+2 4 8 2 
+256 32 2 4 
+
+
+test:SmoothnessTest
+seed:1526866777308
+won:true
+totalmoves:975
+time:3326504067
+ns/move:3411799
+finalboard:
+2048 64 2 2 
+2 4 8 _ 
+4 _ _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866780634
+won:true
+totalmoves:974
+time:3366033916
+ns/move:3455886
+finalboard:
+2048 32 2 2 
+8 2 32 _ 
+4 _ _ _ 
+16 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866784000
+won:true
+totalmoves:957
+time:3339031363
+ns/move:3489060
+finalboard:
+2048 16 2 _ 
+2 4 8 2 
+4 4 _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866787340
+won:false
+totalmoves:963
+time:3306505122
+ns/move:3433546
+finalboard:
+1024 128 8 2 
+256 512 4 32 
+32 64 2 4 
+8 2 16 2 
+
+
+test:SmoothnessTest
+seed:1526866790646
+won:true
+totalmoves:958
+time:3268434476
+ns/move:3411727
+finalboard:
+2048 4 8 16 
+32 8 2 _ 
+2 4 _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866793915
+won:true
+totalmoves:940
+time:3223696332
+ns/move:3429464
+finalboard:
+2048 16 8 _ 
+4 2 _ _ 
+2 16 4 _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526866797138
+won:true
+totalmoves:973
+time:3273184337
+ns/move:3364012
+finalboard:
+2048 2 8 _ 
+16 4 32 _ 
+16 8 _ _ 
+2 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866800412
+won:false
+totalmoves:845
+time:2896099083
+ns/move:3427336
+finalboard:
+1024 16 8 4 
+512 4 64 8 
+16 128 32 4 
+32 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526866803308
+won:true
+totalmoves:966
+time:3384952032
+ns/move:3504091
+finalboard:
+2048 16 _ 2 
+4 8 2 _ 
+16 8 4 _ 
+8 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866806693
+won:true
+totalmoves:997
+time:3475324366
+ns/move:3485781
+finalboard:
+2048 32 8 2 
+8 2 4 64 
+2 4 _ 2 
+_ 16 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866810168
+won:false
+totalmoves:951
+time:3257599505
+ns/move:3425446
+finalboard:
+1024 64 256 4 
+4 8 128 2 
+64 2 4 512 
+4 8 16 2 
+
+
+test:SmoothnessTest
+seed:1526866813426
+won:true
+totalmoves:974
+time:3333250035
+ns/move:3422227
+finalboard:
+2048 4 2 4 
+32 2 16 _ 
+8 8 8 _ 
+_ 4 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866816759
+won:false
+totalmoves:927
+time:3116498106
+ns/move:3361918
+finalboard:
+1024 256 32 4 
+16 128 16 2 
+4 2 4 16 
+32 4 512 2 
+
+
+test:SmoothnessTest
+seed:1526866819876
+won:false
+totalmoves:935
+time:3197490805
+ns/move:3419776
+finalboard:
+1024 512 4 8 
+2 256 64 16 
+4 128 4 2 
+2 8 2 16 
+
+
+test:SmoothnessTest
+seed:1526866823074
+won:true
+totalmoves:972
+time:3322305223
+ns/move:3418009
+finalboard:
+2048 2 16 _ 
+4 16 _ _ 
+16 32 _ 2 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866826396
+won:true
+totalmoves:978
+time:3331115525
+ns/move:3406048
+finalboard:
+2048 2 4 32 
+8 8 16 8 
+_ 4 _ 2 
+_ 2 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866829727
+won:true
+totalmoves:987
+time:3416301275
+ns/move:3461298
+finalboard:
+2048 32 8 _ 
+32 8 _ _ 
+4 _ _ _ 
+2 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866833144
+won:false
+totalmoves:1016
+time:3431412565
+ns/move:3377374
+finalboard:
+1024 64 32 16 
+512 256 64 8 
+4 128 32 4 
+8 32 8 2 
+
+
+test:SmoothnessTest
+seed:1526866836575
+won:true
+totalmoves:978
+time:3363151141
+ns/move:3438804
+finalboard:
+2048 8 16 _ 
+4 8 4 2 
+8 4 2 32 
+4 8 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866839938
+won:false
+totalmoves:871
+time:2973067616
+ns/move:3413395
+finalboard:
+1024 512 64 32 
+16 128 16 4 
+2 64 8 16 
+4 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526866842912
+won:true
+totalmoves:947
+time:3281306228
+ns/move:3464948
+finalboard:
+2048 4 _ _ 
+8 8 2 _ 
+4 _ _ _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866846193
+won:false
+totalmoves:856
+time:2885985556
+ns/move:3371478
+finalboard:
+1024 128 4 2 
+512 64 32 16 
+16 2 4 8 
+64 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526866849079
+won:false
+totalmoves:937
+time:3221411253
+ns/move:3438005
+finalboard:
+1024 512 16 2 
+16 2 256 32 
+4 128 16 8 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866852301
+won:true
+totalmoves:941
+time:3349806759
+ns/move:3559837
+finalboard:
+2048 2 4 2 
+8 4 _ _ 
+4 8 _ _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866855650
+won:true
+totalmoves:957
+time:3353049910
+ns/move:3503709
+finalboard:
+2048 2 _ 2 
+4 8 2 _ 
+2 _ _ _ 
+2 32 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866859004
+won:false
+totalmoves:945
+time:3100511847
+ns/move:3280964
+finalboard:
+1024 512 16 4 
+16 64 128 8 
+8 16 256 4 
+2 4 64 2 
+
+
+test:SmoothnessTest
+seed:1526866862104
+won:false
+totalmoves:513
+time:1707623845
+ns/move:3328701
+finalboard:
+512 64 8 4 
+256 128 64 16 
+16 4 16 8 
+2 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526866863812
+won:true
+totalmoves:1021
+time:3542735544
+ns/move:3469868
+finalboard:
+2048 32 4 _ 
+8 8 2 _ 
+128 2 16 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866867355
+won:true
+totalmoves:992
+time:3412969765
+ns/move:3440493
+finalboard:
+2048 64 16 _ 
+4 4 2 _ 
+2 4 _ _ 
+32 2 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866870768
+won:true
+totalmoves:956
+time:3242043029
+ns/move:3391258
+finalboard:
+2048 4 2 _ 
+2 16 16 _ 
+8 4 _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866874010
+won:true
+totalmoves:981
+time:3381502952
+ns/move:3446995
+finalboard:
+2048 2 16 2 
+2 8 32 2 
+8 8 _ _ 
+16 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866877391
+won:true
+totalmoves:990
+time:3408050132
+ns/move:3442474
+finalboard:
+2048 2 4 _ 
+2 32 2 _ 
+8 4 2 _ 
+32 2 32 _ 
+
+
+test:SmoothnessTest
+seed:1526866880800
+won:false
+totalmoves:486
+time:1619907041
+ns/move:3333142
+finalboard:
+512 32 2 8 
+256 8 128 2 
+64 16 32 8 
+2 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526866882420
+won:true
+totalmoves:968
+time:3334251540
+ns/move:3444474
+finalboard:
+2048 8 4 2 
+32 2 2 _ 
+_ 4 _ _ 
+_ 16 _ 2 
+
+
+test:SmoothnessTest
+seed:1526866885754
+won:false
+totalmoves:879
+time:2948100162
+ns/move:3353925
+finalboard:
+1024 128 16 4 
+512 2 8 2 
+2 128 2 8 
+4 32 64 4 
+
+
+test:SmoothnessTest
+seed:1526866888702
+won:false
+totalmoves:908
+time:3120203138
+ns/move:3436347
+finalboard:
+1024 512 8 2 
+256 32 16 32 
+4 16 64 8 
+2 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526866891822
+won:false
+totalmoves:972
+time:3371045825
+ns/move:3468154
+finalboard:
+1024 512 32 8 
+256 8 16 2 
+32 4 128 4 
+64 2 8 64 
+
+
+test:SmoothnessTest
+seed:1526866895193
+won:true
+totalmoves:944
+time:3299382635
+ns/move:3495108
+finalboard:
+2048 8 8 4 
+4 16 _ 2 
+_ _ _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866898493
+won:false
+totalmoves:961
+time:3331509178
+ns/move:3466710
+finalboard:
+1024 256 2 16 
+512 4 64 4 
+128 64 2 16 
+4 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866901825
+won:false
+totalmoves:912
+time:3124770617
+ns/move:3426283
+finalboard:
+1024 512 2 4 
+64 8 256 64 
+16 4 16 4 
+4 32 8 2 
+
+
+test:SmoothnessTest
+seed:1526866904949
+won:true
+totalmoves:1044
+time:3553127881
+ns/move:3403379
+finalboard:
+2048 64 2 _ 
+4 128 4 _ 
+16 _ _ _ 
+2 8 4 _ 
+
+
+test:SmoothnessTest
+seed:1526866908503
+won:false
+totalmoves:881
+time:2941141922
+ns/move:3338413
+finalboard:
+1024 32 4 512 
+256 16 2 64 
+16 2 8 4 
+2 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526866911444
+won:false
+totalmoves:949
+time:3255547944
+ns/move:3430503
+finalboard:
+1024 256 8 2 
+512 128 32 4 
+32 2 16 8 
+64 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526866914699
+won:true
+totalmoves:944
+time:3252692185
+ns/move:3445648
+finalboard:
+2048 8 _ _ 
+4 2 16 _ 
+2 4 2 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866917952
+won:false
+totalmoves:988
+time:3424932027
+ns/move:3466530
+finalboard:
+1024 64 32 8 
+512 4 128 2 
+64 16 32 4 
+2 256 2 8 
+
+
+test:SmoothnessTest
+seed:1526866921377
+won:true
+totalmoves:954
+time:3316985086
+ns/move:3476923
+finalboard:
+2048 32 8 _ 
+8 8 2 _ 
+_ _ _ _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866924694
+won:true
+totalmoves:978
+time:3422448897
+ns/move:3499436
+finalboard:
+2048 2 4 4 
+4 32 8 2 
+8 2 _ _ 
+_ 32 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866928117
+won:true
+totalmoves:950
+time:3225913463
+ns/move:3395698
+finalboard:
+2048 _ _ _ 
+8 _ _ _ 
+2 _ 4 _ 
+8 4 2 32 
+
+
+test:SmoothnessTest
+seed:1526866931343
+won:true
+totalmoves:987
+time:3307760679
+ns/move:3351327
+finalboard:
+2048 4 64 4 
+8 32 4 _ 
+4 4 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866934651
+won:true
+totalmoves:973
+time:3343314668
+ns/move:3436089
+finalboard:
+2048 16 4 4 
+4 4 _ 2 
+16 16 _ 2 
+_ 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866937994
+won:true
+totalmoves:968
+time:3411592083
+ns/move:3524371
+finalboard:
+2048 4 8 16 
+8 4 8 2 
+2 16 4 _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526866941406
+won:true
+totalmoves:961
+time:3373439532
+ns/move:3510342
+finalboard:
+2048 16 2 _ 
+4 4 _ _ 
+2 8 16 _ 
+2 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866944779
+won:false
+totalmoves:618
+time:2088374649
+ns/move:3379247
+finalboard:
+1024 8 4 16 
+4 256 32 2 
+16 8 2 4 
+2 4 8 2 
+
+
+test:SmoothnessTest
+seed:1526866946868
+won:true
+totalmoves:965
+time:3329315699
+ns/move:3450068
+finalboard:
+2048 2 32 2 
+4 16 4 _ 
+2 _ 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866950197
+won:false
+totalmoves:870
+time:3021821291
+ns/move:3473357
+finalboard:
+1024 512 64 16 
+2 32 8 2 
+16 4 128 4 
+64 2 32 2 
+
+
+test:SmoothnessTest
+seed:1526866953219
+won:true
+totalmoves:955
+time:3305518102
+ns/move:3461275
+finalboard:
+2048 8 2 _ 
+4 8 _ _ 
+8 2 32 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866956525
+won:false
+totalmoves:936
+time:3288308384
+ns/move:3513149
+finalboard:
+1024 256 4 8 
+512 128 32 2 
+16 2 4 64 
+2 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526866959813
+won:true
+totalmoves:963
+time:3377379160
+ns/move:3507143
+finalboard:
+2048 8 4 32 
+4 4 _ 4 
+_ 8 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866963190
+won:false
+totalmoves:507
+time:1711187699
+ns/move:3375123
+finalboard:
+512 64 4 2 
+256 128 2 32 
+2 32 4 8 
+4 64 8 2 
+
+
+test:SmoothnessTest
+seed:1526866964902
+won:false
+totalmoves:495
+time:1658721361
+ns/move:3350952
+finalboard:
+512 64 4 32 
+256 4 2 16 
+128 2 8 4 
+16 8 2 32 
+
+
+test:SmoothnessTest
+seed:1526866966560
+won:false
+totalmoves:876
+time:3014072651
+ns/move:3440722
+finalboard:
+1024 128 64 16 
+512 32 2 4 
+4 16 64 2 
+32 4 8 4 
+
+
+test:SmoothnessTest
+seed:1526866969575
+won:false
+totalmoves:522
+time:1757336743
+ns/move:3366545
+finalboard:
+512 128 2 4 
+2 4 8 2 
+128 16 32 16 
+16 4 256 2 
+
+
+test:SmoothnessTest
+seed:1526866971332
+won:true
+totalmoves:974
+time:3404600759
+ns/move:3495483
+finalboard:
+2048 8 _ _ 
+4 8 _ _ 
+4 2 _ _ 
+64 _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526866974737
+won:false
+totalmoves:747
+time:2508229881
+ns/move:3357737
+finalboard:
+1024 128 32 2 
+8 32 8 32 
+4 16 4 2 
+256 64 2 4 
+
+
+test:SmoothnessTest
+seed:1526866977245
+won:true
+totalmoves:956
+time:3292431758
+ns/move:3443966
+finalboard:
+2048 2 32 2 
+4 32 8 _ 
+8 _ _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866980538
+won:false
+totalmoves:926
+time:3225977988
+ns/move:3483777
+finalboard:
+1024 512 2 4 
+256 4 128 8 
+16 64 2 4 
+8 2 16 8 
+
+
+test:SmoothnessTest
+seed:1526866983764
+won:true
+totalmoves:1015
+time:3459503001
+ns/move:3408377
+finalboard:
+2048 8 64 8 
+2 64 2 _ 
+16 4 16 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866987223
+won:true
+totalmoves:975
+time:3365003641
+ns/move:3451285
+finalboard:
+2048 32 8 _ 
+8 4 2 4 
+16 2 _ _ 
+2 8 _ _ 
+
+
+test:SmoothnessTest
+seed:1526866990588
+won:false
+totalmoves:788
+time:2714305452
+ns/move:3444550
+finalboard:
+1024 16 8 2 
+32 4 512 8 
+16 8 64 4 
+2 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526866993303
+won:true
+totalmoves:964
+time:3341014171
+ns/move:3465782
+finalboard:
+2048 4 16 16 
+4 2 16 4 
+8 _ _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866996644
+won:true
+totalmoves:945
+time:3274266206
+ns/move:3464831
+finalboard:
+2048 8 4 2 
+32 _ 2 _ 
+_ _ _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526866999918
+won:false
+totalmoves:751
+time:2556736678
+ns/move:3404442
+finalboard:
+1024 64 2 32 
+256 128 64 16 
+8 16 8 4 
+4 2 32 2 
+
+
+test:SmoothnessTest
+seed:1526867002475
+won:false
+totalmoves:483
+time:1614276345
+ns/move:3342187
+finalboard:
+512 256 4 16 
+128 16 2 8 
+32 64 4 2 
+8 2 8 16 
+
+
+test:SmoothnessTest
+seed:1526867004089
+won:true
+totalmoves:1034
+time:3531210310
+ns/move:3415097
+finalboard:
+2048 2 2 2 
+2 4 4 128 
+_ 64 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867007621
+won:false
+totalmoves:941
+time:3239094085
+ns/move:3442182
+finalboard:
+1024 256 128 4 
+512 4 2 8 
+16 64 8 32 
+4 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867010860
+won:true
+totalmoves:956
+time:3381125278
+ns/move:3536741
+finalboard:
+2048 4 _ _ 
+4 2 32 _ 
+2 4 _ _ 
+8 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867014241
+won:true
+totalmoves:949
+time:3293074855
+ns/move:3470047
+finalboard:
+2048 32 8 _ 
+8 2 _ _ 
+2 4 2 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867017534
+won:false
+totalmoves:947
+time:3162654847
+ns/move:3339656
+finalboard:
+1024 256 32 4 
+16 64 16 2 
+2 512 32 128 
+4 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867020697
+won:true
+totalmoves:927
+time:3179249559
+ns/move:3429611
+finalboard:
+2048 4 2 2 
+4 8 _ _ 
+16 8 _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867023876
+won:true
+totalmoves:977
+time:3280531637
+ns/move:3357760
+finalboard:
+2048 32 8 _ 
+2 8 4 2 
+32 4 _ _ 
+2 8 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867027157
+won:false
+totalmoves:962
+time:3281736372
+ns/move:3411368
+finalboard:
+1024 512 64 2 
+32 16 2 4 
+4 64 8 256 
+2 4 2 128 
+
+
+test:SmoothnessTest
+seed:1526867030439
+won:false
+totalmoves:829
+time:2850787438
+ns/move:3438826
+finalboard:
+1024 2 8 4 
+512 32 2 64 
+8 2 128 4 
+16 4 2 8 
+
+
+test:SmoothnessTest
+seed:1526867033289
+won:true
+totalmoves:973
+time:3382325779
+ns/move:3476182
+finalboard:
+2048 8 _ _ 
+4 8 64 _ 
+2 4 _ _ 
+2 _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867036672
+won:false
+totalmoves:802
+time:2770092419
+ns/move:3453980
+finalboard:
+1024 512 4 2 
+16 32 16 8 
+8 2 128 2 
+2 4 8 4 
+
+
+test:SmoothnessTest
+seed:1526867039442
+won:false
+totalmoves:517
+time:1611499095
+ns/move:3117019
+finalboard:
+512 128 16 2 
+256 16 2 64 
+64 2 32 8 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867041054
+won:false
+totalmoves:985
+time:3398390707
+ns/move:3450142
+finalboard:
+1024 64 4 2 
+256 32 256 4 
+16 2 8 512 
+4 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867044452
+won:false
+totalmoves:963
+time:3311513645
+ns/move:3438747
+finalboard:
+1024 512 16 4 
+256 128 64 8 
+64 16 4 2 
+8 4 16 4 
+
+
+test:SmoothnessTest
+seed:1526867047764
+won:true
+totalmoves:998
+time:3474909709
+ns/move:3481873
+finalboard:
+2048 2 32 2 
+32 64 16 _ 
+_ 2 2 2 
+_ 8 8 _ 
+
+
+test:SmoothnessTest
+seed:1526867051239
+won:true
+totalmoves:950
+time:3284607405
+ns/move:3457481
+finalboard:
+2048 4 4 4 
+16 16 8 _ 
+8 _ _ _ 
+_ 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867054523
+won:false
+totalmoves:764
+time:2563483962
+ns/move:3355345
+finalboard:
+1024 256 32 8 
+128 64 8 2 
+8 32 2 128 
+4 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526867057087
+won:false
+totalmoves:679
+time:2272236609
+ns/move:3346445
+finalboard:
+1024 32 2 8 
+4 64 256 16 
+16 2 64 8 
+8 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526867059359
+won:false
+totalmoves:972
+time:3316611029
+ns/move:3412151
+finalboard:
+1024 256 2 4 
+512 256 4 2 
+2 4 2 16 
+16 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526867062676
+won:false
+totalmoves:489
+time:1634207677
+ns/move:3341937
+finalboard:
+512 256 2 16 
+64 8 128 2 
+16 32 2 16 
+2 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867064310
+won:true
+totalmoves:956
+time:3282708635
+ns/move:3433795
+finalboard:
+2048 2 2 4 
+_ 16 4 16 
+_ 4 _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867067593
+won:false
+totalmoves:955
+time:3229611211
+ns/move:3381791
+finalboard:
+1024 512 2 8 
+256 64 4 2 
+16 128 8 16 
+4 16 32 2 
+
+
+test:SmoothnessTest
+seed:1526867070823
+won:true
+totalmoves:974
+time:3340922916
+ns/move:3430105
+finalboard:
+2048 2 4 _ 
+64 16 2 _ 
+4 4 _ _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867074164
+won:false
+totalmoves:909
+time:3131785882
+ns/move:3445309
+finalboard:
+1024 8 2 4 
+512 128 4 8 
+256 2 8 2 
+8 32 2 16 
+
+
+test:SmoothnessTest
+seed:1526867077295
+won:false
+totalmoves:743
+time:2491985851
+ns/move:3353951
+finalboard:
+1024 256 64 8 
+2 128 16 4 
+64 32 2 8 
+8 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867079788
+won:false
+totalmoves:987
+time:3378654059
+ns/move:3423155
+finalboard:
+1024 512 16 4 
+256 2 4 16 
+8 64 256 2 
+2 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526867083166
+won:false
+totalmoves:529
+time:1794551787
+ns/move:3392347
+finalboard:
+512 256 64 32 
+4 2 4 8 
+8 64 128 32 
+2 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526867084961
+won:true
+totalmoves:966
+time:3304147354
+ns/move:3420442
+finalboard:
+2048 64 8 _ 
+2 4 _ _ 
+4 8 _ _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867088265
+won:true
+totalmoves:946
+time:3324708746
+ns/move:3514491
+finalboard:
+2048 2 _ 2 
+2 4 2 _ 
+16 2 _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867091590
+won:true
+totalmoves:1028
+time:3634598743
+ns/move:3535601
+finalboard:
+2048 128 16 4 
+2 4 _ _ 
+_ 64 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867095225
+won:true
+totalmoves:951
+time:3300271831
+ns/move:3470317
+finalboard:
+2048 16 4 2 
+_ 2 2 32 
+_ _ _ 2 
+_ _ _ 4 
+
+
+test:SmoothnessTest
+seed:1526867098525
+won:false
+totalmoves:869
+time:2967437625
+ns/move:3414772
+finalboard:
+1024 8 128 4 
+16 512 4 32 
+128 4 64 2 
+4 16 2 4 
+
+
+test:SmoothnessTest
+seed:1526867101492
+won:false
+totalmoves:763
+time:2501577319
+ns/move:3278607
+finalboard:
+1024 256 8 4 
+128 8 128 32 
+64 2 8 4 
+32 8 16 2 
+
+
+test:SmoothnessTest
+seed:1526867103994
+won:false
+totalmoves:401
+time:1281234439
+ns/move:3195098
+finalboard:
+512 128 16 2 
+64 32 64 4 
+2 4 16 8 
+4 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867105275
+won:true
+totalmoves:971
+time:3294916800
+ns/move:3393323
+finalboard:
+2048 8 2 2 
+32 16 8 _ 
+8 2 _ _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867108570
+won:true
+totalmoves:1006
+time:3506623603
+ns/move:3485709
+finalboard:
+2048 4 _ _ 
+2 8 128 _ 
+2 8 _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867112077
+won:true
+totalmoves:943
+time:3275924798
+ns/move:3473939
+finalboard:
+2048 8 2 8 
+4 8 _ 2 
+16 _ _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867115353
+won:true
+totalmoves:962
+time:3249194236
+ns/move:3377540
+finalboard:
+2048 16 32 2 
+2 8 2 4 
+8 4 _ _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867118602
+won:false
+totalmoves:879
+time:3017465228
+ns/move:3432838
+finalboard:
+1024 512 8 2 
+32 256 64 16 
+8 2 8 2 
+2 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526867121620
+won:false
+totalmoves:760
+time:2536480926
+ns/move:3337474
+finalboard:
+1024 8 4 2 
+64 256 64 8 
+32 2 16 2 
+2 64 128 4 
+
+
+test:SmoothnessTest
+seed:1526867124157
+won:false
+totalmoves:965
+time:3337063119
+ns/move:3458096
+finalboard:
+1024 512 4 2 
+256 128 8 4 
+128 32 4 2 
+8 16 8 4 
+
+
+test:SmoothnessTest
+seed:1526867127494
+won:true
+totalmoves:958
+time:3289114087
+ns/move:3433313
+finalboard:
+2048 2 16 2 
+2 8 4 _ 
+2 _ _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867130783
+won:false
+totalmoves:868
+time:2912414939
+ns/move:3355316
+finalboard:
+1024 64 4 8 
+512 4 2 4 
+32 16 32 64 
+4 128 2 8 
+
+
+test:SmoothnessTest
+seed:1526867133695
+won:true
+totalmoves:971
+time:3283544638
+ns/move:3381611
+finalboard:
+2048 4 2 2 
+8 2 64 _ 
+4 8 4 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867136979
+won:false
+totalmoves:1016
+time:3467475434
+ns/move:3412869
+finalboard:
+1024 512 32 4 
+64 2 4 8 
+2 64 8 2 
+16 512 2 4 
+
+
+test:SmoothnessTest
+seed:1526867140447
+won:true
+totalmoves:967
+time:3359832905
+ns/move:3474491
+finalboard:
+2048 2 16 _ 
+2 8 32 4 
+2 8 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867143806
+won:false
+totalmoves:1058
+time:3527977254
+ns/move:3334572
+finalboard:
+1024 512 64 32 
+8 128 8 4 
+256 16 256 2 
+2 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526867147334
+won:true
+totalmoves:949
+time:3256976803
+ns/move:3432009
+finalboard:
+2048 8 16 4 
+4 _ 2 2 
+_ _ 8 _ 
+_ 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867150592
+won:false
+totalmoves:1060
+time:3525957598
+ns/move:3326375
+finalboard:
+1024 256 128 16 
+8 64 32 4 
+2 256 16 2 
+16 4 2 512 
+
+
+test:SmoothnessTest
+seed:1526867154118
+won:true
+totalmoves:970
+time:3401382251
+ns/move:3506579
+finalboard:
+2048 _ _ _ 
+2 8 _ _ 
+8 _ _ 4 
+4 32 4 _ 
+
+
+test:SmoothnessTest
+seed:1526867157519
+won:true
+totalmoves:1020
+time:3381639061
+ns/move:3315332
+finalboard:
+2048 128 2 16 
+4 32 16 2 
+8 8 2 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867160901
+won:true
+totalmoves:959
+time:3266156451
+ns/move:3405794
+finalboard:
+2048 4 _ _ 
+32 8 _ 2 
+16 2 _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867164167
+won:false
+totalmoves:890
+time:3021862273
+ns/move:3395350
+finalboard:
+1024 512 128 16 
+128 64 16 4 
+4 32 8 2 
+16 4 16 4 
+
+
+test:SmoothnessTest
+seed:1526867167189
+won:true
+totalmoves:956
+time:3272395532
+ns/move:3423007
+finalboard:
+2048 16 2 4 
+4 2 16 _ 
+2 4 2 _ 
+_ 16 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867170461
+won:false
+totalmoves:382
+time:1221985684
+ns/move:3198915
+finalboard:
+512 128 32 2 
+16 64 4 8 
+2 32 2 4 
+8 4 16 2 
+
+
+test:SmoothnessTest
+seed:1526867171683
+won:false
+totalmoves:830
+time:2771885715
+ns/move:3339621
+finalboard:
+1024 128 32 2 
+512 2 4 16 
+2 64 2 32 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867174455
+won:false
+totalmoves:970
+time:3283114282
+ns/move:3384653
+finalboard:
+1024 256 32 2 
+128 32 2 16 
+64 4 512 8 
+8 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867177739
+won:true
+totalmoves:958
+time:3295483142
+ns/move:3439961
+finalboard:
+2048 2 8 _ 
+16 32 2 _ 
+4 2 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867181034
+won:false
+totalmoves:928
+time:3187516772
+ns/move:3434824
+finalboard:
+1024 8 4 2 
+512 128 16 256 
+2 8 4 2 
+16 2 64 8 
+
+
+test:SmoothnessTest
+seed:1526867184222
+won:false
+totalmoves:491
+time:1589139456
+ns/move:3236536
+finalboard:
+512 64 32 4 
+4 2 16 2 
+128 256 2 8 
+4 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867185811
+won:true
+totalmoves:1009
+time:3460763003
+ns/move:3429893
+finalboard:
+2048 2 64 16 
+16 32 8 2 
+4 4 8 16 
+_ 2 _ 2 
+
+
+test:SmoothnessTest
+seed:1526867189272
+won:true
+totalmoves:1011
+time:3387462555
+ns/move:3350605
+finalboard:
+2048 16 128 _ 
+2 16 _ _ 
+2 4 _ _ 
+2 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867192659
+won:false
+totalmoves:988
+time:3304376885
+ns/move:3344511
+finalboard:
+1024 512 256 64 
+32 128 32 4 
+4 64 16 2 
+16 4 2 4 
+
+
+test:SmoothnessTest
+seed:1526867195964
+won:true
+totalmoves:962
+time:3293264011
+ns/move:3423351
+finalboard:
+2048 8 32 2 
+4 4 8 _ 
+8 _ 16 _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867199257
+won:false
+totalmoves:951
+time:3176631171
+ns/move:3340306
+finalboard:
+1024 4 512 4 
+8 64 4 16 
+2 32 8 4 
+4 256 128 2 
+
+
+test:SmoothnessTest
+seed:1526867202434
+won:true
+totalmoves:973
+time:3348484198
+ns/move:3441402
+finalboard:
+2048 32 32 2 
+2 8 _ 16 
+4 4 2 _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867205782
+won:true
+totalmoves:954
+time:3133961375
+ns/move:3285074
+finalboard:
+2048 _ _ _ 
+_ _ _ _ 
+4 2 _ _ 
+16 32 16 2 
+
+
+test:SmoothnessTest
+seed:1526867208916
+won:true
+totalmoves:989
+time:3392315840
+ns/move:3430046
+finalboard:
+2048 32 _ _ 
+8 2 8 2 
+64 4 32 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867212309
+won:true
+totalmoves:968
+time:3356146048
+ns/move:3467093
+finalboard:
+2048 8 16 16 
+_ 4 4 4 
+_ _ 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867215665
+won:false
+totalmoves:951
+time:3208867191
+ns/move:3374203
+finalboard:
+1024 512 128 16 
+8 256 64 4 
+16 32 8 2 
+2 16 2 4 
+
+
+test:SmoothnessTest
+seed:1526867218874
+won:false
+totalmoves:923
+time:3142849546
+ns/move:3405037
+finalboard:
+1024 512 4 2 
+64 32 256 32 
+32 8 16 4 
+4 2 32 2 
+
+
+test:SmoothnessTest
+seed:1526867222017
+won:true
+totalmoves:1027
+time:3521373159
+ns/move:3428795
+finalboard:
+2048 64 4 8 
+16 2 2 _ 
+2 4 32 _ 
+_ 64 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867225538
+won:false
+totalmoves:942
+time:3284620193
+ns/move:3486857
+finalboard:
+1024 8 2 32 
+512 256 128 4 
+64 16 8 32 
+4 2 4 2 
+
+
+test:SmoothnessTest
+seed:1526867228823
+won:false
+totalmoves:864
+time:2945081530
+ns/move:3408659
+finalboard:
+1024 2 8 16 
+8 4 2 4 
+2 16 256 32 
+512 2 16 4 
+
+
+test:SmoothnessTest
+seed:1526867231768
+won:true
+totalmoves:964
+time:3283703470
+ns/move:3406331
+finalboard:
+2048 4 8 2 
+16 16 _ _ 
+32 4 _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867235052
+won:true
+totalmoves:983
+time:3378531364
+ns/move:3436959
+finalboard:
+2048 32 _ _ 
+8 64 4 2 
+2 16 4 _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867238431
+won:true
+totalmoves:963
+time:3354100957
+ns/move:3482970
+finalboard:
+2048 2 8 _ 
+2 4 16 _ 
+8 2 _ 2 
+2 4 16 _ 
+
+
+test:SmoothnessTest
+seed:1526867241785
+won:true
+totalmoves:995
+time:3487421401
+ns/move:3504946
+finalboard:
+2048 2 16 32 
+32 16 4 8 
+2 _ 2 _ 
+_ _ _ 4 
+
+
+test:SmoothnessTest
+seed:1526867245272
+won:true
+totalmoves:976
+time:3307573284
+ns/move:3388907
+finalboard:
+2048 2 16 4 
+64 8 4 _ 
+2 4 _ _ 
+2 16 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867248580
+won:true
+totalmoves:1003
+time:3478378049
+ns/move:3467974
+finalboard:
+2048 2 _ 2 
+2 4 2 16 
+4 16 64 2 
+2 4 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867252059
+won:false
+totalmoves:939
+time:3268370378
+ns/move:3480692
+finalboard:
+1024 256 128 32 
+4 64 512 8 
+2 4 8 2 
+16 2 4 8 
+
+
+test:SmoothnessTest
+seed:1526867255327
+won:false
+totalmoves:952
+time:3364325661
+ns/move:3533955
+finalboard:
+1024 4 64 2 
+512 256 16 4 
+128 64 4 8 
+2 16 2 4 
+
+
+test:SmoothnessTest
+seed:1526867258691
+won:false
+totalmoves:953
+time:3176272666
+ns/move:3332919
+finalboard:
+1024 512 64 16 
+2 128 4 32 
+8 256 16 8 
+2 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867261868
+won:true
+totalmoves:945
+time:3193902708
+ns/move:3379791
+finalboard:
+2048 4 _ _ 
+4 2 _ _ 
+2 16 4 _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867265062
+won:true
+totalmoves:955
+time:3273020039
+ns/move:3427246
+finalboard:
+2048 16 8 2 
+4 2 4 _ 
+8 4 2 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867268335
+won:true
+totalmoves:952
+time:3299381977
+ns/move:3465737
+finalboard:
+2048 4 8 _ 
+4 4 _ _ 
+16 8 _ 2 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867271634
+won:false
+totalmoves:785
+time:2511035682
+ns/move:3198771
+finalboard:
+1024 256 32 16 
+16 128 64 8 
+8 32 16 2 
+2 128 2 4 
+
+
+test:SmoothnessTest
+seed:1526867274145
+won:false
+totalmoves:977
+time:3283793446
+ns/move:3361098
+finalboard:
+1024 512 256 2 
+64 32 16 8 
+2 16 64 4 
+128 4 8 2 
+
+
+test:SmoothnessTest
+seed:1526867277429
+won:true
+totalmoves:968
+time:3334309034
+ns/move:3444534
+finalboard:
+2048 8 4 4 
+64 8 8 _ 
+16 _ _ 2 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867280764
+won:false
+totalmoves:476
+time:1536078652
+ns/move:3227055
+finalboard:
+512 64 8 2 
+256 8 32 4 
+64 32 4 16 
+16 8 2 4 
+
+
+test:SmoothnessTest
+seed:1526867282300
+won:false
+totalmoves:482
+time:1644189299
+ns/move:3411181
+finalboard:
+512 2 4 32 
+128 4 256 2 
+4 2 64 4 
+16 4 32 2 
+
+
+test:SmoothnessTest
+seed:1526867283944
+won:true
+totalmoves:974
+time:3416451047
+ns/move:3507649
+finalboard:
+2048 16 _ 2 
+2 4 2 16 
+64 _ _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867287361
+won:true
+totalmoves:966
+time:3378748621
+ns/move:3497669
+finalboard:
+2048 4 16 2 
+4 2 2 _ 
+2 16 _ 2 
+_ 8 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867290740
+won:true
+totalmoves:1015
+time:3538529112
+ns/move:3486235
+finalboard:
+2048 128 2 2 
+4 16 4 8 
+16 8 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867294278
+won:true
+totalmoves:1026
+time:3484287369
+ns/move:3395991
+finalboard:
+2048 64 2 32 
+8 16 32 4 
+2 2 2 8 
+_ 4 _ 2 
+
+
+test:SmoothnessTest
+seed:1526867297763
+won:false
+totalmoves:787
+time:2630732132
+ns/move:3342734
+finalboard:
+1024 2 256 2 
+256 32 4 16 
+32 2 64 4 
+8 32 8 2 
+
+
+test:SmoothnessTest
+seed:1526867300393
+won:true
+totalmoves:965
+time:3360264769
+ns/move:3482139
+finalboard:
+2048 8 _ _ 
+2 8 32 _ 
+8 2 _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867303754
+won:true
+totalmoves:949
+time:3322348364
+ns/move:3500893
+finalboard:
+2048 4 8 2 
+8 4 _ _ 
+32 _ _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867307076
+won:false
+totalmoves:951
+time:3250481072
+ns/move:3417961
+finalboard:
+1024 256 4 16 
+512 2 128 2 
+64 32 16 8 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867310327
+won:true
+totalmoves:984
+time:3449793020
+ns/move:3505887
+finalboard:
+2048 2 16 2 
+16 32 4 _ 
+2 8 _ _ 
+_ 2 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867313777
+won:false
+totalmoves:662
+time:2169757365
+ns/move:3277579
+finalboard:
+512 128 8 2 
+16 8 256 16 
+128 256 2 8 
+4 64 16 4 
+
+
+test:SmoothnessTest
+seed:1526867315946
+won:true
+totalmoves:971
+time:3249864600
+ns/move:3346925
+finalboard:
+2048 8 2 _ 
+16 2 4 _ 
+8 16 _ _ 
+2 4 4 _ 
+
+
+test:SmoothnessTest
+seed:1526867319196
+won:true
+totalmoves:977
+time:3321553624
+ns/move:3399747
+finalboard:
+2048 4 8 _ 
+32 16 _ _ 
+8 _ _ _ 
+4 _ _ 4 
+
+
+test:SmoothnessTest
+seed:1526867322518
+won:true
+totalmoves:995
+time:3399324020
+ns/move:3416406
+finalboard:
+2048 4 2 2 
+64 2 16 _ 
+8 4 _ _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867325917
+won:false
+totalmoves:496
+time:1630730903
+ns/move:3287763
+finalboard:
+512 256 32 4 
+128 16 64 16 
+4 32 8 2 
+8 16 2 4 
+
+
+test:SmoothnessTest
+seed:1526867327548
+won:true
+totalmoves:1012
+time:3531619439
+ns/move:3489742
+finalboard:
+2048 8 2 _ 
+8 16 4 _ 
+64 2 _ _ 
+32 2 _ 2 
+
+
+test:SmoothnessTest
+seed:1526867331080
+won:true
+totalmoves:1013
+time:3457706757
+ns/move:3413333
+finalboard:
+2048 4 2 _ 
+4 64 32 _ 
+8 2 8 _ 
+2 32 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867334538
+won:false
+totalmoves:470
+time:1580636451
+ns/move:3363056
+finalboard:
+512 256 32 4 
+64 16 8 16 
+16 4 64 4 
+4 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526867336118
+won:true
+totalmoves:975
+time:3406322127
+ns/move:3493663
+finalboard:
+2048 2 8 _ 
+2 8 32 _ 
+16 4 _ 2 
+2 4 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867339525
+won:true
+totalmoves:940
+time:3242310032
+ns/move:3449265
+finalboard:
+2048 4 4 _ 
+4 32 _ 2 
+_ _ _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867342767
+won:false
+totalmoves:956
+time:3226353804
+ns/move:3374847
+finalboard:
+1024 512 8 4 
+32 2 4 16 
+8 128 64 256 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867345993
+won:false
+totalmoves:959
+time:3190068938
+ns/move:3326453
+finalboard:
+1024 4 16 8 
+512 128 64 32 
+64 16 4 2 
+4 256 2 16 
+
+
+test:SmoothnessTest
+seed:1526867349184
+won:true
+totalmoves:964
+time:3285637408
+ns/move:3408337
+finalboard:
+2048 4 4 2 
+64 2 _ _ 
+16 8 _ _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867352469
+won:false
+totalmoves:870
+time:2995000912
+ns/move:3442529
+finalboard:
+1024 512 16 4 
+128 64 32 2 
+32 8 4 8 
+8 32 8 2 
+
+
+test:SmoothnessTest
+seed:1526867355464
+won:false
+totalmoves:487
+time:1592988218
+ns/move:3271023
+finalboard:
+512 16 2 4 
+256 128 4 2 
+2 8 32 4 
+4 32 4 64 
+
+
+test:SmoothnessTest
+seed:1526867357057
+won:false
+totalmoves:956
+time:3269674277
+ns/move:3420161
+finalboard:
+1024 512 128 8 
+256 64 8 2 
+8 4 32 4 
+4 8 16 2 
+
+
+test:SmoothnessTest
+seed:1526867360327
+won:false
+totalmoves:266
+time:861573654
+ns/move:3238998
+finalboard:
+256 128 32 8 
+32 4 2 4 
+16 64 16 2 
+2 4 2 8 
+
+
+test:SmoothnessTest
+seed:1526867361189
+won:false
+totalmoves:924
+time:3185509849
+ns/move:3447521
+finalboard:
+1024 512 128 2 
+16 256 2 16 
+2 8 32 4 
+32 4 8 2 
+
+
+test:SmoothnessTest
+seed:1526867364374
+won:true
+totalmoves:945
+time:3197375358
+ns/move:3383465
+finalboard:
+2048 4 _ 2 
+16 _ _ _ 
+4 4 _ _ 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867367572
+won:true
+totalmoves:973
+time:3289829560
+ns/move:3381119
+finalboard:
+2048 2 4 _ 
+2 4 32 8 
+2 4 2 _ 
+2 32 8 _ 
+
+
+test:SmoothnessTest
+seed:1526867370862
+won:true
+totalmoves:971
+time:3301162399
+ns/move:3399755
+finalboard:
+2048 32 8 2 
+32 2 4 2 
+2 16 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867374163
+won:true
+totalmoves:942
+time:3288669054
+ns/move:3491156
+finalboard:
+2048 2 _ _ 
+16 _ _ _ 
+4 4 _ _ 
+16 2 16 2 
+
+
+test:SmoothnessTest
+seed:1526867377452
+won:false
+totalmoves:983
+time:3340397826
+ns/move:3398166
+finalboard:
+1024 16 8 4 
+512 2 512 16 
+16 8 32 4 
+8 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526867380792
+won:true
+totalmoves:989
+time:3470704507
+ns/move:3509306
+finalboard:
+2048 8 2 _ 
+4 64 _ _ 
+2 4 _ _ 
+16 _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867384263
+won:true
+totalmoves:967
+time:3328135714
+ns/move:3441712
+finalboard:
+2048 2 8 _ 
+4 16 2 2 
+8 _ _ _ 
+32 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867387591
+won:false
+totalmoves:799
+time:2734385392
+ns/move:3422259
+finalboard:
+1024 256 128 8 
+128 64 8 2 
+4 8 2 4 
+32 64 4 2 
+
+
+test:SmoothnessTest
+seed:1526867390326
+won:true
+totalmoves:952
+time:3179562439
+ns/move:3339876
+finalboard:
+2048 8 8 2 
+2 2 2 4 
+_ _ 8 16 
+_ _ _ 4 
+
+
+test:SmoothnessTest
+seed:1526867393505
+won:false
+totalmoves:523
+time:1737701216
+ns/move:3322564
+finalboard:
+512 64 4 64 
+256 32 16 8 
+16 4 128 4 
+4 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526867395243
+won:true
+totalmoves:971
+time:3352202309
+ns/move:3452319
+finalboard:
+2048 4 2 _ 
+4 32 _ _ 
+2 8 _ _ 
+16 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867398595
+won:false
+totalmoves:845
+time:2858023686
+ns/move:3382276
+finalboard:
+1024 16 8 128 
+128 8 4 2 
+8 32 512 4 
+4 16 4 8 
+
+
+test:SmoothnessTest
+seed:1526867401453
+won:false
+totalmoves:959
+time:3283847074
+ns/move:3424240
+finalboard:
+1024 8 256 4 
+512 16 128 16 
+4 64 8 4 
+32 8 16 2 
+
+
+test:SmoothnessTest
+seed:1526867404737
+won:true
+totalmoves:960
+time:3271205551
+ns/move:3407505
+finalboard:
+2048 16 2 2 
+16 4 16 _ 
+_ _ _ _ 
+_ 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867408009
+won:false
+totalmoves:909
+time:3013276588
+ns/move:3314935
+finalboard:
+1024 8 32 16 
+256 2 64 2 
+4 512 16 32 
+32 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867411022
+won:true
+totalmoves:973
+time:3324894781
+ns/move:3417158
+finalboard:
+2048 16 4 2 
+64 8 2 _ 
+_ 4 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867414347
+won:false
+totalmoves:928
+time:3170506626
+ns/move:3416494
+finalboard:
+1024 512 2 32 
+128 2 8 2 
+2 4 256 8 
+8 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867417517
+won:true
+totalmoves:994
+time:3480652267
+ns/move:3501662
+finalboard:
+2048 2 8 _ 
+32 64 2 _ 
+2 16 4 _ 
+_ _ 2 2 
+
+
+test:SmoothnessTest
+seed:1526867420998
+won:true
+totalmoves:980
+time:3338875805
+ns/move:3407016
+finalboard:
+2048 16 2 2 
+4 2 16 _ 
+8 4 _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867424337
+won:true
+totalmoves:963
+time:3374256457
+ns/move:3503900
+finalboard:
+2048 4 _ _ 
+4 2 32 _ 
+4 16 _ _ 
+4 2 _ 2 
+
+
+test:SmoothnessTest
+seed:1526867427711
+won:true
+totalmoves:1017
+time:3594901203
+ns/move:3534809
+finalboard:
+2048 4 4 128 
+4 16 4 2 
+_ _ _ _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867431306
+won:false
+totalmoves:807
+time:2792942907
+ns/move:3460895
+finalboard:
+1024 16 4 2 
+512 8 128 4 
+4 32 2 16 
+2 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867434099
+won:false
+totalmoves:749
+time:2485185575
+ns/move:3318004
+finalboard:
+1024 64 2 16 
+128 8 256 64 
+64 16 4 2 
+2 8 2 4 
+
+
+test:SmoothnessTest
+seed:1526867436585
+won:false
+totalmoves:969
+time:3280358664
+ns/move:3385303
+finalboard:
+1024 16 2 4 
+512 8 256 2 
+128 16 32 4 
+2 128 2 8 
+
+
+test:SmoothnessTest
+seed:1526867439865
+won:true
+totalmoves:957
+time:3281052467
+ns/move:3428476
+finalboard:
+2048 2 _ _ 
+_ _ _ _ 
+16 2 8 _ 
+2 4 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867443146
+won:true
+totalmoves:1014
+time:3483259029
+ns/move:3435166
+finalboard:
+2048 4 2 2 
+128 16 4 _ 
+16 2 _ 2 
+_ 16 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867446630
+won:true
+totalmoves:948
+time:3266923822
+ns/move:3446122
+finalboard:
+2048 32 2 _ 
+2 8 _ _ 
+4 16 4 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867449897
+won:false
+totalmoves:972
+time:3298300755
+ns/move:3393313
+finalboard:
+1024 128 64 4 
+512 16 32 16 
+2 64 256 4 
+8 4 8 2 
+
+
+test:SmoothnessTest
+seed:1526867453195
+won:false
+totalmoves:948
+time:3302735004
+ns/move:3483897
+finalboard:
+1024 512 64 256 
+128 4 8 4 
+2 16 64 8 
+4 2 4 2 
+
+
+test:SmoothnessTest
+seed:1526867456498
+won:true
+totalmoves:986
+time:3382205028
+ns/move:3430228
+finalboard:
+2048 64 2 _ 
+16 4 32 _ 
+8 _ _ _ 
+2 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867459880
+won:false
+totalmoves:479
+time:1559369564
+ns/move:3255468
+finalboard:
+512 256 16 2 
+2 64 2 8 
+4 16 128 4 
+2 32 2 16 
+
+
+test:SmoothnessTest
+seed:1526867461439
+won:false
+totalmoves:487
+time:1637266387
+ns/move:3361943
+finalboard:
+512 256 4 2 
+128 32 2 8 
+16 64 16 4 
+32 2 8 2 
+
+
+test:SmoothnessTest
+seed:1526867463077
+won:false
+totalmoves:690
+time:2288450131
+ns/move:3316594
+finalboard:
+1024 2 128 2 
+8 4 64 4 
+64 128 2 16 
+4 8 32 4 
+
+
+test:SmoothnessTest
+seed:1526867465366
+won:true
+totalmoves:973
+time:3336919974
+ns/move:3429516
+finalboard:
+2048 2 _ 2 
+4 8 32 _ 
+4 16 4 2 
+2 4 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867468703
+won:false
+totalmoves:750
+time:2511935670
+ns/move:3349247
+finalboard:
+1024 256 2 8 
+4 64 16 2 
+128 8 2 32 
+64 16 8 16 
+
+
+test:SmoothnessTest
+seed:1526867471215
+won:true
+totalmoves:961
+time:3311083898
+ns/move:3445456
+finalboard:
+2048 32 _ _ 
+4 8 2 _ 
+4 _ _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867474526
+won:true
+totalmoves:969
+time:3346751075
+ns/move:3453819
+finalboard:
+2048 16 2 16 
+_ 2 4 4 
+2 _ 16 2 
+_ _ _ 4 
+
+
+test:SmoothnessTest
+seed:1526867477873
+won:true
+totalmoves:967
+time:3330378646
+ns/move:3444031
+finalboard:
+2048 16 2 _ 
+2 32 8 _ 
+16 4 2 _ 
+4 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867481203
+won:true
+totalmoves:950
+time:3281448172
+ns/move:3454155
+finalboard:
+2048 2 4 _ 
+16 2 8 2 
+8 16 2 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867484484
+won:true
+totalmoves:987
+time:3416689976
+ns/move:3461691
+finalboard:
+2048 2 4 2 
+4 32 32 _ 
+32 2 8 _ 
+4 2 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867487901
+won:false
+totalmoves:850
+time:2882644155
+ns/move:3391346
+finalboard:
+1024 64 32 4 
+2 128 4 16 
+16 512 32 8 
+32 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867490784
+won:true
+totalmoves:958
+time:3283604591
+ns/move:3427562
+finalboard:
+2048 2 4 2 
+32 8 8 _ 
+_ 16 2 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867494068
+won:true
+totalmoves:983
+time:3325923728
+ns/move:3383442
+finalboard:
+2048 8 16 2 
+16 4 2 _ 
+4 2 64 _ 
+8 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867497394
+won:false
+totalmoves:956
+time:3258138550
+ns/move:3408094
+finalboard:
+1024 256 8 4 
+512 16 128 8 
+4 64 16 4 
+32 4 8 2 
+
+
+test:SmoothnessTest
+seed:1526867500652
+won:false
+totalmoves:737
+time:2483197524
+ns/move:3369331
+finalboard:
+1024 16 8 2 
+128 4 64 256 
+4 64 8 2 
+2 8 2 32 
+
+
+test:SmoothnessTest
+seed:1526867503135
+won:false
+totalmoves:906
+time:3070169698
+ns/move:3388708
+finalboard:
+1024 8 2 32 
+512 16 256 2 
+64 8 2 8 
+16 2 8 16 
+
+
+test:SmoothnessTest
+seed:1526867506205
+won:false
+totalmoves:971
+time:3416243920
+ns/move:3518273
+finalboard:
+1024 2 4 512 
+2 128 16 4 
+4 8 256 64 
+8 64 32 2 
+
+
+test:SmoothnessTest
+seed:1526867509622
+won:false
+totalmoves:748
+time:2557774793
+ns/move:3419485
+finalboard:
+1024 256 32 8 
+64 128 2 64 
+8 32 4 2 
+2 16 8 4 
+
+
+test:SmoothnessTest
+seed:1526867512179
+won:false
+totalmoves:849
+time:2878017836
+ns/move:3389891
+finalboard:
+1024 32 16 2 
+512 4 32 4 
+128 8 16 2 
+64 4 8 4 
+
+
+test:SmoothnessTest
+seed:1526867515058
+won:true
+totalmoves:964
+time:3277040051
+ns/move:3399419
+finalboard:
+2048 16 _ _ 
+4 8 4 _ 
+4 32 _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867518335
+won:false
+totalmoves:762
+time:2656125474
+ns/move:3485728
+finalboard:
+1024 4 2 32 
+256 2 4 2 
+32 8 2 8 
+2 16 256 4 
+
+
+test:SmoothnessTest
+seed:1526867520991
+won:true
+totalmoves:958
+time:3289768326
+ns/move:3433996
+finalboard:
+2048 16 2 _ 
+16 4 2 8 
+2 _ _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867524281
+won:true
+totalmoves:967
+time:3389090543
+ns/move:3504747
+finalboard:
+2048 2 2 2 
+16 16 8 _ 
+4 2 _ _ 
+_ 8 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867527670
+won:false
+totalmoves:924
+time:3205492223
+ns/move:3469147
+finalboard:
+1024 256 16 4 
+512 32 8 16 
+32 4 64 4 
+8 16 8 2 
+
+
+test:SmoothnessTest
+seed:1526867530875
+won:true
+totalmoves:937
+time:3271980787
+ns/move:3491975
+finalboard:
+2048 4 4 8 
+16 4 16 _ 
+_ 2 _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867534147
+won:true
+totalmoves:1015
+time:3486714247
+ns/move:3435186
+finalboard:
+2048 128 _ _ 
+2 32 16 _ 
+2 8 2 _ 
+4 4 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867537634
+won:false
+totalmoves:506
+time:1692367099
+ns/move:3344599
+finalboard:
+512 128 4 2 
+256 4 64 16 
+32 2 8 4 
+2 32 16 2 
+
+
+test:SmoothnessTest
+seed:1526867539327
+won:false
+totalmoves:931
+time:3202013030
+ns/move:3439326
+finalboard:
+1024 32 16 4 
+512 4 128 2 
+8 2 256 16 
+2 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867542529
+won:true
+totalmoves:940
+time:3283023300
+ns/move:3492577
+finalboard:
+2048 8 _ 2 
+2 16 _ _ 
+8 _ _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867545812
+won:true
+totalmoves:947
+time:3262251182
+ns/move:3444827
+finalboard:
+2048 4 16 4 
+2 16 _ _ 
+4 _ _ _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867549074
+won:true
+totalmoves:964
+time:3337951784
+ns/move:3462605
+finalboard:
+2048 8 _ _ 
+32 8 4 _ 
+4 2 4 _ 
+2 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867552412
+won:true
+totalmoves:956
+time:3334349440
+ns/move:3487813
+finalboard:
+2048 2 4 2 
+8 16 _ 4 
+_ _ _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867555747
+won:true
+totalmoves:963
+time:3338568551
+ns/move:3466841
+finalboard:
+2048 4 32 2 
+16 8 2 _ 
+_ _ _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867559085
+won:true
+totalmoves:963
+time:3194709078
+ns/move:3317454
+finalboard:
+2048 2 4 2 
+2 16 2 _ 
+16 8 _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867562280
+won:true
+totalmoves:981
+time:3387808020
+ns/move:3453423
+finalboard:
+2048 32 _ _ 
+8 4 8 2 
+32 8 _ _ 
+2 4 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867565668
+won:false
+totalmoves:863
+time:2950304632
+ns/move:3418661
+finalboard:
+1024 128 2 8 
+512 4 32 16 
+8 128 16 8 
+4 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867568618
+won:true
+totalmoves:983
+time:3414181031
+ns/move:3473225
+finalboard:
+2048 2 8 _ 
+4 2 16 4 
+2 32 4 _ 
+4 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867572033
+won:true
+totalmoves:971
+time:3381534444
+ns/move:3482527
+finalboard:
+2048 8 2 _ 
+2 32 2 8 
+4 16 4 16 
+4 _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867575414
+won:false
+totalmoves:930
+time:3163125690
+ns/move:3401210
+finalboard:
+1024 32 64 16 
+2 4 16 8 
+512 64 2 256 
+32 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867578577
+won:false
+totalmoves:749
+time:2474879464
+ns/move:3304244
+finalboard:
+1024 256 4 2 
+128 64 8 32 
+8 32 16 4 
+2 64 8 2 
+
+
+test:SmoothnessTest
+seed:1526867581052
+won:true
+totalmoves:968
+time:3348596059
+ns/move:3459293
+finalboard:
+2048 4 16 2 
+2 2 4 2 
+8 8 _ _ 
+_ 32 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867584401
+won:false
+totalmoves:929
+time:3201584733
+ns/move:3446269
+finalboard:
+1024 512 16 8 
+4 128 8 32 
+2 256 16 4 
+4 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867587603
+won:true
+totalmoves:979
+time:3423716930
+ns/move:3497157
+finalboard:
+2048 4 _ _ 
+8 64 2 _ 
+16 4 _ _ 
+2 8 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867591026
+won:true
+totalmoves:942
+time:3198446124
+ns/move:3395378
+finalboard:
+2048 2 4 4 
+8 8 2 _ 
+2 _ _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867594225
+won:true
+totalmoves:962
+time:3253153012
+ns/move:3381655
+finalboard:
+2048 8 2 _ 
+4 2 16 _ 
+2 8 64 2 
+4 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867597478
+won:false
+totalmoves:985
+time:3251986297
+ns/move:3301508
+finalboard:
+1024 512 16 4 
+2 128 64 2 
+32 64 8 16 
+256 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867600730
+won:true
+totalmoves:988
+time:3403207804
+ns/move:3444542
+finalboard:
+2048 2 8 _ 
+16 4 32 16 
+8 4 4 _ 
+_ _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867604133
+won:true
+totalmoves:988
+time:3381137457
+ns/move:3422203
+finalboard:
+2048 32 2 64 
+2 _ _ 4 
+2 _ _ 16 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867607515
+won:false
+totalmoves:849
+time:2898053388
+ns/move:3413490
+finalboard:
+1024 128 8 2 
+512 64 16 4 
+64 32 4 2 
+2 8 2 8 
+
+
+test:SmoothnessTest
+seed:1526867610413
+won:false
+totalmoves:737
+time:2476745470
+ns/move:3360577
+finalboard:
+1024 64 8 2 
+4 16 2 4 
+256 4 64 2 
+8 32 128 8 
+
+
+test:SmoothnessTest
+seed:1526867612890
+won:false
+totalmoves:854
+time:2842323554
+ns/move:3328247
+finalboard:
+1024 128 8 2 
+512 8 64 8 
+4 32 4 2 
+64 16 8 4 
+
+
+test:SmoothnessTest
+seed:1526867615732
+won:false
+totalmoves:511
+time:1666843936
+ns/move:3261925
+finalboard:
+512 4 8 32 
+128 16 256 16 
+4 2 64 8 
+64 16 4 2 
+
+
+test:SmoothnessTest
+seed:1526867617399
+won:false
+totalmoves:1068
+time:3766108124
+ns/move:3526318
+finalboard:
+1024 128 64 8 
+512 4 8 256 
+256 16 32 4 
+8 4 8 2 
+
+
+test:SmoothnessTest
+seed:1526867621165
+won:false
+totalmoves:526
+time:1786930813
+ns/move:3397206
+finalboard:
+512 128 32 8 
+4 128 2 4 
+2 8 64 16 
+4 2 4 256 
+
+
+test:SmoothnessTest
+seed:1526867622952
+won:true
+totalmoves:964
+time:3334598170
+ns/move:3459126
+finalboard:
+2048 32 16 _ 
+8 4 _ 2 
+2 _ _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867626287
+won:false
+totalmoves:948
+time:3235819633
+ns/move:3413311
+finalboard:
+1024 8 4 2 
+4 128 16 8 
+64 256 2 64 
+512 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867629523
+won:false
+totalmoves:751
+time:2478505458
+ns/move:3300273
+finalboard:
+1024 64 8 4 
+128 16 64 16 
+2 256 4 8 
+8 16 32 2 
+
+
+test:SmoothnessTest
+seed:1526867632001
+won:false
+totalmoves:934
+time:3179196823
+ns/move:3403850
+finalboard:
+1024 128 4 2 
+512 64 32 16 
+2 256 4 2 
+16 4 16 8 
+
+
+test:SmoothnessTest
+seed:1526867635180
+won:false
+totalmoves:719
+time:2424692986
+ns/move:3372312
+finalboard:
+1024 256 64 2 
+2 32 2 8 
+4 8 16 2 
+128 2 32 4 
+
+
+test:SmoothnessTest
+seed:1526867637605
+won:false
+totalmoves:1017
+time:3437213894
+ns/move:3379758
+finalboard:
+1024 2 512 128 
+64 256 2 16 
+2 4 64 4 
+16 128 4 16 
+
+
+test:SmoothnessTest
+seed:1526867641043
+won:true
+totalmoves:1033
+time:3561738952
+ns/move:3447956
+finalboard:
+2048 8 _ 2 
+8 64 2 _ 
+128 4 _ _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867644604
+won:false
+totalmoves:717
+time:2472814087
+ns/move:3448834
+finalboard:
+1024 4 256 2 
+128 64 8 4 
+8 4 16 32 
+4 32 8 4 
+
+
+test:SmoothnessTest
+seed:1526867647077
+won:true
+totalmoves:954
+time:3205798150
+ns/move:3360375
+finalboard:
+2048 16 4 2 
+4 16 _ _ 
+8 2 _ _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867650283
+won:false
+totalmoves:987
+time:3358954570
+ns/move:3403196
+finalboard:
+1024 512 64 8 
+64 4 32 4 
+32 256 8 128 
+4 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867653642
+won:false
+totalmoves:968
+time:3283523606
+ns/move:3392069
+finalboard:
+1024 4 256 32 
+128 2 512 8 
+2 128 2 16 
+4 8 4 8 
+
+
+test:SmoothnessTest
+seed:1526867656926
+won:false
+totalmoves:871
+time:2995937777
+ns/move:3439653
+finalboard:
+1024 2 4 512 
+32 128 16 8 
+128 2 4 32 
+8 4 16 2 
+
+
+test:SmoothnessTest
+seed:1526867659922
+won:false
+totalmoves:1055
+time:3626123645
+ns/move:3437084
+finalboard:
+1024 64 1024 32 
+4 32 8 4 
+8 4 64 8 
+2 32 4 2 
+
+
+test:SmoothnessTest
+seed:1526867663548
+won:true
+totalmoves:1022
+time:3538699828
+ns/move:3462524
+finalboard:
+2048 16 2 2 
+8 8 32 128 
+_ 2 16 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867667087
+won:true
+totalmoves:989
+time:3437151655
+ns/move:3475380
+finalboard:
+2048 4 32 _ 
+4 8 32 2 
+4 32 2 _ 
+4 16 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867670524
+won:true
+totalmoves:968
+time:3311758363
+ns/move:3421237
+finalboard:
+2048 2 4 _ 
+32 16 _ _ 
+4 _ _ _ 
+2 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867673836
+won:false
+totalmoves:974
+time:3421770135
+ns/move:3513111
+finalboard:
+1024 512 64 2 
+128 4 256 8 
+64 2 32 2 
+2 4 16 8 
+
+
+test:SmoothnessTest
+seed:1526867677258
+won:true
+totalmoves:980
+time:3431801970
+ns/move:3501838
+finalboard:
+2048 8 4 _ 
+2 32 32 _ 
+8 2 _ _ 
+2 4 _ 2 
+
+
+test:SmoothnessTest
+seed:1526867680689
+won:true
+totalmoves:956
+time:3328760815
+ns/move:3481967
+finalboard:
+2048 8 _ _ 
+8 32 _ _ 
+2 _ _ _ 
+2 _ _ 2 
+
+
+test:SmoothnessTest
+seed:1526867684018
+won:false
+totalmoves:962
+time:3273547525
+ns/move:3402856
+finalboard:
+1024 128 2 32 
+256 4 16 2 
+4 2 32 64 
+2 512 8 2 
+
+
+test:SmoothnessTest
+seed:1526867687292
+won:false
+totalmoves:794
+time:2652573561
+ns/move:3340772
+finalboard:
+1024 2 4 32 
+128 64 256 8 
+2 8 32 4 
+32 4 128 2 
+
+
+test:SmoothnessTest
+seed:1526867689945
+won:true
+totalmoves:988
+time:3463092158
+ns/move:3505154
+finalboard:
+2048 64 _ _ 
+2 8 4 4 
+8 4 _ _ 
+2 16 _ _ 
+
+
+test:SmoothnessTest
+seed:1526867693408
+won:false
+totalmoves:844
+time:2875325746
+ns/move:3406784
+finalboard:
+1024 8 4 8 
+512 2 128 64 
+32 8 2 4 
+4 2 32 8 
+
+
+test:SmoothnessTest
+seed:1526867696283
+won:false
+totalmoves:518
+time:1716586448
+ns/move:3313873
+finalboard:
+512 4 16 64 
+256 128 8 2 
+64 32 2 16 
+16 8 4 2 
+
+
+test:SmoothnessTest
+seed:1526867698000
+won:false
+totalmoves:495
+time:1641239132
+ns/move:3315634
+finalboard:
+512 256 4 32 
+2 128 32 8 
+4 2 4 16 
+2 16 2 64 
+
+
+test:SmoothnessTest
+seed:1526867699641
+won:true
+totalmoves:963
+time:3368290886
+ns/move:3497706
+finalboard:
+2048 2 16 _ 
+4 2 8 _ 
+4 8 2 _ 
+2 _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867703009
+won:true
+totalmoves:971
+time:3349355983
+ns/move:3449388
+finalboard:
+2048 2 4 2 
+2 16 32 _ 
+4 2 16 _ 
+_ _ _ _ 
+
+
+test:SmoothnessTest
+seed:1526867706359
+won:false
+totalmoves:822
+time:2840671791
+ns/move:3455805
+finalboard:
+1024 128 32 4 
+512 2 4 2 
+32 16 64 4 
+8 4 2 8 
+
+
+test:SmoothnessTest
+seed:1526867709200
+won:true
+totalmoves:974
+time:3281589107
+ns/move:3369187
+finalboard:
+2048 2 4 _ 
+16 8 32 _ 
+4 4 _ _ 
+_ _ 2 _ 
+
+
+test:SmoothnessTest
+seed:1526867712481
+won:true
+totalmoves:954
+time:3278179442
+ns/move:3436246
+finalboard:
+2048 16 2 _ 
+4 16 16 _ 
+2 4 4 _ 
+_ _ _ 2 
+
+

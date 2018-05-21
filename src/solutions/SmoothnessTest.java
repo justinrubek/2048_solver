@@ -5,6 +5,7 @@ import java.lang.StringBuilder;
 import board.GameBoard;
 import board.Tile;
 import board.Direction;
+
 /* 
     Start at a corner, and do similar to SnakeTest, but only down and to right
     Score is assigned by adding a tile if it is to the right or below a tile that is
@@ -15,7 +16,9 @@ import board.Direction;
 public class SmoothnessTest implements Solver {
     public float CORNER_MULTIPLIER = 2.5f;
     public float SMOOTH_MULTIPLIER = 1.5f;
-    public int MAX_SEARCH_DEPTH = 6;
+    public int MAX_SEARCH_DEPTH = 4;
+    // 8 means evaluate the whole board
+    public int MAX_SMOOTHNESS_DEPTH = 7;
     public int MOVE_LIMIT = 2000;
     public int WIN_POWER = 11;
 
@@ -26,6 +29,10 @@ public class SmoothnessTest implements Solver {
 
     StringBuilder output;
     GameBoard board;
+
+    public SmoothnessTest() {
+        this(System.currentTimeMillis());
+    }
 
     public SmoothnessTest(long seed) {
         this.seed = seed;
@@ -76,17 +83,18 @@ public class SmoothnessTest implements Solver {
         println(i);
         if (board.won) {
             println("win");
-        } 
-        else {
+        } else {
             println("loss");
         }
 
-        return new TestResult(board).move_count(i).output(output.toString()).name("SmoothnessTest").time_taken(end - start);
+        return new TestResult(board).move_count(i).output(output.toString()).name("SmoothnessTest")
+                .time_taken(end - start).seed(seed);
     }
 
     void print(Object o) {
         output.append(o);
-        // Print to stderr so we can see it live if we chose, but aren't required to for performance
+        // Print to stderr so we can see it live if we chose, but aren't required to for
+        // performance
         // This is probably still not good for performance? I have no idea
         System.err.print(o);
     }
@@ -125,33 +133,34 @@ public class SmoothnessTest implements Solver {
         return new MoveResult(best_direction, best_score);
     }
 
-    public float score(GameBoard board, Tile tile) {
+    public float score(GameBoard board, Tile tile, int depth) {
+        if (depth >= MAX_SMOOTHNESS_DEPTH) {
+            return 0.0f;
+        }
         float score = 0.0f;
         if (tile != null) {
             Tile down = board.get(tile.x + 1, tile.y);
             Tile right = board.get(tile.x, tile.y + 1);
 
             if (down != null) {
-                float down_score = score(board, down);
+                float down_score = score(board, down, depth + 1);
                 if (down.value.equals(tile.value / 2)) {
                     score += down_score * SMOOTH_MULTIPLIER;
-                }
-                else if (down.value.compareTo(tile.value) < 0) { 
+                } else if (down.value.compareTo(tile.value) < 0) {
                     score += down_score;
                 }
             }
             if (right != null) {
-                float right_score = score(board, right);
+                float right_score = score(board, right, depth + 1);
                 if (right.value.equals(tile.value / 2)) {
                     score += right_score * SMOOTH_MULTIPLIER;
-                }
-                else if (right.value.compareTo(tile.value) < 0) { 
+                } else if (right.value.compareTo(tile.value) < 0) {
                     score += right_score;
                 }
             }
 
             score += tile.value;
-        }        
+        }
 
         int emptySpaces = board.emptySpaces();
         if (emptySpaces < CROWDED_CAPACITY) {
@@ -165,17 +174,17 @@ public class SmoothnessTest implements Solver {
 
     public float score(GameBoard board) {
         // Just checking one corner for now
-        if (board.merges.containsKey((int)Math.pow(2, WIN_POWER))) {
+        if (board.merges.containsKey((int) Math.pow(2, WIN_POWER))) {
             return Float.MAX_VALUE;
         }
         int x = 0;
         int y = 0;
         Tile start = board.get(x, y);
-        float score = score(board, start);
+        float score = score(board, start, 0);
         if (start != null) {
             score += start.value * CORNER_MULTIPLIER;
         }
-        
+
         return score;
     }
 }
