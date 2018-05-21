@@ -23,6 +23,8 @@ public class SmoothnessTest implements Solver {
     public int WIN_POWER = 11;
 
     public float CROWDED_PENALTY_MULT = 0.4f;
+    // TODO: make a percentage instead of a flat value?
+    // Although maybe it works better as a value, for increasing board sizes?
     public int CROWDED_CAPACITY = 8;
 
     long seed;

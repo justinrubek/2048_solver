@@ -59,7 +59,7 @@ public class GameSolver {
       executor.shutdown();
 
     } else {
-      boolean automate = true;
+      boolean automate = false;
 
       if (automate) {
         final int RUNS = 400;
@@ -71,6 +71,40 @@ public class GameSolver {
         }
       } else {
         // Prompt the user
+        boolean running = true;
+        while (running) {
+
+          System.out.println("What would you like to do?");
+          System.out.println("0: Snake test");
+          System.out.println("1: Smoothness test");
+          System.out.println("2: Average test");
+          System.out.println("q: Quit");
+
+          String input;
+          try {
+          input = stdin.readLine().trim();
+          }
+          catch (Exception e) {
+            continue;
+          }
+          switch(input) {
+            case "0":
+              new SnakeTest().run();
+              break;
+            case "1":
+              new SmoothnessTest().run();
+              break;
+            case "2":
+              new AverageTest().run();
+              break;
+            case "q":
+              running = false;
+              break;
+            default:
+              System.out.println("huh? ");
+              break;
+          }
+        }
       }
 
       // Maybe compare time here?
@@ -111,21 +145,21 @@ public class GameSolver {
       }
       int val = 0;
       switch (selected) {
-      case 'w':
-        val = 0;
-        break;
-      case 'a':
-        val = 1;
-        break;
-      case 's':
-        val = 3;
-        break;
-      case 'd':
-        val = 2;
-        break;
-      default:
-        System.out.println("huh? ");
-        continue;
+        case 'w':
+          val = 0;
+          break;
+        case 'a':
+          val = 1;
+          break;
+        case 's':
+          val = 3;
+          break;
+        case 'd':
+          val = 2;
+          break;
+        default:
+          System.out.println("huh? ");
+          continue;
       }
       board.move(Direction.values()[val]);
 
@@ -169,7 +203,7 @@ public class GameSolver {
         if (line.contains("test")) {
           count++;
           String name = line.split(":")[1].trim();
-          
+
           String[] stats = new String[5];
           for (int i = 0; i < 5; i++) {
             stats[i] = getNextStat(scanner);
@@ -229,7 +263,7 @@ public class GameSolver {
       System.out.println("0: Run a test");
       System.out.println("1: Play the game");
       System.out.println("q: Quit");
-      
+
       String input = stdin.readLine().trim();
       switch(input) {
         case "0":
