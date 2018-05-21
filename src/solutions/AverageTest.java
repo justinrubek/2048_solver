@@ -41,6 +41,10 @@ public class AverageTest implements Solver {
 
     GameBoard board;
 
+    public AverageTest() {
+        this(System.currentTimeMillis());
+    }
+
     public AverageTest(long seed) {
         this.seed = seed;
 

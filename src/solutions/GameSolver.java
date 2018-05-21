@@ -65,8 +65,8 @@ public class GameSolver {
         final int RUNS = 400;
 
         for (int i = 0; i < RUNS; ++i) {
-          Solver smooth = new SmoothnessTest();
-          TestResult result = smooth.run();
+          Solver average = new AverageTest();
+          TestResult result = average.run();
           System.out.println(result);
         }
       } else {
@@ -100,11 +100,8 @@ public class GameSolver {
     while (board.over != true) {
       System.out.println(board);
       System.out.println("What would you like to do?");
-      int i = 0;
-      for (Direction d : Direction.values()) {
-        System.out.println(String.format("%d: %s", i, d));
-        i++;
-      }
+      System.out.println("w: up - s: down - a: left - d: right");
+
       char selected;
       try {
         selected = (char) System.in.read();
@@ -126,6 +123,9 @@ public class GameSolver {
       case 'd':
         val = 2;
         break;
+      default:
+        System.out.println("huh? ");
+        continue;
       }
       board.move(Direction.values()[val]);
 
@@ -146,6 +146,8 @@ public class GameSolver {
   public static void give_stats(String path) {
 
     try {
+      StringBuilder output = new StringBuilder();
+      output.append("File: ").append(path).append("\n");
       File f = new File(path);
       Scanner scanner = new Scanner(f);
 
@@ -167,6 +169,7 @@ public class GameSolver {
         if (line.contains("test")) {
           count++;
           String name = line.split(":")[1].trim();
+          
           String[] stats = new String[5];
           for (int i = 0; i < 5; i++) {
             stats[i] = getNextStat(scanner);
@@ -189,18 +192,19 @@ public class GameSolver {
             winningTimes.add(time);
             winCount++;
           } else {
-            winningMoves.add(totalmoves);
+            losingMoves.add(totalmoves);
           }
         }
       }
 
-      StringBuilder output = new StringBuilder();
 
       //Double winPercentage = (double) results.stream().filter(b -> b).collect(Collectors.toList()) / count;
       Double winPercentage = (double) winCount / count;
       Double winMoveAverage = winningMoves.stream().mapToInt(v -> v).average().orElse(0.0);
       Double winTimeAverage = winningTimes.stream().mapToLong(v -> v).average().orElse(0);
 
+      output.append("Total games                    :").append(count).append("\n");
+      output.append("Games won                      :").append(winCount).append("\n");
       output.append("Win Percentage                 :").append(winPercentage).append("\n");
       output.append("Average moves in winning games :").append(new DecimalFormat("###.##").format(winMoveAverage)).append("\n");
       output.append("Average time to win game       :").append(new DecimalFormat("######").format(winTimeAverage / 1000000)).append("ms\n");
@@ -208,17 +212,50 @@ public class GameSolver {
       System.out.println(output.toString());
 
     } catch (FileNotFoundException e) {
-      System.out.println("File not found");
+      System.out.print(path);
+      System.out.println(" not found");
     }
 
   }
 
-  public static void main(String[] args) {
+  static BufferedReader stdin;
+  public static void main(String[] args) throws IOException {
     // Kickoff
+    stdin = new BufferedReader(new InputStreamReader(System.in));
+
+    boolean running = true;
+    while (running) {
+      System.out.println("What would you like to do?");
+      System.out.println("0: Run a test");
+      System.out.println("1: Play the game");
+      System.out.println("q: Quit");
+      
+      String input = stdin.readLine().trim();
+      switch(input) {
+        case "0":
+          run_tests();
+          break;
+        case "1":
+          play(new GameBoard());
+          break;
+        case "q":
+          running = false;
+          break;
+        case "stats":
+          give_stats("snake.txt");
+          give_stats("smooth2.txt");
+          give_stats("smooth6deep.txt");
+          give_stats("average.txt");
+          break;
+        default:
+          System.out.println("huh? ");
+          break;
+      }
+
+    }
+
 
     // play(new GameBoard());
-    // run_tests();
-    give_stats("smooth4deep.txt");
-
+    //run_tests();
   }
 }
